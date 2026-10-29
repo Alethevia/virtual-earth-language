@@ -83,6 +83,14 @@ Thresholds for tracking, no-load and load-augmented scores are respectively 54.7
 | Stuck valid detections | 7/60 | 57/60 | 56/60 |
 | Bias plus shift valid detections | 2/60 | 0/60 | 0/60 |
 
+**Figure 1.** Whole-episode false alarms; lower is better. Parameter shift lies outside the healthy calibration distribution.
+
+![False-alarm rates](figures/false_alarms.svg)
+
+**Figure 2.** Valid fault detections; higher is better, and the first alarm must not precede fault onset.
+
+![Detection rates](figures/detections.svg)
+
 The load-augmented healthy false-alarm fraction is 3.33%, with interval 0.92%-11.36%. Its bias detection fraction is 28.33% (18.51%-40.77%), and stuck detection is 93.33% (84.07%-97.38%). The shifted healthy false-alarm fraction is 100% (93.98%-100%). These wide intervals and the small calibration sample preclude precise performance claims.
 
 The augmented observer's median conditional delays are 0.17 s for bias, 5.095 s for drift and 0.32 s for stuck faults. Their denominators are only 17, 28 and 56 detected episodes. A small delay among successes must not obscure the missed faults. Both observers alarm before fault onset in all 60 shifted bias episodes; their zero valid-detection count is therefore diagnostic failure, not lack of alarm activity.

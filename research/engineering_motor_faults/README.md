@@ -30,6 +30,12 @@ Use a new empty output directory for every run. Reference summaries and the mani
 
 The load-augmented observer generated 2/60 healthy-episode false alarms, detected 17/60 bias faults and 56/60 stuck-sensor faults, but falsely alarmed on all 60 healthy parameter-shift episodes. It did not improve on the no-load observer in this pilot. See [results](results/run_v1/RESULTS.md) and [the working paper](PAPER.md). Passing software tests does not establish diagnostic robustness.
 
+![Healthy-episode false-alarm rates with Wilson intervals](figures/false_alarms.svg)
+
+![Valid fault detection rates with Wilson intervals](figures/detections.svg)
+
+Figures are based on the locked simulation summary and may be regenerated with `python plot_results.py --summary results/run_v1/summary.json --out figures`. They are **not** hardware results.
+
 ## 中文说明
 
 这不是“已经发表的工程论文”，也不是工业现场验证。第一版完成了物理建模、带抗积分饱和的 PI 控制、两种状态观测器、整段实验校准、故障注入和可重复测试。最重要的负结果是：只增加负载估计，仍无法抵抗电机参数失配；不能把所有异常残差都当成传感器损坏。

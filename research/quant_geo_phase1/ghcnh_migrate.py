@@ -26,7 +26,13 @@ OTHER = {'220','221','222','223','347','348'}
 
 def check_lock(root=ROOT):
     lock = json.loads((root/'lock.json').read_text())
-    for name, digest in lock['sha256'].items():
+    expected=dict(lock['sha256'])
+    amendment=root/'amendment_01.json'
+    if amendment.exists():
+        a=json.loads(amendment.read_text())
+        if a['original_source_sha256']!=expected['ghcnh_migrate.py']:raise ValueError('Wrong amendment base')
+        expected['ghcnh_migrate.py']=a['amended_source_sha256']
+    for name, digest in expected.items():
         if q.sha256(q.ROOT/name) != digest:
             raise ValueError('Locked source changed: '+name)
     return lock
@@ -48,7 +54,9 @@ def parse(frame, station):
         value = pd.to_numeric(frame[v],errors='raise')
         source = frame[v+'_Source_Code'].fillna('').astype(str).str.strip()
         code = frame[v+'_Quality_Code'].fillna('').astype(str).str.strip()
-        unknown = value.notna() & ~source.isin(NCEI|OTHER)
+        # Amendment 01 quarantines documented-in-our-audit code 999. Its values
+        # never pass accepted below. All other unreviewed source codes still stop.
+        unknown = value.notna() & ~source.isin(NCEI|OTHER|{'999'})
         if unknown.any():
             raise ValueError('Undocumented temperature source: '+str(sorted(source[unknown].unique())))
         accepted = (source.isin(NCEI)&code.isin(['1','5'])) | (source.isin(OTHER)&code.eq('1'))

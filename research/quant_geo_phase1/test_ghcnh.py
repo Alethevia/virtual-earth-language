@@ -12,7 +12,9 @@ class GHCNhTests(unittest.TestCase):
         self.assertEqual(parse(self.frame('223','1'),self.station).temp.iloc[0],12.3)
     def test_lowercase_qc_and_unknown_source(self):
         self.assertTrue(parse(self.frame(code='l'),self.station).temp.isna().all())
-        with self.assertRaises(ValueError):parse(self.frame('999'),self.station)
+        with self.assertRaises(ValueError):parse(self.frame('998'),self.station)
+    def test_999_is_quarantined_not_accepted(self):
+        self.assertTrue(parse(self.frame('999','1'),self.station).temp.isna().all())
     def test_wrong_identity(self):
         f=self.frame();f.STATION='OTHER'
         with self.assertRaises(ValueError):parse(f,self.station)

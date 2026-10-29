@@ -1,0 +1,11 @@
+{
+  "status": "BEFORE_ANY_GHCNH_MODEL_FIT",
+  "original_source_sha256": "f6594e02f97f5a7d8cd13f55f0dc734669d71c3c6069e25b8ad3ed8ce91e303a",
+  "amended_source_sha256": "bc50a4bf4eecdb73d049561fbced3d9d214de9fb272dd7a613f4d880cca59288",
+  "source_list_sha256": "4f6a18c0b18825f28e72af04cc3a2ac8a26bd7015910798d1a0cee2a114f689d",
+  "quarantined_source": "999",
+  "quarantined_rows": 642,
+  "model_fits_before_amendment": 0,
+  "scientific_model_changes": [],
+  "quality_acceptance_changes": []
+}

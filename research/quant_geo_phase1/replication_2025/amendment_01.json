@@ -1,0 +1,12 @@
+{
+  "amendment_id": "01",
+  "recorded_on": "2026-10-29",
+  "freeze_commit": "03d970db40ad3d7ca00a5d5adca91286efc0cf67",
+  "stage": "AFTER_DATA_RETRIEVAL_BEFORE_ANY_REPLICATION_MODEL_FIT",
+  "original_runner_sha256": "04c523acc4b815d9156b9c9e3d95b8d8dbfc1f0ad98fb156cd9c98c30c7a3f53",
+  "corrected_runner_sha256": "011b6d075b52cbffa65103d29086b8176dff46dd6138c3b7721283ff023ad457",
+  "reason": "New-year missing observations promote weather-hour count columns from integer to float. Compare historical values, labels and missingness with unchanged 1e-8 tolerance, ignoring only pandas storage dtype.",
+  "scientific_protocol_changes": [],
+  "model_fits_before_amendment": 0,
+  "observed_coverage_failure": "Only 237 of 365 days have complete weather; unchanged 90% requirement still applies. No model score was calculated."
+}

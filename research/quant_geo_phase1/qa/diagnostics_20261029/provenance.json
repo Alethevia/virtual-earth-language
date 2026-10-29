@@ -1,0 +1,16 @@
+{
+  "status": "POST_HOC_DESCRIPTIVE_ONLY",
+  "model_fits": 0,
+  "source_sha256": "61151002b4d2bab6b74d12450c78ff19ec8ba02b2c889fb409f82c1d247b142c",
+  "predictions_sha256": "a1609152436425d373f551a57b44b89f1406e3102dd42b85c7e6fc18e2497f2c",
+  "daily_sha256": "9c9c79a7fa7927ac0b828a073bff5b6094ce6614ed0da02940f44a42b1a3a518",
+  "threshold_mw": 24966.5,
+  "excluded_days": 4,
+  "excluded_known_high_load_days": 0,
+  "limitations": [
+    "Observed 2024 after the original evaluation; no confirmatory subgroup tests.",
+    "Error accounting does not establish a physical or causal mechanism.",
+    "Episodes are consecutive observed high-load days, not independent samples.",
+    "All months and episodes retained; no selection of favorable dates."
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "duplicate_rows_removed": 0,
+  "complete_load_days": 2557,
+  "incomplete_load_days": 0,
+  "stations": {
+    "BUF": {
+      "id": "72528014733",
+      "names": [
+        "BUFFALO NIAGARA INTERNATIONAL AIRPOR, NY US"
+      ]
+    },
+    "SYR": {
+      "id": "72519014771",
+      "names": [
+        "SYRACUSE HANCOCK INTERNATIONAL AIRPORT, NY US"
+      ]
+    },
+    "ALB": {
+      "id": "72518014735",
+      "names": [
+        "ALBANY INTERNATIONAL AIRPORT, NY US"
+      ]
+    },
+    "LGA": {
+      "id": "72503014732",
+      "names": [
+        "LAGUARDIA AIRPORT, NY US"
+      ]
+    },
+    "ISP": {
+      "id": "72505004781",
+      "names": [
+        "ISLIP LI MACARTHUR AIRPORT, NY US"
+      ]
+    }
+  },
+  "start": "2019-01-01",
+  "end": "2025-12-31",
+  "complete_weather_days": 2382,
+  "protocol_sha256": "f683d9ae75e56b91acbedfb85ea8476f2289aa4520042f57358ab69ab9a1fa7f",
+  "raw_manifest_sha256": "9c4327ad8d79e4b60f3ce4a0e31a46e6f1d14c72f896f61514c6d265b9659c5e"
+}
+Traceback (most recent call last):
+  File "/workspace/scratch/e571836a46e5/repos/virtual-earth-language/research/quant_geo_phase1/replicate_2025.py", line 174, in <module>
+    globals()[args.command]()
+  File "/workspace/scratch/e571836a46e5/repos/virtual-earth-language/research/quant_geo_phase1/replicate_2025.py", line 62, in prepare
+    pd.testing.assert_frame_equal(reference, extended.loc[reference.index], check_exact=False, rtol=0, atol=1e-8)
+  File "/workspace/scratch/e571836a46e5/.continue-venv/lib/python3.12/site-packages/pandas/_testing/asserters.py", line 1279, in assert_frame_equal
+    assert_series_equal(
+  File "/workspace/scratch/e571836a46e5/.continue-venv/lib/python3.12/site-packages/pandas/_testing/asserters.py", line 975, in assert_series_equal
+    assert_attr_equal("dtype", left, right, obj=f"Attributes of {obj}")
+  File "/workspace/scratch/e571836a46e5/.continue-venv/lib/python3.12/site-packages/pandas/_testing/asserters.py", line 421, in assert_attr_equal
+    raise_assert_detail(obj, msg, left_attr, right_attr)
+  File "/workspace/scratch/e571836a46e5/.continue-venv/lib/python3.12/site-packages/pandas/_testing/asserters.py", line 614, in raise_assert_detail
+    raise AssertionError(msg)
+AssertionError: Attributes of DataFrame.iloc[:, 16] (column name="BUF_temp_hours") are different
+
+Attribute "dtype" are different
+[left]:  int64
+[right]: float64

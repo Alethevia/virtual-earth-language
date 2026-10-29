@@ -24,7 +24,9 @@ python -m pip install -r requirements.txt
 python -m unittest -v
 ```
 
-**No empirical model result is claimed:** on 2026-10-29, all 102 official files downloaded and parsed, yielding 2,192 complete load days and 2,145 weather-complete days. Real-data model fitting has not been run; NYISO interval-label conventions still need manual confirmation. Same-day observed weather does not constitute a day-ahead forecast. See its protocol and status file for limits.
+**The first real-data screen did not support the proposed high-load benefit.** On the 2024 test set, adding station identity increased HGB high-load MAE by 10.07%, despite improving overall MAE. All 13 model/control results and uncertainty intervals are retained in [RESULTS.md](research/quant_geo_phase1/RESULTS.md). Hour-label alignment was numerically cross-checked against official five-minute data; a direct written timing definition remains unverified. Same-day observed weather does not constitute a day-ahead forecast.
+
+The [2024 error decomposition](research/quant_geo_phase1/DIAGNOSTICS_2024.md) is descriptive follow-up. A [locked 2025 replication attempt](research/quant_geo_phase1/replication_2025/STATUS.md) stopped before fitting: the legacy NOAA product ends in August 2025, leaving only 64.93% usable days against the unchanged 90% requirement. It supplies no additional model-performance evidence.
 
 ## Optional globe viewer
 
@@ -36,8 +38,3 @@ npm run dev
 ```
 
 Cesium assets are generated from the locked npm dependency during installation/build. Generated third-party asset copies are no longer tracked. The viewer is a visualization shell with sample GeoJSON, not a validated geospatial analysis system. See [AUDIT.md](AUDIT.md).
-
-
-## Quantitative geography study
-
-A separate [weather–electric-load experiment](research/quant_geo_phase1/README.md) is included as a reproducible research project. Its first real-data screen did not support the proposed extra high-load benefit from station identity. See [all results and limitations](research/quant_geo_phase1/RESULTS.md); this is not a trading strategy or a claim of a new scientific discovery.

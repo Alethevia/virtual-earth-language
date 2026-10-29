@@ -1,0 +1,61 @@
+{
+  "status": "BLOCKED_DATA_COVERAGE",
+  "calendar_days": 365,
+  "complete_load_days": 365,
+  "complete_weather_days": 237,
+  "usable_days": 237,
+  "usable_fraction": 0.6493150684931507,
+  "required_fraction": 0.9,
+  "raw_file_count": 119,
+  "historical_file_count": 102,
+  "new_file_count": 17,
+  "original_daily_values_and_missingness_preserved": true,
+  "no_model_fits_in_this_audit": true,
+  "weather_files": [
+    {
+      "file": "noaa_BUF_2025.csv",
+      "rows": 10236,
+      "first_utc": "2025-01-01T00:00:00",
+      "last_utc": "2025-08-27T04:59:00",
+      "sha256": "10af84143765670b265f04db2f16a7bef205a9b0b0ea6ddb5bda9309b7f9c345"
+    },
+    {
+      "file": "noaa_SYR_2025.csv",
+      "rows": 9756,
+      "first_utc": "2025-01-01T00:00:00",
+      "last_utc": "2025-08-27T04:59:00",
+      "sha256": "4694df2863eda6cfcdc2d4e7130436d3d29a689b443ecb3d98377ad99be90050"
+    },
+    {
+      "file": "noaa_ALB_2025.csv",
+      "rows": 9445,
+      "first_utc": "2025-01-01T00:00:00",
+      "last_utc": "2025-08-27T04:59:00",
+      "sha256": "fbb78ba65ec15324074906b33250990c0e5b2f9a795ad4610519c955a7e7c52b"
+    },
+    {
+      "file": "noaa_LGA_2025.csv",
+      "rows": 8813,
+      "first_utc": "2025-01-01T00:00:00",
+      "last_utc": "2025-08-27T04:59:00",
+      "sha256": "86f0d8d6c124ec7c625fe324b2ac47d38b982d780586996dc80521e12698bb9a"
+    },
+    {
+      "file": "noaa_ISP_2025.csv",
+      "rows": 7221,
+      "first_utc": "2025-01-01T00:56:00",
+      "last_utc": "2025-08-27T04:59:00",
+      "sha256": "aa64ae5377993f0c362cadc3dbff152d6a803e3b24bf7cb1679d9436e6bfb5ab"
+    }
+  ],
+  "preparation_provenance": {
+    "daily_sha256": "de558f5d1f1222c5b6ffd51380e04a5cbced0b744a999bee9b7196a6de2eb6c3",
+    "protocol_sha256": "f683d9ae75e56b91acbedfb85ea8476f2289aa4520042f57358ab69ab9a1fa7f",
+    "source_sha256": "8698cacde6e7785ca405ea352b91d428ae34c0582e5756a43faa48f72565c61d",
+    "raw_manifest_sha256": "9c4327ad8d79e4b60f3ce4a0e31a46e6f1d14c72f896f61514c6d265b9659c5e",
+    "audit_sha256": "0c262cea01ee7d3dbc7d1189bb92d4f68370ef1adccc325ec74742dc508532ae",
+    "status": "OFFICIAL_ARCHIVE_PREPARED"
+  },
+  "source_sha256": "1418edcf5ec22b4aefadebb6ad04f660f08374279a109f2d633980fd6fa92f21",
+  "note": "All requested files downloaded does not imply full temporal coverage. Legacy ISD ends during August 2025."
+}

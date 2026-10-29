@@ -22,7 +22,14 @@ ROOT = q.ROOT / 'replication_2025'
 
 def check_lock(root=ROOT):
     lock = json.loads((root / 'lock.json').read_text())
-    for name, digest in lock['sha256'].items():
+    expected = dict(lock['sha256'])
+    amendment = root / 'amendment_01.json'
+    if amendment.exists():
+        change = json.loads(amendment.read_text())
+        if change['original_runner_sha256'] != expected['replicate_2025.py']:
+            raise ValueError('Amendment does not refer to the locked runner.')
+        expected['replicate_2025.py'] = change['corrected_runner_sha256']
+    for name, digest in expected.items():
         if q.sha256(q.ROOT / name) != digest:
             raise ValueError('Locked input changed: ' + name)
     cfg = q.read_protocol(root)
@@ -31,6 +38,13 @@ def check_lock(root=ROOT):
         if key not in lock['allowed_protocol_changes'] and cfg[key] != original[key]:
             raise ValueError('Unplanned protocol change: ' + key)
     return lock
+
+
+def verify_historical_values(reference, extended):
+    # New missing days can promote count columns from int to float in a CSV.
+    # Require identical labels, values and missingness, not pandas storage dtype.
+    pd.testing.assert_frame_equal(reference, extended.loc[reference.index],
+                                  check_dtype=False, check_exact=False, rtol=0, atol=1e-8)
 
 
 def download(root=ROOT):
@@ -59,7 +73,7 @@ def prepare(root=ROOT):
             (q.ROOT / 'qa/empirical_20261029/empirical_report.json').read_text())['data_sha256']:
         raise ValueError('Original prepared data changed.')
     extended = pd.read_csv(root / 'prepared/daily.csv', index_col='date', parse_dates=True)
-    pd.testing.assert_frame_equal(reference, extended.loc[reference.index], check_exact=False, rtol=0, atol=1e-8)
+    verify_historical_values(reference, extended)
 
 
 def verify(root=ROOT):
@@ -155,6 +169,7 @@ def analyse(root=ROOT):
         primary_relative_tail_MAE_improvement=gain, screen_conditions=conditions,
         screening_pass=all(conditions.values()), reproduced_2024_max_abs_difference_mw=max_difference,
         plan_lock=lock, runner_sha256=q.sha256(Path(__file__)), preparation_provenance=provenance,
+        implementation_amendment=json.loads((root / 'amendment_01.json').read_text()) if (root / 'amendment_01.json').exists() else None,
         interval_evidence_sha256=q.sha256(root / 'qa/interval_convention_20261029.json'),
         versions=dict(python=sys.version.split()[0], numpy=np.__version__, pandas=pd.__version__, sklearn=sklearn.__version__),
         limitations=['Planned after observing 2024; not an external preregistration.',

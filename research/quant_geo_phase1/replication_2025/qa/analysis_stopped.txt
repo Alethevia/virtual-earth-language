@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/workspace/scratch/e571836a46e5/repos/virtual-earth-language/research/quant_geo_phase1/replicate_2025.py", line 189, in <module>
+    globals()[args.command]()
+  File "/workspace/scratch/e571836a46e5/repos/virtual-earth-language/research/quant_geo_phase1/replicate_2025.py", line 107, in analyse
+    raise ValueError('Coverage failed the unchanged 90% requirement.')
+ValueError: Coverage failed the unchanged 90% requirement.

@@ -1,0 +1,119 @@
+cached nyiso_201901.zip
+cached nyiso_201902.zip
+cached nyiso_201903.zip
+cached nyiso_201904.zip
+cached nyiso_201905.zip
+cached nyiso_201906.zip
+cached nyiso_201907.zip
+cached nyiso_201908.zip
+cached nyiso_201909.zip
+cached nyiso_201910.zip
+cached nyiso_201911.zip
+cached nyiso_201912.zip
+cached nyiso_202001.zip
+cached nyiso_202002.zip
+cached nyiso_202003.zip
+cached nyiso_202004.zip
+cached nyiso_202005.zip
+cached nyiso_202006.zip
+cached nyiso_202007.zip
+cached nyiso_202008.zip
+cached nyiso_202009.zip
+cached nyiso_202010.zip
+cached nyiso_202011.zip
+cached nyiso_202012.zip
+cached nyiso_202101.zip
+cached nyiso_202102.zip
+cached nyiso_202103.zip
+cached nyiso_202104.zip
+cached nyiso_202105.zip
+cached nyiso_202106.zip
+cached nyiso_202107.zip
+cached nyiso_202108.zip
+cached nyiso_202109.zip
+cached nyiso_202110.zip
+cached nyiso_202111.zip
+cached nyiso_202112.zip
+cached nyiso_202201.zip
+cached nyiso_202202.zip
+cached nyiso_202203.zip
+cached nyiso_202204.zip
+cached nyiso_202205.zip
+cached nyiso_202206.zip
+cached nyiso_202207.zip
+cached nyiso_202208.zip
+cached nyiso_202209.zip
+cached nyiso_202210.zip
+cached nyiso_202211.zip
+cached nyiso_202212.zip
+cached nyiso_202301.zip
+cached nyiso_202302.zip
+cached nyiso_202303.zip
+cached nyiso_202304.zip
+cached nyiso_202305.zip
+cached nyiso_202306.zip
+cached nyiso_202307.zip
+cached nyiso_202308.zip
+cached nyiso_202309.zip
+cached nyiso_202310.zip
+cached nyiso_202311.zip
+cached nyiso_202312.zip
+cached nyiso_202401.zip
+cached nyiso_202402.zip
+cached nyiso_202403.zip
+cached nyiso_202404.zip
+cached nyiso_202405.zip
+cached nyiso_202406.zip
+cached nyiso_202407.zip
+cached nyiso_202408.zip
+cached nyiso_202409.zip
+cached nyiso_202410.zip
+cached nyiso_202411.zip
+cached nyiso_202412.zip
+downloaded nyiso_202501.zip 78666
+downloaded nyiso_202502.zip 70923
+downloaded nyiso_202503.zip 78488
+downloaded nyiso_202504.zip 75897
+downloaded nyiso_202505.zip 78326
+downloaded nyiso_202506.zip 76689
+downloaded nyiso_202507.zip 79988
+downloaded nyiso_202508.zip 79458
+downloaded nyiso_202509.zip 76541
+downloaded nyiso_202510.zip 78807
+downloaded nyiso_202511.zip 76213
+downloaded nyiso_202512.zip 78756
+cached noaa_BUF_2019.csv
+cached noaa_BUF_2020.csv
+cached noaa_BUF_2021.csv
+cached noaa_BUF_2022.csv
+cached noaa_BUF_2023.csv
+cached noaa_BUF_2024.csv
+downloaded noaa_BUF_2025.csv 1637884
+cached noaa_SYR_2019.csv
+cached noaa_SYR_2020.csv
+cached noaa_SYR_2021.csv
+cached noaa_SYR_2022.csv
+cached noaa_SYR_2023.csv
+cached noaa_SYR_2024.csv
+downloaded noaa_SYR_2025.csv 1570840
+cached noaa_ALB_2019.csv
+cached noaa_ALB_2020.csv
+cached noaa_ALB_2021.csv
+cached noaa_ALB_2022.csv
+cached noaa_ALB_2023.csv
+cached noaa_ALB_2024.csv
+downloaded noaa_ALB_2025.csv 1426319
+cached noaa_LGA_2019.csv
+cached noaa_LGA_2020.csv
+cached noaa_LGA_2021.csv
+cached noaa_LGA_2022.csv
+cached noaa_LGA_2023.csv
+cached noaa_LGA_2024.csv
+downloaded noaa_LGA_2025.csv 1225131
+cached noaa_ISP_2019.csv
+cached noaa_ISP_2020.csv
+cached noaa_ISP_2021.csv
+cached noaa_ISP_2022.csv
+cached noaa_ISP_2023.csv
+cached noaa_ISP_2024.csv
+downloaded noaa_ISP_2025.csv 1076053

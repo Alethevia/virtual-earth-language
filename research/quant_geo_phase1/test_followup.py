@@ -3,7 +3,7 @@ import unittest
 import numpy as np
 import pandas as pd
 from diagnose_errors import episode_ids, summarize
-from replicate_2025 import check_lock, verify_predictions
+from replicate_2025 import check_lock, verify_predictions, verify_historical_values
 
 
 class FollowupTests(unittest.TestCase):
@@ -29,6 +29,14 @@ class FollowupTests(unittest.TestCase):
 
     def test_locked_inputs_match(self):
         self.assertEqual(check_lock()['test_year'], 2025)
+
+    def test_dtype_promotion_does_not_hide_value_changes(self):
+        original = pd.DataFrame({'hours': [24, 23]}, index=['old1', 'old2'])
+        extended = pd.DataFrame({'hours': [24., 23., np.nan]}, index=['old1', 'old2', 'new'])
+        verify_historical_values(original, extended)
+        extended.loc['old1', 'hours'] = 22
+        with self.assertRaises(AssertionError):
+            verify_historical_values(original, extended)
 
 
 if __name__ == '__main__':

@@ -36,5 +36,13 @@
   "held_out_test_days": 362,
   "held_out_high_load_days": 33,
   "results": "qa/empirical_20261029",
-  "repeat_predictions_identical": true
+  "repeat_predictions_identical": true,
+  "offline_checks_total_after_followup": 37,
+  "posthoc_2024_diagnostics": "DIAGNOSTICS_2024.md",
+  "temporal_replication_2025": {
+    "status": "BLOCKED_DATA_COVERAGE",
+    "model_fits": 0,
+    "screening_pass": null,
+    "details": "replication_2025/execution_status.json"
+  }
 }

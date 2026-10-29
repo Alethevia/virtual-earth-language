@@ -1,0 +1,11 @@
+{
+  "status": "ALL_MATCHED",
+  "metric_rows": 65,
+  "error_metrics_recomputed": 260,
+  "interval_means_checked": 30,
+  "absolute_tolerance_mw": 1e-08,
+  "sensitivity_metric_rows": 9,
+  "sensitivity_error_metrics_recomputed": 36,
+  "original_2025_predictions_sha256": "f1465d92a45c70b8bf8ccebf6c1c8233bd553b9f9b3d4052a7a1898b28b40fd0",
+  "bridge_2024_predictions_sha256": "9626792f18232de144a547da0a6ec337a1bb92cdb20b338cfdfeb7bf40501642"
+}

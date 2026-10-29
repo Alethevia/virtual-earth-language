@@ -1,0 +1,34 @@
+Refit frozen pipeline hgb__B0_calendar_lags
+Refit frozen pipeline hgb__B1_aggregated
+Refit frozen pipeline hgb__B2_distribution
+Refit frozen pipeline hgb__B3_site_identity
+Refit frozen pipeline ridge__B0_calendar_lags
+Refit frozen pipeline ridge__B1_aggregated
+Refit frozen pipeline ridge__B2_distribution
+Refit frozen pipeline ridge__B3_site_identity
+Refit frozen pipeline hgb__identity_scramble_17
+Refit frozen pipeline hgb__identity_scramble_29
+Refit frozen pipeline hgb__identity_scramble_43
+Refit frozen pipeline hgb__identity_scramble_61
+Refit frozen pipeline hgb__identity_scramble_79
+            scope family   representation   n        MAE       RMSE  high_load_n  high_load_MAE  high_load_underprediction
+  ISD_2024_native    hgb  B2_distribution 362 370.953206 480.610018           33     464.723571                 245.195597
+  ISD_2024_native    hgb B3_site_identity 362 350.042122 458.794669           33     511.514317                 334.383124
+  ISD_2024_native  ridge  B2_distribution 362 406.401576 532.976121           33     466.008384                 345.805309
+  ISD_2024_native  ridge B3_site_identity 362 418.023770 542.614987           33     541.069550                 424.675693
+GHCNh_2024_native    hgb  B2_distribution 365 369.624720 482.195806           33     525.390274                 273.093203
+GHCNh_2024_native    hgb B3_site_identity 365 357.164084 464.386902           33     497.491468                 322.961911
+GHCNh_2024_native  ridge  B2_distribution 365 407.837949 533.880227           33     465.677246                 346.379466
+GHCNh_2024_native  ridge B3_site_identity 365 418.768304 543.498054           33     540.298026                 424.792996
+GHCNh_2025_native    hgb  B2_distribution 338 443.448222 592.350014           31     592.528449                 445.017916
+GHCNh_2025_native    hgb B3_site_identity 338 427.495634 559.164938           31     554.890638                 442.641967
+GHCNh_2025_native  ridge  B2_distribution 338 465.335051 582.783411           31     488.659049                 399.745284
+GHCNh_2025_native  ridge B3_site_identity 338 460.891451 579.089605           31     443.586857                 345.317449
+  ISD_2024_common    hgb  B2_distribution 362 370.953206 480.610018           33     464.723571                 245.195597
+  ISD_2024_common    hgb B3_site_identity 362 350.042122 458.794669           33     511.514317                 334.383124
+  ISD_2024_common  ridge  B2_distribution 362 406.401576 532.976121           33     466.008384                 345.805309
+  ISD_2024_common  ridge B3_site_identity 362 418.023770 542.614987           33     541.069550                 424.675693
+GHCNh_2024_common    hgb  B2_distribution 362 369.814525 482.855296           33     525.390274                 273.093203
+GHCNh_2024_common    hgb B3_site_identity 362 358.126954 465.541854           33     497.491468                 322.961911
+GHCNh_2024_common  ridge  B2_distribution 362 407.634903 533.962173           33     465.677246                 346.379466
+GHCNh_2024_common  ridge B3_site_identity 362 418.700623 543.445015           33     540.298026                 424.792996

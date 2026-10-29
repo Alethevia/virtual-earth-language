@@ -1,0 +1,227 @@
+{
+  "hgb__B0_calendar_lags": {
+    "legacy": {
+      "max_iter": 200,
+      "learning_rate": 0.05,
+      "max_leaf_nodes": 7,
+      "min_samples_leaf": 20,
+      "l2_regularization": 10.0,
+      "early_stopping": false,
+      "random_state": 20261028
+    },
+    "ghcnh": {
+      "max_iter": 200,
+      "learning_rate": 0.05,
+      "max_leaf_nodes": 7,
+      "min_samples_leaf": 20,
+      "l2_regularization": 10.0,
+      "early_stopping": false,
+      "random_state": 20261028
+    },
+    "changed": false
+  },
+  "hgb__B1_aggregated": {
+    "legacy": {
+      "max_iter": 200,
+      "learning_rate": 0.05,
+      "max_leaf_nodes": 15,
+      "min_samples_leaf": 20,
+      "l2_regularization": 1.0,
+      "early_stopping": false,
+      "random_state": 20261028
+    },
+    "ghcnh": {
+      "max_iter": 200,
+      "learning_rate": 0.05,
+      "max_leaf_nodes": 15,
+      "min_samples_leaf": 20,
+      "l2_regularization": 10.0,
+      "early_stopping": false,
+      "random_state": 20261028
+    },
+    "changed": true
+  },
+  "hgb__B2_distribution": {
+    "legacy": {
+      "max_iter": 200,
+      "learning_rate": 0.05,
+      "max_leaf_nodes": 7,
+      "min_samples_leaf": 20,
+      "l2_regularization": 10.0,
+      "early_stopping": false,
+      "random_state": 20261028
+    },
+    "ghcnh": {
+      "max_iter": 200,
+      "learning_rate": 0.05,
+      "max_leaf_nodes": 15,
+      "min_samples_leaf": 20,
+      "l2_regularization": 10.0,
+      "early_stopping": false,
+      "random_state": 20261028
+    },
+    "changed": true
+  },
+  "hgb__B3_site_identity": {
+    "legacy": {
+      "max_iter": 200,
+      "learning_rate": 0.05,
+      "max_leaf_nodes": 15,
+      "min_samples_leaf": 20,
+      "l2_regularization": 1.0,
+      "early_stopping": false,
+      "random_state": 20261028
+    },
+    "ghcnh": {
+      "max_iter": 200,
+      "learning_rate": 0.05,
+      "max_leaf_nodes": 15,
+      "min_samples_leaf": 20,
+      "l2_regularization": 1.0,
+      "early_stopping": false,
+      "random_state": 20261028
+    },
+    "changed": false
+  },
+  "ridge__B0_calendar_lags": {
+    "legacy": {
+      "alpha": 10.0
+    },
+    "ghcnh": {
+      "alpha": 10.0
+    },
+    "changed": false
+  },
+  "ridge__B1_aggregated": {
+    "legacy": {
+      "alpha": 1.0
+    },
+    "ghcnh": {
+      "alpha": 1.0
+    },
+    "changed": false
+  },
+  "ridge__B2_distribution": {
+    "legacy": {
+      "alpha": 10.0
+    },
+    "ghcnh": {
+      "alpha": 10.0
+    },
+    "changed": false
+  },
+  "ridge__B3_site_identity": {
+    "legacy": {
+      "alpha": 100.0
+    },
+    "ghcnh": {
+      "alpha": 100.0
+    },
+    "changed": false
+  },
+  "hgb__identity_scramble_17": {
+    "legacy": {
+      "max_iter": 200,
+      "learning_rate": 0.05,
+      "max_leaf_nodes": 7,
+      "min_samples_leaf": 20,
+      "l2_regularization": 10.0,
+      "early_stopping": false,
+      "random_state": 20261028
+    },
+    "ghcnh": {
+      "max_iter": 200,
+      "learning_rate": 0.05,
+      "max_leaf_nodes": 15,
+      "min_samples_leaf": 20,
+      "l2_regularization": 1.0,
+      "early_stopping": false,
+      "random_state": 20261028
+    },
+    "changed": true
+  },
+  "hgb__identity_scramble_29": {
+    "legacy": {
+      "max_iter": 200,
+      "learning_rate": 0.05,
+      "max_leaf_nodes": 7,
+      "min_samples_leaf": 20,
+      "l2_regularization": 10.0,
+      "early_stopping": false,
+      "random_state": 20261028
+    },
+    "ghcnh": {
+      "max_iter": 200,
+      "learning_rate": 0.05,
+      "max_leaf_nodes": 15,
+      "min_samples_leaf": 20,
+      "l2_regularization": 10.0,
+      "early_stopping": false,
+      "random_state": 20261028
+    },
+    "changed": true
+  },
+  "hgb__identity_scramble_43": {
+    "legacy": {
+      "max_iter": 200,
+      "learning_rate": 0.05,
+      "max_leaf_nodes": 15,
+      "min_samples_leaf": 20,
+      "l2_regularization": 10.0,
+      "early_stopping": false,
+      "random_state": 20261028
+    },
+    "ghcnh": {
+      "max_iter": 200,
+      "learning_rate": 0.05,
+      "max_leaf_nodes": 7,
+      "min_samples_leaf": 20,
+      "l2_regularization": 10.0,
+      "early_stopping": false,
+      "random_state": 20261028
+    },
+    "changed": true
+  },
+  "hgb__identity_scramble_61": {
+    "legacy": {
+      "max_iter": 200,
+      "learning_rate": 0.05,
+      "max_leaf_nodes": 15,
+      "min_samples_leaf": 20,
+      "l2_regularization": 1.0,
+      "early_stopping": false,
+      "random_state": 20261028
+    },
+    "ghcnh": {
+      "max_iter": 200,
+      "learning_rate": 0.05,
+      "max_leaf_nodes": 15,
+      "min_samples_leaf": 20,
+      "l2_regularization": 1.0,
+      "early_stopping": false,
+      "random_state": 20261028
+    },
+    "changed": false
+  },
+  "hgb__identity_scramble_79": {
+    "legacy": {
+      "max_iter": 200,
+      "learning_rate": 0.05,
+      "max_leaf_nodes": 7,
+      "min_samples_leaf": 20,
+      "l2_regularization": 10.0,
+      "early_stopping": false,
+      "random_state": 20261028
+    },
+    "ghcnh": {
+      "max_iter": 200,
+      "learning_rate": 0.05,
+      "max_leaf_nodes": 7,
+      "min_samples_leaf": 20,
+      "l2_regularization": 10.0,
+      "early_stopping": false,
+      "random_state": 20261028
+    },
+    "changed": false
+  }
+}

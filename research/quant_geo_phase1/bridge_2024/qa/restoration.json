@@ -1,0 +1,65 @@
+{
+  "status": "EXACT_MODEL_INPUT_RESTORED",
+  "files_verified": 124,
+  "original_file_hashes_matched": 119,
+  "boundary_archive_changes": [
+    {
+      "actual": {
+        "file": "GHCNh_USW00014733_2026.parquet",
+        "source": "https://www.ncei.noaa.gov/oa/global-historical-climatology-network/hourly/access/by-year/2026/parquet/GHCNh_USW00014733_2026.parquet",
+        "sha256": "529586081298804ac47af658089fa6c468e94cdbb05b7fc8777e9cd0e45db01a",
+        "bytes": 1845724,
+        "retrieved_utc": "2026-10-29T23:30:33.367943+00:00"
+      },
+      "original_sha256": "90c423b9dc40664a6efcbd091330266f06f840e8589347d4355a3ac70fa73198",
+      "changed": true
+    },
+    {
+      "actual": {
+        "file": "GHCNh_USW00014771_2026.parquet",
+        "source": "https://www.ncei.noaa.gov/oa/global-historical-climatology-network/hourly/access/by-year/2026/parquet/GHCNh_USW00014771_2026.parquet",
+        "sha256": "4107c837ce23c290754aa880db376746c132a92cc029d6b740a49c86048d4983",
+        "bytes": 1552371,
+        "retrieved_utc": "2026-10-29T23:30:36.968616+00:00"
+      },
+      "original_sha256": "7a1ccd3aec583cee69b2eb9687dfe564801241bd52c7e399b8b05c56e4862048",
+      "changed": true
+    },
+    {
+      "actual": {
+        "file": "GHCNh_USW00014735_2026.parquet",
+        "source": "https://www.ncei.noaa.gov/oa/global-historical-climatology-network/hourly/access/by-year/2026/parquet/GHCNh_USW00014735_2026.parquet",
+        "sha256": "003d7a0461600b2d6c13eea4570ecc547c7e7c7be76612aefc08b24569da33e4",
+        "bytes": 1669490,
+        "retrieved_utc": "2026-10-29T23:30:47.400785+00:00"
+      },
+      "original_sha256": "49ebdc17f5e415f5bd15a6fab611242c1c4340dcc5f0468309d3829ef96cac50",
+      "changed": true
+    },
+    {
+      "actual": {
+        "file": "GHCNh_USW00014732_2026.parquet",
+        "source": "https://www.ncei.noaa.gov/oa/global-historical-climatology-network/hourly/access/by-year/2026/parquet/GHCNh_USW00014732_2026.parquet",
+        "sha256": "f6b3d418f6dc26706342855337731aa59f3542d9bc3edb91bd05623304501372",
+        "bytes": 1446293,
+        "retrieved_utc": "2026-10-29T23:30:53.944802+00:00"
+      },
+      "original_sha256": "11915d20d652817068bc339cedc1c9bc442886b7eae55ad329f216b110ab3a9a",
+      "changed": true
+    },
+    {
+      "actual": {
+        "file": "GHCNh_USW00004781_2026.parquet",
+        "source": "https://www.ncei.noaa.gov/oa/global-historical-climatology-network/hourly/access/by-year/2026/parquet/GHCNh_USW00004781_2026.parquet",
+        "sha256": "15c07f70b929b0dfdb5ef3473628c5cadca0ed6c196e3368ff9b6ee31b38d49e",
+        "bytes": 1312131,
+        "retrieved_utc": "2026-10-29T23:31:04.765626+00:00"
+      },
+      "original_sha256": "64d0a203e499bf6bec18f6969dff43a1e0f1fbe0a42f5499a858d15cbfe51191",
+      "changed": true
+    }
+  ],
+  "verified_utc": "2026-10-29T23:31:17.671895+00:00",
+  "daily_sha256": "a3d182d6f6168d06d51460f485b8b139566432a7afdabfae4df9ff95f74f5260",
+  "note": "Unchanged cached records retain original retrieval times. Revised 2026 files have new hashes; the full model-input daily CSV is byte-identical."
+}

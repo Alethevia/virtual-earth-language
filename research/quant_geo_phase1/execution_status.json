@@ -37,7 +37,7 @@
   "held_out_high_load_days": 33,
   "results": "qa/empirical_20261029",
   "repeat_predictions_identical": true,
-  "offline_checks_total_after_followup": 43,
+  "offline_checks_total_after_followup": 49,
   "posthoc_2024_diagnostics": "DIAGNOSTICS_2024.md",
   "temporal_replication_2025": {
     "status": "BLOCKED_DATA_COVERAGE",
@@ -49,5 +49,11 @@
     "status": "COMPLETED_SCREEN_NOT_PASSED",
     "model_fit_calls": 65,
     "details": "ghcnh_v1/execution_status.json"
+  },
+  "same_version_bridge": {
+    "status": "POST_HOC_COMPLETED",
+    "bridge_model_fits": 13,
+    "sensitivity_model_fits": 1,
+    "details": "bridge_2024/execution_status.json"
   }
 }

@@ -1,0 +1,37 @@
+{
+  "status": "POST_HOC_PARAMETER_SENSITIVITY",
+  "model_fits": 1,
+  "parameter_searches": 0,
+  "legacy_B2_parameters": {
+    "max_iter": 200,
+    "learning_rate": 0.05,
+    "max_leaf_nodes": 7,
+    "min_samples_leaf": 20,
+    "l2_regularization": 10.0,
+    "early_stopping": false,
+    "random_state": 20261028
+  },
+  "current_B2_parameters": {
+    "max_iter": 200,
+    "learning_rate": 0.05,
+    "max_leaf_nodes": 15,
+    "min_samples_leaf": 20,
+    "l2_regularization": 10.0,
+    "early_stopping": false,
+    "random_state": 20261028
+  },
+  "B3_parameters_identical": true,
+  "training_days": 1775,
+  "lock": {
+    "status": "POST_HOC_SENSITIVITY_BEFORE_ONE_EXTRA_FIT",
+    "daily_sha256": "a3d182d6f6168d06d51460f485b8b139566432a7afdabfae4df9ff95f74f5260",
+    "sha256": {
+      "bridge_baseline_sensitivity.py": "0a71272ce2c12309d83733f1f928316731863dd85955e5054a4ac4847a782119",
+      "bridge_2024/SENSITIVITY_PLAN.md": "1ec4225aabeba18636231c5a08046f401caa737bead0bd411c963acd2150499c",
+      "ghcnh_v1/qa/model_selection.json": "48d22da5c8649770a3dd87f356825021733d223ec93e1b9e4a7f4e219b1c70b8",
+      "qa/empirical_20261029/model_selection.json": "3cd3159034aa97ebcf7b06a6cb9d7a72bc7364742c04d242e626792bbb38fde4"
+    }
+  },
+  "source_sha256": "0a71272ce2c12309d83733f1f928316731863dd85955e5054a4ac4847a782119",
+  "limitation": "Diagnostic after observing the bridge. Neither comparator replaces either published primary model or restores an independent holdout."
+}

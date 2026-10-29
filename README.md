@@ -38,3 +38,5 @@ npm run dev
 ```
 
 Cesium assets are generated from the locked npm dependency during installation/build. Generated third-party asset copies are no longer tracked. The viewer is a visualization shell with sample GeoJSON, not a validated geospatial analysis system. See [AUDIT.md](AUDIT.md).
+
+The [same-version 2024–2025 bridge](research/quant_geo_phase1/bridge_2024/RESULTS.md) reproduces all 2025 predictions and adds descriptive 2024 comparisons. HGB point estimates are positive on both GHCNh years, but their intervals include zero and ridge disagrees in 2024; part of the change from the legacy study reflects a worse baseline. No new independent-validation claim is made.

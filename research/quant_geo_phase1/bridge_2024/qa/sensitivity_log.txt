@@ -1,0 +1,10 @@
+ year  scope                 model   n        MAE       RMSE  high_load_n  high_load_MAE  high_load_underprediction
+ 2024 native   legacy_parameter_B2 365 378.511374 492.650605           33     516.982752                 268.360778
+ 2024 native selected_parameter_B2 365 369.624720 482.195806           33     525.390274                 273.093203
+ 2024 native          unchanged_B3 365 357.164084 464.386902           33     497.491468                 322.961911
+ 2024 common   legacy_parameter_B2 362 378.544839 492.933306           33     516.982752                 268.360778
+ 2024 common selected_parameter_B2 362 369.814525 482.855296           33     525.390274                 273.093203
+ 2024 common          unchanged_B3 362 358.126954 465.541854           33     497.491468                 322.961911
+ 2025 native   legacy_parameter_B2 338 468.241093 613.988723           31     601.846815                 460.934651
+ 2025 native selected_parameter_B2 338 443.448222 592.350014           31     592.528449                 445.017916
+ 2025 native          unchanged_B3 338 427.495634 559.164938           31     554.890638                 442.641967

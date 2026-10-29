@@ -1,0 +1,21 @@
+{
+  "status": "POST_HOC_BRIDGE_AND_SENSITIVITY_COMPLETED",
+  "date": "2026-10-29",
+  "plan_commit": "fd3bcce92f9c7fa3a5f13f51f59b5c67a0c60ec7",
+  "recovery_amendment_commit": "b9b60db431e9eacc6eee1a7136135aa91ff71406",
+  "sensitivity_plan_commit": "d045f255ef96288bb748c24f5dfb47309a68d98d",
+  "bridge_model_fits": 13,
+  "sensitivity_model_fits": 1,
+  "new_parameter_searches": 0,
+  "offline_checks_passed": 49,
+  "reproduced_2025_max_abs_difference_mw": 3.637978807091713e-12,
+  "frozen_model_input_sha256": "a3d182d6f6168d06d51460f485b8b139566432a7afdabfae4df9ff95f74f5260",
+  "model_input_byte_identical": true,
+  "unchanged_archive_hashes": 119,
+  "revised_boundary_archive_hashes": 5,
+  "metric_values_independently_recomputed": 296,
+  "bridge_interval_means_recomputed": 30,
+  "independent_validation": false,
+  "primary_2025_screen_changed": false,
+  "conclusion": "HGB positive point estimates on both GHCNh years remain uncertain; ridge differs in 2024. Relative improvement partly reflects baseline degradation across data versions."
+}

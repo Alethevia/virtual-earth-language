@@ -1,0 +1,54 @@
+test_changed_frozen_prediction_rejected (test_bridge.BridgeTests.test_changed_frozen_prediction_rejected) ... ok
+test_fit_excludes_both_evaluation_years (test_bridge.BridgeTests.test_fit_excludes_both_evaluation_years) ... ok
+test_full_calendar_includes_trailing_missing_days (test_bridge.BridgeTests.test_full_calendar_includes_trailing_missing_days) ... ok
+test_only_boundary_archive_revision_can_be_considered (test_bridge.BridgeTests.test_only_boundary_archive_revision_can_be_considered) ... ok
+test_pairing_checks_actual_load (test_bridge.BridgeTests.test_pairing_checks_actual_load) ... ok
+test_revised_archive_cannot_change_model_input (test_bridge.BridgeTests.test_revised_archive_cannot_change_model_input) ... ok
+test_dtype_promotion_does_not_hide_value_changes (test_followup.FollowupTests.test_dtype_promotion_does_not_hide_value_changes) ... ok
+test_locked_inputs_match (test_followup.FollowupTests.test_locked_inputs_match) ... ok
+test_missing_calendar_day_breaks_episode (test_followup.FollowupTests.test_missing_calendar_day_breaks_episode) ... ok
+test_modified_predictions_rejected (test_followup.FollowupTests.test_modified_predictions_rejected) ... ok
+test_under_over_accounting (test_followup.FollowupTests.test_under_over_accounting) ... ok
+test_999_is_quarantined_not_accepted (test_ghcnh.GHCNhTests.test_999_is_quarantined_not_accepted) ... ok
+test_celsius_not_scaled (test_ghcnh.GHCNhTests.test_celsius_not_scaled) ... ok
+test_conflicting_duplicates (test_ghcnh.GHCNhTests.test_conflicting_duplicates) ... ok
+test_lowercase_qc_and_unknown_source (test_ghcnh.GHCNhTests.test_lowercase_qc_and_unknown_source) ... ok
+test_source_specific_code (test_ghcnh.GHCNhTests.test_source_specific_code) ... ok
+test_wrong_identity (test_ghcnh.GHCNhTests.test_wrong_identity) ... ok
+test_constructed_identity_example (test_quant_geo_phase1.AlgebraTests.test_constructed_identity_example) ... ok
+test_heating_cooling_gap_same (test_quant_geo_phase1.AlgebraTests.test_heating_cooling_gap_same) ... ok
+test_jensen_exact_identity_random (test_quant_geo_phase1.AlgebraTests.test_jensen_exact_identity_random) ... ok
+test_spread_without_gap_above_threshold (test_quant_geo_phase1.AlgebraTests.test_spread_without_gap_above_threshold) ... ok
+test_feature_groups_nested (test_quant_geo_phase1.LeakageTests.test_feature_groups_nested) ... ok
+test_hyperparameter_selection_ignores_test_labels (test_quant_geo_phase1.LeakageTests.test_hyperparameter_selection_ignores_test_labels) ... ok
+test_lags_exclude_current_target (test_quant_geo_phase1.LeakageTests.test_lags_exclude_current_target) ... ok
+test_no_calendar_gap_shift (test_quant_geo_phase1.LeakageTests.test_no_calendar_gap_shift) ... ok
+test_shuffle_date_key_not_position (test_quant_geo_phase1.LeakageTests.test_shuffle_date_key_not_position) ... ok
+test_shuffle_only_changes_identity (test_quant_geo_phase1.LeakageTests.test_shuffle_only_changes_identity) ... ok
+test_splits_disjoint_and_2024_leap (test_quant_geo_phase1.LeakageTests.test_splits_disjoint_and_2024_leap) ... ok
+test_training_only_weights (test_quant_geo_phase1.LeakageTests.test_training_only_weights) ... ok
+test_conflicting_duplicates_rejected (test_quant_geo_phase1.ParsingTests.test_conflicting_duplicates_rejected) ... ok
+test_dewpoint_above_temp_rejected (test_quant_geo_phase1.ParsingTests.test_dewpoint_above_temp_rejected) ... ok
+test_dst_expected_hours (test_quant_geo_phase1.ParsingTests.test_dst_expected_hours) ... ok
+test_duplicate_subhour_readings_not_double_hours (test_quant_geo_phase1.ParsingTests.test_duplicate_subhour_readings_not_double_hours) ... ok
+test_fall_back_two_distinct_hours (test_quant_geo_phase1.ParsingTests.test_fall_back_two_distinct_hours) ... ok
+test_missing_zone_hour_removes_day (test_quant_geo_phase1.ParsingTests.test_missing_zone_hour_removes_day) ... ok
+test_negative_load_rejected (test_quant_geo_phase1.ParsingTests.test_negative_load_rejected) ... ok
+test_noaa_html_is_not_data (test_quant_geo_phase1.ParsingTests.test_noaa_html_is_not_data) ... ok
+test_system_peak_not_sum_of_zonal_peaks (test_quant_geo_phase1.ParsingTests.test_system_peak_not_sum_of_zonal_peaks) ... ok
+test_unknown_timezone_rejected (test_quant_geo_phase1.ParsingTests.test_unknown_timezone_rejected) ... ok
+test_weather_daily_coverage_no_imputation (test_quant_geo_phase1.ParsingTests.test_weather_daily_coverage_no_imputation) ... ok
+test_weather_flags_and_sentinel (test_quant_geo_phase1.ParsingTests.test_weather_flags_and_sentinel) ... ok
+test_zip_schema (test_quant_geo_phase1.ParsingTests.test_zip_schema) ... ok
+test_analysis_cannot_use_missing_data (test_quant_geo_phase1.ReportingTests.test_analysis_cannot_use_missing_data) ... ok
+test_analysis_rejects_stale_preparation_code (test_quant_geo_phase1.ReportingTests.test_analysis_rejects_stale_preparation_code) ... ok
+test_analysis_requires_successful_interval_check (test_quant_geo_phase1.ReportingTests.test_analysis_requires_successful_interval_check) ... ok
+test_constant_block_bootstrap (test_quant_geo_phase1.ReportingTests.test_constant_block_bootstrap) ... ok
+test_invalid_probability_weights (test_quant_geo_phase1.ReportingTests.test_invalid_probability_weights) ... ok
+test_metric_subset (test_quant_geo_phase1.ReportingTests.test_metric_subset) ... ok
+test_request_list (test_quant_geo_phase1.ReportingTests.test_request_list) ... ok
+
+----------------------------------------------------------------------
+Ran 49 tests in 0.463s
+
+OK

@@ -1,0 +1,43 @@
+{
+  "status": "POST_HOC_SAME_VERSION_BRIDGE",
+  "model_fits": 13,
+  "new_parameter_searches": 0,
+  "training_days": 1775,
+  "training_end": "2023-12-31",
+  "new_2024_days": 365,
+  "legacy_2024_days": 362,
+  "common_2024_days": 362,
+  "frozen_2025_max_difference_mw": 3.637978807091713e-12,
+  "threshold_mw": 24966.5,
+  "lock": {
+    "status": "POST_HOC_PLAN_BEFORE_BRIDGE_EXECUTION",
+    "base_commit": "e91145ccd4ea0edb5ea8bb5c735ead2a9bf04ae7",
+    "sha256": {
+      "bridge_2024.py": "85043452a65f9f8e6c46de21ba49488471d03e839b7624cddcfc7812ffddbbb5",
+      "quant_geo_phase1.py": "8698cacde6e7785ca405ea352b91d428ae34c0582e5756a43faa48f72565c61d",
+      "ghcnh_migrate.py": "bc50a4bf4eecdb73d049561fbced3d9d214de9fb272dd7a613f4d880cca59288",
+      "bridge_2024/PLAN.md": "6bce24aa47880b0ea9cf8a9cefa953830d337a28d48a9e05850d542988c13761",
+      "ghcnh_v1/protocol.json": "fb18e8db6d8714b8ff864a9e7618df84b87db59e1647805204a7b91dc6ac8e7d",
+      "ghcnh_v1/qa/model_selection.json": "48d22da5c8649770a3dd87f356825021733d223ec93e1b9e4a7f4e219b1c70b8",
+      "ghcnh_v1/qa/test_predictions.csv": "f1465d92a45c70b8bf8ccebf6c1c8233bd553b9f9b3d4052a7a1898b28b40fd0",
+      "ghcnh_v1/qa/preparation_provenance.json": "36f42b620624763c922dc8711b5ca6f3456487d51e11b1b83e509bd2bf068506",
+      "ghcnh_v1/qa/download_manifest.json": "1d9c603aab3b864588016fd7d78f27cead646ede463ea5b4996d50e76f74eda4",
+      "qa/empirical_20261029/test_predictions.csv": "a1609152436425d373f551a57b44b89f1406e3102dd42b85c7e6fc18e2497f2c",
+      "qa/empirical_20261029/model_selection.json": "3cd3159034aa97ebcf7b06a6cb9d7a72bc7364742c04d242e626792bbb38fde4"
+    }
+  },
+  "source_sha256": "11fd8a0c3a0777d93529f96f4bf62da76b5d748d151f6b07b9fab637902123d0",
+  "data_sha256": "a3d182d6f6168d06d51460f485b8b139566432a7afdabfae4df9ff95f74f5260",
+  "versions": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "sklearn": "1.8.0"
+  },
+  "limitations": [
+    "Both evaluation years already observed; bridge is descriptive, not new independent validation.",
+    "Historical same-date version comparison includes training samples, weather values and previously selected parameters; not pure sensor measurement causality.",
+    "Supplementary intervals span every calendar day; the published 2025 primary interval is preserved unchanged.",
+    "No pooled two-year success claim, test-year tuning, geographic transfer or day-ahead forecast validation."
+  ]
+}

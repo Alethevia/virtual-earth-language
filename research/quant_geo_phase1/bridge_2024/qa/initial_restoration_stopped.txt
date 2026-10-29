@@ -1,0 +1,121 @@
+downloaded nyiso_201902.zip 52562
+downloaded nyiso_201901.zip 58566
+downloaded nyiso_201903.zip 57948
+downloaded nyiso_201904.zip 56230
+downloaded nyiso_201906.zip 57122
+downloaded nyiso_201905.zip 58359
+downloaded nyiso_201909.zip 56980
+downloaded nyiso_201907.zip 60252
+downloaded nyiso_201908.zip 59702
+downloaded nyiso_201912.zip 58474
+downloaded nyiso_201910.zip 58328
+downloaded nyiso_201911.zip 56543
+downloaded nyiso_202001.zip 58479
+downloaded nyiso_202002.zip 54505
+downloaded nyiso_202003.zip 57893
+downloaded nyiso_202004.zip downloaded nyiso_202006.zip55747
+ 61506
+downloaded nyiso_202005.zip 57901
+downloaded nyiso_202008.zip 79535
+downloaded nyiso_202009.zip 75967
+downloaded nyiso_202007.zip 79784
+downloaded nyiso_202011.zip 76323
+downloaded nyiso_202010.zip 77987
+downloaded nyiso_202012.zip 79098
+downloaded nyiso_202102.zip 71074
+downloaded nyiso_202103.zip 78263
+downloaded nyiso_202101.zip 78849
+downloaded nyiso_202105.zip 78388
+downloaded nyiso_202106.zip 77185
+downloaded nyiso_202104.zip 75617
+downloaded nyiso_202108.zip 79891
+downloaded nyiso_202107.zip 79781
+downloaded nyiso_202109.zip 76655
+downloaded nyiso_202110.zip 78812
+downloaded nyiso_202112.zip 78849
+downloaded nyiso_202111.zip 76145
+downloaded nyiso_202203.zip 78152
+downloaded nyiso_202201.zip 78691
+downloaded nyiso_202202.zip 70798
+downloaded nyiso_202206.zip 76676
+downloaded nyiso_202204.zip 75546
+downloaded nyiso_202205.zip 78528
+downloaded nyiso_202208.zip 79930
+downloaded nyiso_202209.zip 76468
+downloaded nyiso_202207.zip 79990
+downloaded nyiso_202211.zip 76140
+downloaded nyiso_202210.zip 78311
+downloaded nyiso_202212.zip 78606
+downloaded nyiso_202303.zip 78155
+downloadeddownloaded nyiso_202302.zip  nyiso_202301.zip 7867570921
+
+downloaded nyiso_202304.zip 75805
+downloaded nyiso_202305.zip 78344
+downloaded nyiso_202306.zip 76442
+downloaded nyiso_202309.zip 76406
+downloaded nyiso_202307.zip 79859
+downloaded nyiso_202308.zip 79281
+downloaded nyiso_202311.zip 76122
+downloaded nyiso_202312.zip 78761
+downloaded nyiso_202310.zip 78720
+downloaded nyiso_202401.zip 78427
+downloaded nyiso_202403.zip 78264
+downloaded nyiso_202402.zip 73592
+downloaded nyiso_202404.zip 75746
+downloaded nyiso_202405.zip 78571
+downloaded nyiso_202406.zip 76795
+downloaded nyiso_202407.zip 79952
+downloaded nyiso_202408.zip 79471
+downloaded nyiso_202409.zip 76518
+downloaded nyiso_202411.zip 76200
+downloaded nyiso_202412.zip 78780
+downloaded nyiso_202410.zip 78791
+downloaded nyiso_202502.zip 70923
+downloaded nyiso_202503.zip 78488
+downloaded nyiso_202501.zip 78666
+downloaded nyiso_202504.zip 75897
+downloaded nyiso_202505.zip 78326
+downloaded nyiso_202506.zip 76689
+downloaded nyiso_202508.zip 79458
+downloaded nyiso_202507.zip 79988
+downloaded nyiso_202509.zip 76541
+downloaded nyiso_202511.zip 76213
+downloaded nyiso_202510.zip 78807
+downloaded nyiso_202512.zip 78756
+downloaded GHCNh_USW00014733_2019.parquet 1496373
+downloaded GHCNh_USW00014733_2020.parquet 1430739
+downloaded GHCNh_USW00014733_2021.parquet 1361044
+downloaded GHCNh_USW00014733_2024.parquet 1421172
+downloaded GHCNh_USW00014733_2023.parquet 1427165
+downloaded GHCNh_USW00014733_2022.parquet 1486569
+downloaded GHCNh_USW00014733_2026.parquet 1845724
+downloaded GHCNh_USW00014771_2019.parquet 1368234
+downloaded GHCNh_USW00014733_2025.parquet 1404040
+downloaded GHCNh_USW00014771_2022.parquet 1316845
+downloaded GHCNh_USW00014771_2021.parquet 1306630
+downloaded GHCNh_USW00014771_2020.parquet 1305977
+Traceback (most recent call last):
+  File "/workspace/scratch/e571836a46e5/repos/virtual-earth-language/research/quant_geo_phase1/bridge_2024.py", line 172, in <module>
+    with threadpool_limits(limits=1):globals()[args.command]()
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/e571836a46e5/repos/virtual-earth-language/research/quant_geo_phase1/bridge_2024.py", line 38, in restore
+    names=list(pool.map(fetch,manifest['files']))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/concurrent/futures/_base.py", line 619, in result_iterator
+    yield _result_or_cancel(fs.pop())
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/concurrent/futures/_base.py", line 317, in _result_or_cancel
+    return fut.result(timeout)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/e571836a46e5/repos/virtual-earth-language/research/quant_geo_phase1/bridge_2024.py", line 35, in fetch
+    if actual['sha256']!=row['sha256']:raise ValueError('Archive revision: '+row['file'])
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Archive revision: GHCNh_USW00014733_2026.parquet

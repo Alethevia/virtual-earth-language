@@ -28,6 +28,7 @@ jobs:
       - run: python -m pip install -r requirements.txt
       - run: python -m unittest -v
       - run: python run_experiment.py --out results/ci
+      - run: python plot_results.py --summary results/ci/summary.json --out results/ci/figures
       - uses: actions/upload-artifact@v4
         with:
           name: motor-fault-benchmark-results

@@ -1,0 +1,22 @@
+{
+  "data_kind": "ARTIFICIAL_OFFLINE_FIXTURE_NOT_OBSERVATIONS",
+  "selected_model_pipelines_checked": 13,
+  "pipelines": [
+    "hgb__B0_calendar_lags",
+    "hgb__B1_aggregated",
+    "hgb__B2_distribution",
+    "hgb__B3_site_identity",
+    "ridge__B0_calendar_lags",
+    "ridge__B1_aggregated",
+    "ridge__B2_distribution",
+    "ridge__B3_site_identity",
+    "hgb__identity_scramble_17",
+    "hgb__identity_scramble_29",
+    "hgb__identity_scramble_43",
+    "hgb__identity_scramble_61",
+    "hgb__identity_scramble_79"
+  ],
+  "checks": "finite output and exactly 366 held-out synthetic dates",
+  "empirical_effects_measured": false,
+  "no_predictive_metrics_reported": true
+}

@@ -1,0 +1,29 @@
+{
+  "status": "OFFICIAL_DATA_DOWNLOADED_AND_PARSED__EMPIRICAL_MODELS_NOT_RUN",
+  "date": "2026-10-29",
+  "official_data_downloaded_files": 102,
+  "empirical_models_fit": 0,
+  "empirical_performance_claims": false,
+  "offline_artificial_fixture_tests_run": 30,
+  "offline_artificial_fixture_tests_passed": 30,
+  "download_failure": null,
+  "network_integration_verified": false,
+  "dependencies_tested": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "sklearn": "1.8.0",
+    "requests": "2.34.2",
+    "threadpoolctl": "3.6.0"
+  },
+  "protocol_sha256": "dabaa879b0292b877d1aab6f90f1e487f6ede618c4345afa38b2edd45f1acfae",
+  "source_sha256": "2bd1b31102bc4ccd725173b4c0207a2c83f7a307b4e837859ac772910cb0a8a5",
+  "no_trading_results": true,
+  "no_external_preregistration_claim": true,
+  "offline_artificial_selected_model_pipelines_checked": 13,
+  "official_data_download_verified": true,
+  "real_file_parsing_verified": true,
+  "remaining_integration_check": "Manually confirm NYISO interval label convention before empirical interpretation.",
+  "complete_load_days": 2192,
+  "complete_weather_days": 2145
+}

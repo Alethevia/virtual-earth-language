@@ -31,7 +31,7 @@ export default function CesiumViewer({ layers, onSelect }: Props) {
     })
 
     const handler = new Cesium.ScreenSpaceEventHandler(viewer.scene.canvas)
-    handler.setInputAction((movement) => {
+    handler.setInputAction((movement: { position: Cesium.Cartesian2 }) => {
       const picked = viewer.scene.pick(movement.position)
       if (picked && (picked as any).id) onSelect((picked as any).id)
       else onSelect(null)

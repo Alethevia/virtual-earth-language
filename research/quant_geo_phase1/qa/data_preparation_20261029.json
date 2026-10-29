@@ -1,0 +1,42 @@
+{
+  "duplicate_rows_removed": 0,
+  "complete_load_days": 2192,
+  "incomplete_load_days": 0,
+  "stations": {
+    "BUF": {
+      "id": "72528014733",
+      "names": [
+        "BUFFALO NIAGARA INTERNATIONAL AIRPOR, NY US"
+      ]
+    },
+    "SYR": {
+      "id": "72519014771",
+      "names": [
+        "SYRACUSE HANCOCK INTERNATIONAL AIRPORT, NY US"
+      ]
+    },
+    "ALB": {
+      "id": "72518014735",
+      "names": [
+        "ALBANY INTERNATIONAL AIRPORT, NY US"
+      ]
+    },
+    "LGA": {
+      "id": "72503014732",
+      "names": [
+        "LAGUARDIA AIRPORT, NY US"
+      ]
+    },
+    "ISP": {
+      "id": "72505004781",
+      "names": [
+        "ISLIP LI MACARTHUR AIRPORT, NY US"
+      ]
+    }
+  },
+  "start": "2019-01-01",
+  "end": "2024-12-31",
+  "complete_weather_days": 2145,
+  "protocol_sha256": "dabaa879b0292b877d1aab6f90f1e487f6ede618c4345afa38b2edd45f1acfae",
+  "raw_manifest_sha256": "c3a2fb2f1a614dbced3c20f8fcf173a157b402b894737347384ded1d40dab56f"
+}

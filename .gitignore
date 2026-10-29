@@ -97,3 +97,9 @@ upload.sh
 *secret*
 upload.sh
 oryx-build-commands.txt
+
+/web/public/cesium/
+/web/dist/
+/web/*.tsbuildinfo
+
+node_modules/

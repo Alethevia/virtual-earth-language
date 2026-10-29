@@ -19,14 +19,34 @@ jobs:
       - name: Install
         run: |
           python -m pip install -U pip
-          python -m pip install -U -r requirements.txt || true
+          python -m pip install -r requirements.txt
           python -m pip install -U pytest
 
       - name: Minimal example
         run: PYTHONPATH=. python experiments/minimal_run.py
 
       - name: Pytest
-        run: PYTHONPATH=. pytest -q
+        run: PYTHONPATH=. pytest tests -q
 
       - name: Verify repo (MWE)
         run: PYTHONPATH=. python scripts/verify_repo.py
+
+      - name: Geography offline checks
+        working-directory: research/quant_geo_phase1
+        run: |
+          python -m pip install -r requirements.txt
+          python -m unittest -v test_quant_geo_phase1.py
+
+  web:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+      - run: npm ci
+        working-directory: web
+      - run: npm run build
+        working-directory: web

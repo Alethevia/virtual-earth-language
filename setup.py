@@ -6,12 +6,11 @@ with open("README.md", "r", encoding="utf-8") as fh:
 setup(
     name="virtual-earth-language",
     version="0.1.0",
-    author="Your Name",
-    author_email="your.email@example.com",
-    description="Emergent Language Evolution in Multi-Agent Systems",
+    author="Alethevia",
+    description="Experimental spatial simulation and explicit symbol communication",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/yourusername/virtual-earth-language",
+    url="https://github.com/Alethevia/virtual-earth-language",
     packages=find_packages(),
     classifiers=[
         "Development Status :: 3 - Alpha",
@@ -24,7 +23,7 @@ setup(
         "Programming Language :: Python :: 3.10",
         "Topic :: Scientific/Engineering :: Artificial Intelligence",
     ],
-    python_requires=">=3.8",
+    python_requires=">=3.11",
     install_requires=[
         "torch>=2.0.0",
         "numpy>=1.21.0",
@@ -54,7 +53,7 @@ setup(
             "websockets>=10.0",
         ],
         "gpu": [
-            "torch[cuda]",
+            "torch",
         ],
     },
 )

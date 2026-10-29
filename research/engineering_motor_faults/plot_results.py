@@ -49,7 +49,8 @@ def validate_summary(payload):
                 if (d.get("metric") != metric or not isinstance(n, int)
                         or not isinstance(count, int) or n <= 0 or not 0 <= count <= n
                         or len(ci) != 2 or not all(math.isfinite(v) for v in (rate, *ci))
-                        or not 0 <= ci[0] <= rate <= ci[1] <= 1
+                        or not (-1e-12 <= ci[0] <= rate + 1e-12 and
+                                rate - 1e-12 <= ci[1] <= 1 + 1e-12)
                         or not math.isclose(count / n, rate, abs_tol=1e-12)):
                     raise ValueError(f"Invalid data: {filename}, {condition}, {method}")
 

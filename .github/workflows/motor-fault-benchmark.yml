@@ -1,0 +1,35 @@
+name: Motor fault benchmark
+on:
+  push:
+    paths:
+      - 'research/engineering_motor_faults/**'
+      - '.github/workflows/motor-fault-benchmark.yml'
+  pull_request:
+    paths:
+      - 'research/engineering_motor_faults/**'
+      - '.github/workflows/motor-fault-benchmark.yml'
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    defaults:
+      run:
+        working-directory: research/engineering_motor_faults
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - run: python -m pip install -r requirements.txt
+      - run: python -m unittest -v
+      - run: python run_experiment.py --out results/ci
+      - run: python plot_results.py --summary results/ci/summary.json --out results/ci/figures
+      - uses: actions/upload-artifact@v4
+        with:
+          name: motor-fault-benchmark-results
+          path: research/engineering_motor_faults/results/ci

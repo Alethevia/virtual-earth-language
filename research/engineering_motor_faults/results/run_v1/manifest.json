@@ -1,0 +1,24 @@
+{
+  "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+  "numpy": "2.3.5",
+  "scipy": "1.17.0",
+  "platform": "Linux-6.18.55-x86_64-with-glibc2.41",
+  "source_sha256": {
+    "motorbench.py": "caea2a328becfff82cf915511b157c76b7dd01ca43a2c884e1f2804c566a4834",
+    "controller.c": "80b771197795f9ecaf97e1ccaea41eaea6acce158eb960b50ec3c3f4774e2863",
+    "run_experiment.py": "159d565e256c99ce03dd889e1ff2548d44154809075318548b43727359ab654f",
+    "PROTOCOL.md": "113d8d9771e1f4d232fbd0bb515b2626b40a1d5d7cdb0906271a6f749aa84ccd"
+  },
+  "artifacts_sha256": {
+    "RESULTS.md": "c9777898c66cac95e4ae9153459794a4c4a6a78968218f7314f17d85a4e53e60",
+    "calibration_maxima.csv": "e89c42728a285d2c7798c1d54e412095d5dcf48eb01e1216832b41fc8a1d9e77",
+    "episode_metrics.csv": "628568c8bcec9687d0d742702006da8da49ab08a2df08432db7fcf099f83d43e",
+    "summary.json": "a30d0ffd5dd8d0c2cd36df95bdc4384db079f6d63755badab0c9f30af818648c",
+    "trace_bias.csv": "7d0d4b7224e7744610216a2f148a9adef171592ee9b81254be6cfa1e3b85aa60",
+    "trace_bias_shift.csv": "4d42a20f6acceee36afe075cd22ac7c55c28a352377dd99774a67d40bdc2e3a0",
+    "trace_drift.csv": "60d85adf16bacd5543d7b719258aec0bdd0f55dde45f97863d08c6108c78dfff",
+    "trace_healthy.csv": "70410d90078e855f1a456cf3d6e2e99402ef11c4ddef663fc9e577b67a03864d",
+    "trace_healthy_shift.csv": "47019017a8d9ac5fe3a2183ff5eab41e45852eaff43b40c3fce15f0da20596d0",
+    "trace_stuck.csv": "7d931e1b0e6bac5ef72bbb810cda7d7a64e063943be920dbafd9d0de674e258e"
+  }
+}

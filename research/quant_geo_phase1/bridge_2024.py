@@ -20,22 +20,37 @@ ROOT=q.ROOT/'bridge_2024'
 
 def check_lock():
     lock=json.loads((ROOT/'lock.json').read_text())
-    for name,digest in lock['sha256'].items():
+    expected=dict(lock['sha256'])
+    amendment=ROOT/'amendment_01.json'
+    if amendment.exists():
+        change=json.loads(amendment.read_text())
+        if change['original_source_sha256']!=expected['bridge_2024.py']:raise ValueError('Wrong amendment base')
+        expected['bridge_2024.py']=change['amended_source_sha256']
+    for name,digest in expected.items():
         if q.sha256(q.ROOT/name)!=digest:raise ValueError('Bridge input changed: '+name)
     g.check_lock()
     return lock
 
 
+def boundary_revision_allowed(name):
+    return name.startswith('GHCNh_') and name.endswith('_2026.parquet')
+
+
+def require_frozen_daily(actual,expected):
+    if actual!=expected:raise ValueError('Rebuilt input differs from the published snapshot; no bridge will run')
+
+
 def restore():
-    """Recover the exact published input snapshot, refusing archive revisions."""
+    """Recover exact published model input; log conditional boundary archive updates."""
     check_lock();root=g.ROOT;raw=root/'raw';raw.mkdir(exist_ok=True)
     manifest=json.loads((root/'qa/download_manifest.json').read_text())
     def fetch(row):
         actual=g.retrieve((row['source'],raw/row['file'],row))
-        if actual['sha256']!=row['sha256']:raise ValueError('Archive revision: '+row['file'])
-        return row['file']
+        if actual['sha256']!=row['sha256'] and not boundary_revision_allowed(row['file']):
+            raise ValueError('Archive revision outside boundary year: '+row['file'])
+        return dict(actual=actual,original_sha256=row['sha256'],changed=actual['sha256']!=row['sha256'])
     with ThreadPoolExecutor(max_workers=3) as pool:
-        names=list(pool.map(fetch,manifest['files']))
+        recovered=list(pool.map(fetch,manifest['files']))
     cfg=q.read_protocol(root);loads=[]
     for row in manifest['files']:
         if row['file'].endswith('.zip'):
@@ -55,16 +70,24 @@ def restore():
     prepared=root/'prepared';prepared.mkdir(exist_ok=True)
     candidate=prepared/'daily.restored.csv';data.index.name='date';data.to_csv(candidate)
     expected=json.loads((root/'qa/preparation_provenance.json').read_text())
-    if q.sha256(candidate)!=expected['daily_sha256']:
-        raise ValueError('Rebuilt input differs from the published snapshot; no bridge will run')
+    require_frozen_daily(q.sha256(candidate),expected['daily_sha256'])
     candidate.replace(prepared/'daily.csv')
-    shutil.copy2(root/'qa/download_manifest.json',raw/'download_manifest.json')
+    # Preserve the immutable published manifest in qa/. The current local raw
+    # manifest records actual restored bytes, including conditional revisions.
+    current=dict(manifest,files=[r['actual'] for r in recovered])
+    q.dump_json(raw/'download_manifest.json',current)
     shutil.copy2(root/'qa/preparation_audit.json',prepared/'audit.json')
-    shutil.copy2(root/'qa/preparation_provenance.json',prepared/'provenance.json')
-    q.dump_json(ROOT/'qa/restoration.json',dict(status='EXACT_SNAPSHOT_RESTORED',files_verified=len(names),
+    restored_provenance=dict(expected,raw_manifest_sha256=q.sha256(raw/'download_manifest.json'),
+        original_provenance_sha256=q.sha256(root/'qa/preparation_provenance.json'))
+    q.dump_json(prepared/'provenance.json',restored_provenance)
+    q.dump_json(ROOT/'qa/restored_download_manifest.json',current)
+    q.dump_json(ROOT/'qa/restored_preparation_provenance.json',restored_provenance)
+    q.dump_json(ROOT/'qa/restoration.json',dict(status='EXACT_MODEL_INPUT_RESTORED',files_verified=len(recovered),
+        original_file_hashes_matched=sum(not r['changed'] for r in recovered),
+        boundary_archive_changes=[r for r in recovered if r['changed']],
         verified_utc=datetime.now(timezone.utc).isoformat(),daily_sha256=expected['daily_sha256'],
-        note='Download-manifest timestamps retain original retrieval times; this is the new verification time.'))
-    print('Exact input snapshot restored:',len(names),'files',flush=True)
+        note='Unchanged cached records retain original retrieval times. Revised 2026 files have new hashes; the full model-input daily CSV is byte-identical.'))
+    print('Exact model input restored:',len(recovered),'files',flush=True)
 
 
 def fit_mask(index,valid,cfg):
@@ -98,6 +121,7 @@ def calendar_interval(differences,year,block,replicates,seed):
 def analyse():
     lock=check_lock();root=g.ROOT;cfg=q.read_protocol(root)
     provenance=q.validate_analysis_inputs(root)
+    require_frozen_daily(provenance['daily_sha256'],json.loads((root/'qa/preparation_provenance.json').read_text())['daily_sha256'])
     if provenance['migration_source_sha256']!=q.sha256(Path(g.__file__)):
         raise ValueError('Stale migration code')
     data=pd.read_csv(root/'prepared/daily.csv',index_col='date',parse_dates=True)

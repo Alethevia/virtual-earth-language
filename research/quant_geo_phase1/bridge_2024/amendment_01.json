@@ -1,0 +1,9 @@
+{
+  "status": "BEFORE_BRIDGE_MODEL_FITTING",
+  "original_source_sha256": "85043452a65f9f8e6c46de21ba49488471d03e839b7624cddcfc7812ffddbbb5",
+  "amended_source_sha256": "11fd8a0c3a0777d93529f96f4bf62da76b5d748d151f6b07b9fab637902123d0",
+  "only_boundary_year": 2026,
+  "required_daily_sha256": "a3d182d6f6168d06d51460f485b8b139566432a7afdabfae4df9ff95f74f5260",
+  "model_input_change_allowed": false,
+  "model_fits_before_amendment": 0
+}

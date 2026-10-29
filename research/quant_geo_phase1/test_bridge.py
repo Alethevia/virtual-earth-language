@@ -1,9 +1,15 @@
 import unittest
 import numpy as np
 import pandas as pd
-from bridge_2024 import fit_mask,reproduce,common_sample,calendar_interval
+from bridge_2024 import fit_mask,reproduce,common_sample,calendar_interval,boundary_revision_allowed,require_frozen_daily
 
 class BridgeTests(unittest.TestCase):
+    def test_only_boundary_archive_revision_can_be_considered(self):
+        self.assertTrue(boundary_revision_allowed('GHCNh_USW00014733_2026.parquet'))
+        self.assertFalse(boundary_revision_allowed('GHCNh_USW00014733_2025.parquet'))
+        self.assertFalse(boundary_revision_allowed('nyiso_202601.zip'))
+    def test_revised_archive_cannot_change_model_input(self):
+        with self.assertRaises(ValueError):require_frozen_daily('new-input-hash','frozen-input-hash')
     def test_fit_excludes_both_evaluation_years(self):
         idx=pd.to_datetime(['2022-12-31','2023-12-31','2024-01-01','2025-01-01'])
         cfg=dict(start='2019-01-01',train_end='2022-12-31',validation_start='2023-01-01',validation_end='2023-12-31',test_start='2025-01-01',test_end='2025-12-31')

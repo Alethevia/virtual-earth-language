@@ -1,0 +1,92 @@
+{
+  "status": "NUMERICAL_INTERVAL_CROSSCHECK",
+  "convention": "hour_beginning",
+  "verified": true,
+  "protocol_sha256": "dabaa879b0292b877d1aab6f90f1e487f6ede618c4345afa38b2edd45f1acfae",
+  "dates": [
+    {
+      "date": "20190115",
+      "matched_hour_zone_pairs": 242,
+      "mean_absolute_difference_mw": {
+        "-1": 46.226018299881915,
+        "0": 6.834513970877614,
+        "1": 54.61044864226684
+      },
+      "hour_beginning_consistent": true
+    },
+    {
+      "date": "20220715",
+      "matched_hour_zone_pairs": 242,
+      "mean_absolute_difference_mw": {
+        "-1": 53.963203433687525,
+        "0": 7.987727833530093,
+        "1": 68.25506930342384
+      },
+      "hour_beginning_consistent": true
+    },
+    {
+      "date": "20240310",
+      "matched_hour_zone_pairs": 231,
+      "mean_absolute_difference_mw": {
+        "-1": 31.629892063492058,
+        "0": 5.069034838177697,
+        "1": 38.37045420016492
+      },
+      "hour_beginning_consistent": true
+    },
+    {
+      "date": "20240715",
+      "matched_hour_zone_pairs": 242,
+      "mean_absolute_difference_mw": {
+        "-1": 70.21838391258366,
+        "0": 9.710570784058087,
+        "1": 85.80986289084021
+      },
+      "hour_beginning_consistent": true
+    },
+    {
+      "date": "20241103",
+      "matched_hour_zone_pairs": 253,
+      "mean_absolute_difference_mw": {
+        "-1": 39.575341412572946,
+        "0": 6.666356992283067,
+        "1": 50.15706854884245
+      },
+      "hour_beginning_consistent": true
+    }
+  ],
+  "sources": [
+    {
+      "five_minute_url": "https://mis.nyiso.com/public/csv/pal/20190101pal_csv.zip",
+      "five_minute_sha256": "653edab46f0d1b8c003ec8174a1072939294d851241b5f287fec90e8555d423c",
+      "integrated_file": "nyiso_201901.zip",
+      "integrated_sha256": "e57ad2374c0f3ab6569c0bc33fb2736b7f73166d212026e0a7ccfa27f6db8644"
+    },
+    {
+      "five_minute_url": "https://mis.nyiso.com/public/csv/pal/20220701pal_csv.zip",
+      "five_minute_sha256": "0b812def4354c1b19508cc42b4980b64a828d6a72d27d928ae9e71ae14ce2e99",
+      "integrated_file": "nyiso_202207.zip",
+      "integrated_sha256": "0ecdfe1aff6470a67099a1849b21bbfa1e74060711820e80e2e8d79289261991"
+    },
+    {
+      "five_minute_url": "https://mis.nyiso.com/public/csv/pal/20240301pal_csv.zip",
+      "five_minute_sha256": "8d7930644d0dda33292189bb556a928eb9ae09e4f203bce1f276fb984d4bec3e",
+      "integrated_file": "nyiso_202403.zip",
+      "integrated_sha256": "90276dc779225078ec5016c3f417fecb2562964f9340124d1d8ccf5f02417a9b"
+    },
+    {
+      "five_minute_url": "https://mis.nyiso.com/public/csv/pal/20240701pal_csv.zip",
+      "five_minute_sha256": "4c05f032de30601b91950c99ab8337922b71db3414d6f57eb1eed5c4888e20d2",
+      "integrated_file": "nyiso_202407.zip",
+      "integrated_sha256": "61fedf8d4904892213b231327bf87e52c871d921dbb1c047e1a588c17feca774"
+    },
+    {
+      "five_minute_url": "https://mis.nyiso.com/public/csv/pal/20241101pal_csv.zip",
+      "five_minute_sha256": "cb954d42e1e53cdcf71e42c628a4ed1cfed11700118875424bdf03307442a58b",
+      "integrated_file": "nyiso_202411.zip",
+      "integrated_sha256": "7d53095c957af801ea831e7aa80fb0244240689bdaf3308130daa47a91e884ba"
+    }
+  ],
+  "method": "Approximate five-minute means compared with integrated load on identical hour-zone pairs; UTC offsets taken from EST/EDT labels.",
+  "limitations": "Numerical corroboration from official raw data, not an explicit NYISO written definition. Sampling and integration weights differ; equality is not expected."
+}

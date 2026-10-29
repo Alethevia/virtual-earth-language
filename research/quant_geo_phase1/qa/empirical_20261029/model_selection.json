@@ -1,0 +1,147 @@
+{
+  "hgb__B0_calendar_lags": {
+    "validation_MAE": 769.2444798827541,
+    "parameters": {
+      "max_iter": 200,
+      "learning_rate": 0.05,
+      "max_leaf_nodes": 7,
+      "min_samples_leaf": 20,
+      "l2_regularization": 10.0,
+      "early_stopping": false,
+      "random_state": 20261028
+    },
+    "features": 19
+  },
+  "hgb__B1_aggregated": {
+    "validation_MAE": 419.58980249681014,
+    "parameters": {
+      "max_iter": 200,
+      "learning_rate": 0.05,
+      "max_leaf_nodes": 15,
+      "min_samples_leaf": 20,
+      "l2_regularization": 1.0,
+      "early_stopping": false,
+      "random_state": 20261028
+    },
+    "features": 35
+  },
+  "hgb__B2_distribution": {
+    "validation_MAE": 421.4653942162144,
+    "parameters": {
+      "max_iter": 200,
+      "learning_rate": 0.05,
+      "max_leaf_nodes": 7,
+      "min_samples_leaf": 20,
+      "l2_regularization": 10.0,
+      "early_stopping": false,
+      "random_state": 20261028
+    },
+    "features": 63
+  },
+  "hgb__B3_site_identity": {
+    "validation_MAE": 430.8591710612838,
+    "parameters": {
+      "max_iter": 200,
+      "learning_rate": 0.05,
+      "max_leaf_nodes": 15,
+      "min_samples_leaf": 20,
+      "l2_regularization": 1.0,
+      "early_stopping": false,
+      "random_state": 20261028
+    },
+    "features": 93
+  },
+  "ridge__B0_calendar_lags": {
+    "validation_MAE": 749.9042557007213,
+    "parameters": {
+      "alpha": 10.0
+    },
+    "features": 19
+  },
+  "ridge__B1_aggregated": {
+    "validation_MAE": 366.2821991644551,
+    "parameters": {
+      "alpha": 1.0
+    },
+    "features": 35
+  },
+  "ridge__B2_distribution": {
+    "validation_MAE": 354.4679916794228,
+    "parameters": {
+      "alpha": 10.0
+    },
+    "features": 63
+  },
+  "ridge__B3_site_identity": {
+    "validation_MAE": 357.5526796946058,
+    "parameters": {
+      "alpha": 100.0
+    },
+    "features": 93
+  },
+  "hgb__identity_scramble_17": {
+    "validation_MAE": 422.7537233438634,
+    "parameters": {
+      "max_iter": 200,
+      "learning_rate": 0.05,
+      "max_leaf_nodes": 7,
+      "min_samples_leaf": 20,
+      "l2_regularization": 10.0,
+      "early_stopping": false,
+      "random_state": 20261028
+    },
+    "features": 93
+  },
+  "hgb__identity_scramble_29": {
+    "validation_MAE": 419.7609064076197,
+    "parameters": {
+      "max_iter": 200,
+      "learning_rate": 0.05,
+      "max_leaf_nodes": 7,
+      "min_samples_leaf": 20,
+      "l2_regularization": 10.0,
+      "early_stopping": false,
+      "random_state": 20261028
+    },
+    "features": 93
+  },
+  "hgb__identity_scramble_43": {
+    "validation_MAE": 425.935379027821,
+    "parameters": {
+      "max_iter": 200,
+      "learning_rate": 0.05,
+      "max_leaf_nodes": 15,
+      "min_samples_leaf": 20,
+      "l2_regularization": 10.0,
+      "early_stopping": false,
+      "random_state": 20261028
+    },
+    "features": 93
+  },
+  "hgb__identity_scramble_61": {
+    "validation_MAE": 425.64818127364964,
+    "parameters": {
+      "max_iter": 200,
+      "learning_rate": 0.05,
+      "max_leaf_nodes": 15,
+      "min_samples_leaf": 20,
+      "l2_regularization": 1.0,
+      "early_stopping": false,
+      "random_state": 20261028
+    },
+    "features": 93
+  },
+  "hgb__identity_scramble_79": {
+    "validation_MAE": 420.7760686184951,
+    "parameters": {
+      "max_iter": 200,
+      "learning_rate": 0.05,
+      "max_leaf_nodes": 7,
+      "min_samples_leaf": 20,
+      "l2_regularization": 10.0,
+      "early_stopping": false,
+      "random_state": 20261028
+    },
+    "features": 93
+  }
+}

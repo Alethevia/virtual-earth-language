@@ -1,0 +1,49 @@
+{
+  "status": "EMPIRICAL_SCREEN_ONLY",
+  "scope": "NYISO system-wide daily maximum of hourly integrated zonal load; NOT outage risk and NOT a trading backtest",
+  "estimand": "Held-out conditional prediction using realized same-day weather, not a deployable day-ahead forecast",
+  "high_load_threshold_training_only": 24966.5,
+  "exposure_weights": {
+    "BUF": 0.15986890319156563,
+    "SYR": 0.18638091936228135,
+    "ALB": 0.1388533152625587,
+    "LGA": 0.3821057913423931,
+    "ISP": 0.13279107084120131
+  },
+  "primary_relative_tail_MAE_improvement": -0.10068511409298564,
+  "screen_conditions": {
+    "enough_tail_days": true,
+    "at_least_five_percent_tail_gain": false,
+    "primary_interval_positive": false,
+    "ridge_tail_direction_agrees": false,
+    "beats_four_of_five_scrambles": false,
+    "overall_MAE_not_more_than_two_percent_worse": true
+  },
+  "screening_pass": false,
+  "limitations": [
+    "One system and one held-out year; not geographic transfer validation.",
+    "Realized contemporaneous weather, not historical forecast vintages.",
+    "Historical files may be revised; this is not a point-in-time trading dataset.",
+    "Coarse five-station exposure mapping, not population-weighted coverage.",
+    "Hour-beginning labels corroborated against five-minute official archives, not an explicit written NYISO timing definition.",
+    "Passing an analyst-defined screen does not establish novelty, causality, deployability, or trading profit."
+  ],
+  "protocol_sha256": "dabaa879b0292b877d1aab6f90f1e487f6ede618c4345afa38b2edd45f1acfae",
+  "source_sha256": "8698cacde6e7785ca405ea352b91d428ae34c0582e5756a43faa48f72565c61d",
+  "data_sha256": "9c9c79a7fa7927ac0b828a073bff5b6094ce6614ed0da02940f44a42b1a3a518",
+  "preparation_provenance": {
+    "daily_sha256": "9c9c79a7fa7927ac0b828a073bff5b6094ce6614ed0da02940f44a42b1a3a518",
+    "protocol_sha256": "dabaa879b0292b877d1aab6f90f1e487f6ede618c4345afa38b2edd45f1acfae",
+    "source_sha256": "8698cacde6e7785ca405ea352b91d428ae34c0582e5756a43faa48f72565c61d",
+    "raw_manifest_sha256": "b95b631d26d63a1ddaebd1a61dc291cde1662d51335c51239d6caa229549448d",
+    "audit_sha256": "fff9e794ca5d303ff60c2b57ed991ee0407a7a2b9e51c7d849a1af6c4ee5405d",
+    "status": "OFFICIAL_ARCHIVE_PREPARED"
+  },
+  "interval_evidence_sha256": "d0b4f68b61fea2c79b89a83ff707d81f2f516f17df7c3cad91fe0ba32c9da750",
+  "versions": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "sklearn": "1.8.0"
+  }
+}

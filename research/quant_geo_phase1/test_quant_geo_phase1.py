@@ -195,6 +195,38 @@ class LeakageTests(unittest.TestCase):
 
 
 class ReportingTests(unittest.TestCase):
+    def test_analysis_rejects_stale_preparation_code(self):
+        with tempfile.TemporaryDirectory() as d:
+            p = Path(d)
+            (p/'prepared').mkdir()
+            (p/'protocol.json').write_text('{}')
+            (p/'prepared'/'daily.csv').write_text('date,peak\n2024-01-01,100\n')
+            q.dump_json(p/'prepared'/'provenance.json', dict(
+                status='OFFICIAL_ARCHIVE_PREPARED', daily_sha256=q.sha256(p/'prepared'/'daily.csv'),
+                protocol_sha256=q.sha256(p/'protocol.json'), source_sha256='stale'))
+            with self.assertRaisesRegex(ValueError, 'Preparation code changed'):
+                q.validate_analysis_inputs(p)
+
+    def test_analysis_requires_successful_interval_check(self):
+        with tempfile.TemporaryDirectory() as d:
+            p = Path(d)
+            for folder in ('prepared', 'raw', 'qa'): (p/folder).mkdir()
+            (p/'protocol.json').write_text('{}')
+            (p/'prepared'/'daily.csv').write_text('date,peak\n2024-01-01,100\n')
+            (p/'prepared'/'audit.json').write_text('{}')
+            (p/'raw'/'download_manifest.json').write_text('{}')
+            q.dump_json(p/'prepared'/'provenance.json', dict(
+                status='OFFICIAL_ARCHIVE_PREPARED', daily_sha256=q.sha256(p/'prepared'/'daily.csv'),
+                protocol_sha256=q.sha256(p/'protocol.json'), source_sha256=q.sha256(Path(q.__file__)),
+                raw_manifest_sha256=q.sha256(p/'raw'/'download_manifest.json'),
+                audit_sha256=q.sha256(p/'prepared'/'audit.json')))
+            with self.assertRaisesRegex(ValueError, 'verify_intervals'):
+                q.validate_analysis_inputs(p)
+            q.dump_json(p/'qa'/'interval_convention_20261029.json', dict(
+                convention='hour_beginning', verified=False, protocol_sha256=q.sha256(p/'protocol.json')))
+            with self.assertRaisesRegex(ValueError, 'Interval convention'):
+                q.validate_analysis_inputs(p)
+
     def test_metric_subset(self):
         s=q.score(np.array([1,10,20]),np.array([2,8,16]),10)
         self.assertEqual(s['high_load_n'],2);self.assertEqual(s['high_load_MAE'],3)

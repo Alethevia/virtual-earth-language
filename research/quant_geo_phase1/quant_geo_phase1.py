@@ -7,8 +7,8 @@ Commands:
   python quant_geo_phase1.py analyse
   python -m unittest -v test_quant_geo_phase1.py
 
-The first three commands need official downloaded data. This source package ships
-NO empirical results. Tests use artificial fixtures only. Same-day realized weather
+The first three commands need official downloaded data. Empirical reports require
+verified provenance. Tests use artificial fixtures only. Same-day realized weather
 makes this a retrospective conditional-prediction experiment, NOT a trading or
 operational day-ahead forecasting test. Read PROTOCOL.md before interpreting output.
 """
@@ -30,6 +30,7 @@ from urllib.parse import urlencode
 import numpy as np
 import pandas as pd
 import requests
+import sklearn
 from pandas.tseries.holiday import USFederalHolidayCalendar
 from sklearn.ensemble import HistGradientBoostingRegressor
 from sklearn.linear_model import Ridge
@@ -277,6 +278,9 @@ def prepare(root: Path = ROOT) -> None:
     dump_json(out / 'audit.json', audit)
     dump_json(out / 'provenance.json', dict(daily_sha256=sha256(out / 'daily.csv'),
                                            protocol_sha256=sha256(root / 'protocol.json'),
+                                           source_sha256=sha256(Path(__file__)),
+                                           raw_manifest_sha256=sha256(mp),
+                                           audit_sha256=sha256(out / 'audit.json'),
                                            status='OFFICIAL_ARCHIVE_PREPARED'))
     print(json.dumps(audit, ensure_ascii=False, indent=2))
 
@@ -412,8 +416,8 @@ def paired_block_interval(differences: pd.Series, block_days: int, replicates: i
                 note='Exploratory paired circular-block interval; not causal and not a multiple-testing correction.')
 
 
-def analyse(root: Path = ROOT) -> None:
-    cfg = read_protocol(root); prepared = root / 'prepared'
+def validate_analysis_inputs(root: Path) -> dict:
+    prepared = root / 'prepared'
     provpath = prepared / 'provenance.json'
     if not provpath.exists():
         raise FileNotFoundError('No verified empirical dataset; cannot report empirical performance.')
@@ -422,6 +426,25 @@ def analyse(root: Path = ROOT) -> None:
         raise ValueError('Prepared-data provenance check failed.')
     if prov['protocol_sha256'] != sha256(root / 'protocol.json'):
         raise ValueError('Protocol changed; do not silently tune after observing a test set.')
+    if prov.get('source_sha256') != sha256(Path(__file__)):
+        raise ValueError('Preparation code changed; rerun prepare before analysis.')
+    if prov.get('raw_manifest_sha256') != sha256(root / 'raw' / 'download_manifest.json'):
+        raise ValueError('Raw-data manifest changed after preparation.')
+    if prov.get('audit_sha256') != sha256(prepared / 'audit.json'):
+        raise ValueError('Preparation audit changed after preparation.')
+    evidence_path = root / 'qa' / 'interval_convention_20261029.json'
+    if not evidence_path.exists():
+        raise ValueError('Run verify_intervals.py before interpreting empirical models.')
+    evidence = json.loads(evidence_path.read_text())
+    if (evidence.get('verified') is not True or evidence.get('convention') != 'hour_beginning'
+            or evidence.get('protocol_sha256') != prov['protocol_sha256']):
+        raise ValueError('Interval convention evidence is missing, failed, or belongs to another protocol.')
+    return prov
+
+
+def analyse(root: Path = ROOT) -> None:
+    cfg = read_protocol(root); prepared = root / 'prepared'
+    provenance = validate_analysis_inputs(root)
     data = pd.read_csv(prepared / 'daily.csv', index_col='date', parse_dates=True)
     data = data.reindex(pd.date_range(cfg['start'], cfg['end'], freq='D'))
     weights = fit_exposure_weights(data, cfg)
@@ -477,9 +500,12 @@ def analyse(root: Path = ROOT) -> None:
           'Realized contemporaneous weather, not historical forecast vintages.',
           'Historical files may be revised; this is not a point-in-time trading dataset.',
           'Coarse five-station exposure mapping, not population-weighted coverage.',
+          'Hour-beginning labels corroborated against five-minute official archives, not an explicit written NYISO timing definition.',
           'Passing an analyst-defined screen does not establish novelty, causality, deployability, or trading profit.'],
         protocol_sha256=sha256(root/'protocol.json'), source_sha256=sha256(Path(__file__)),
-        data_sha256=sha256(prepared/'daily.csv'), versions=dict(python=sys.version.split()[0],numpy=np.__version__,pandas=pd.__version__))
+        data_sha256=sha256(prepared/'daily.csv'), preparation_provenance=provenance,
+        interval_evidence_sha256=sha256(root/'qa'/'interval_convention_20261029.json'),
+        versions=dict(python=sys.version.split()[0],numpy=np.__version__,pandas=pd.__version__,sklearn=sklearn.__version__))
     metric.to_csv(out/'metrics.csv',index=False)
     pred.index.name='date'; pred.to_csv(out/'test_predictions.csv')
     dump_json(out/'model_selection.json',tuning); dump_json(out/'block_intervals.json',boot)

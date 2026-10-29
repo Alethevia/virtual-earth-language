@@ -1,0 +1,17 @@
+{
+  "train": {
+    "eligible": 1461,
+    "usable": 1404,
+    "fraction": 0.9609856262833676
+  },
+  "validation": {
+    "eligible": 365,
+    "usable": 365,
+    "fraction": 1.0
+  },
+  "test": {
+    "eligible": 366,
+    "usable": 362,
+    "fraction": 0.9890710382513661
+  }
+}

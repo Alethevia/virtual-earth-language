@@ -13,6 +13,6 @@
 |[Niubility](https://github.com/Alethevia/Niubility)|补齐训练依赖并修复随机种子|7项测试通过；CPU执行120步SAC短训练，成功保存checkpoint并推理一次。|
 |[Stock_Deepseeker](https://github.com/Alethevia/Stock_Deepseeker)|修复两套回测入口的会计与成交错误|205项测试通过，包括新增会计与CLI/v2成交回归；确定性人工行情示例有2次成交、0次拒单。|
 |[Stock_Trading_Robot_RAC](https://github.com/Alethevia/Stock_Trading_Robot_RAC)|修复导出类型和配置读取，收敛说明|1项离线回归测试通过。|
-|[virtual-earth-language](https://github.com/Alethevia/virtual-earth-language)|修复网页构建，新增量化地理研究目录|原模拟2项测试通过、最小例程通过；Web生产构建通过。地理研究30项离线测试通过；102份官方文件下载解析成功，得到2,192天完整负荷和2,145天天气完整记录。|
+|[virtual-earth-language](https://github.com/Alethevia/virtual-earth-language)|修复网页构建，新增量化地理研究目录|原模拟2项测试通过、最小例程通过；Web生产构建通过。地理研究32项离线检查通过；真实建模及2024年留出评价完成，原定高负荷主假设未通过，完整负结果可复查。|
 
-[新增量化地理研究目录](research/quant_geo_phase1/README.md)。真实数据下载/整理完成，实证拟合尚未开始。
+[新增量化地理研究目录](research/quant_geo_phase1/README.md)。真实数据首轮建模完成；[结果报告](research/quant_geo_phase1/RESULTS.md)保留全部对照和负结果。

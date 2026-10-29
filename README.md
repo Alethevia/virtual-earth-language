@@ -36,3 +36,8 @@ npm run dev
 ```
 
 Cesium assets are generated from the locked npm dependency during installation/build. Generated third-party asset copies are no longer tracked. The viewer is a visualization shell with sample GeoJSON, not a validated geospatial analysis system. See [AUDIT.md](AUDIT.md).
+
+
+## Quantitative geography study
+
+A separate [weather–electric-load experiment](research/quant_geo_phase1/README.md) is included as a reproducible research project. Its first real-data screen did not support the proposed extra high-load benefit from station identity. See [all results and limitations](research/quant_geo_phase1/RESULTS.md); this is not a trading strategy or a claim of a new scientific discovery.

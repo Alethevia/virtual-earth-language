@@ -1,0 +1,8 @@
+{
+  "duplicate_rows_removed": 0,
+  "complete_load_days": 2557,
+  "incomplete_load_days": 0,
+  "protocol_sha256": "fb18e8db6d8714b8ff864a9e7618df84b87db59e1647805204a7b91dc6ac8e7d",
+  "dataset": "GHCNh 1.1.0",
+  "complete_weather_days": 2492
+}

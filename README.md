@@ -26,7 +26,7 @@ python -m unittest -v
 
 **The first real-data screen did not support the proposed high-load benefit.** On the 2024 test set, adding station identity increased HGB high-load MAE by 10.07%, despite improving overall MAE. All 13 model/control results and uncertainty intervals are retained in [RESULTS.md](research/quant_geo_phase1/RESULTS.md). Hour-label alignment was numerically cross-checked against official five-minute data; a direct written timing definition remains unverified. Same-day observed weather does not constitute a day-ahead forecast.
 
-The [2024 error decomposition](research/quant_geo_phase1/DIAGNOSTICS_2024.md) is descriptive follow-up. A [locked 2025 replication attempt](research/quant_geo_phase1/replication_2025/STATUS.md) stopped before fitting: the legacy NOAA product ends in August 2025, leaving only 64.93% usable days against the unchanged 90% requirement. It supplies no additional model-performance evidence.
+The [2024 error decomposition](research/quant_geo_phase1/DIAGNOSTICS_2024.md) is descriptive follow-up. The legacy-data [2025 attempt](research/quant_geo_phase1/replication_2025/STATUS.md) stopped for inadequate coverage. A separate [GHCNh data-version experiment](research/quant_geo_phase1/ghcnh_v1/RESULTS.md) now covers 338 test days: HGB high-load MAE improves 6.35%, but its primary 95% interval includes zero, so the full screen still fails. All 13 pipelines are reported; this is not a stable-advantage or novelty claim.
 
 ## Optional globe viewer
 

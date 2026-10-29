@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/workspace/scratch/e571836a46e5/repos/virtual-earth-language/research/quant_geo_phase1/ghcnh_migrate.py", line 175, in <module>
+    with threadpool_limits(limits=1):globals()[args.command]()
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/e571836a46e5/repos/virtual-earth-language/research/quant_geo_phase1/ghcnh_migrate.py", line 128, in prepare
+    observations.append(parse(frame,station))
+                        ^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/e571836a46e5/repos/virtual-earth-language/research/quant_geo_phase1/ghcnh_migrate.py", line 53, in parse
+    raise ValueError('Undocumented temperature source: '+str(sorted(source[unknown].unique())))
+ValueError: Undocumented temperature source: ['999']

@@ -1,0 +1,9 @@
+{
+  "status": "OFFICIAL_ARCHIVE_PREPARED",
+  "daily_sha256": "a3d182d6f6168d06d51460f485b8b139566432a7afdabfae4df9ff95f74f5260",
+  "protocol_sha256": "fb18e8db6d8714b8ff864a9e7618df84b87db59e1647805204a7b91dc6ac8e7d",
+  "source_sha256": "8698cacde6e7785ca405ea352b91d428ae34c0582e5756a43faa48f72565c61d",
+  "migration_source_sha256": "bc50a4bf4eecdb73d049561fbced3d9d214de9fb272dd7a613f4d880cca59288",
+  "raw_manifest_sha256": "1d9c603aab3b864588016fd7d78f27cead646ede463ea5b4996d50e76f74eda4",
+  "audit_sha256": "82926aa15793d3b73c43a9037dbcf153abb3cccb038f816c02b24b515954c1f5"
+}

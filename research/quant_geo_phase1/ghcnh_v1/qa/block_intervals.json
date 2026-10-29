@@ -1,0 +1,56 @@
+[
+  {
+    "family": "hgb",
+    "block_days": 7,
+    "paired_mean_improvement": 37.637811608334054,
+    "lower_95": -79.29592554160695,
+    "upper_95": 162.4497570030547,
+    "effective_bootstrap_replicates": 2000,
+    "note": "Exploratory paired circular-block interval; not causal and not a multiple-testing correction."
+  },
+  {
+    "family": "hgb",
+    "block_days": 14,
+    "paired_mean_improvement": 37.637811608334054,
+    "lower_95": -60.04699489903477,
+    "upper_95": 163.19177157599322,
+    "effective_bootstrap_replicates": 1989,
+    "note": "Exploratory paired circular-block interval; not causal and not a multiple-testing correction."
+  },
+  {
+    "family": "hgb",
+    "block_days": 28,
+    "paired_mean_improvement": 37.637811608334054,
+    "lower_95": -31.974275591647846,
+    "upper_95": 140.3381395755995,
+    "effective_bootstrap_replicates": 1935,
+    "note": "Exploratory paired circular-block interval; not causal and not a multiple-testing correction."
+  },
+  {
+    "family": "ridge",
+    "block_days": 7,
+    "paired_mean_improvement": 45.0721914325842,
+    "lower_95": -10.647350995019462,
+    "upper_95": 128.08790189740628,
+    "effective_bootstrap_replicates": 2000,
+    "note": "Exploratory paired circular-block interval; not causal and not a multiple-testing correction."
+  },
+  {
+    "family": "ridge",
+    "block_days": 14,
+    "paired_mean_improvement": 45.0721914325842,
+    "lower_95": -14.785203968564055,
+    "upper_95": 135.01733513908144,
+    "effective_bootstrap_replicates": 1989,
+    "note": "Exploratory paired circular-block interval; not causal and not a multiple-testing correction."
+  },
+  {
+    "family": "ridge",
+    "block_days": 28,
+    "paired_mean_improvement": 45.0721914325842,
+    "lower_95": 7.5535140576742155,
+    "upper_95": 162.5250530129575,
+    "effective_bootstrap_replicates": 1935,
+    "note": "Exploratory paired circular-block interval; not causal and not a multiple-testing correction."
+  }
+]

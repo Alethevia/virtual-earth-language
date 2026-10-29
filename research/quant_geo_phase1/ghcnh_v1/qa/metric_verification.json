@@ -1,0 +1,9 @@
+{
+  "method": "Independent NumPy recomputation from saved prediction CSV, absolute tolerance 1e-8 MW",
+  "pipelines_verified": 13,
+  "metrics_verified_per_pipeline": 4,
+  "test_days": 338,
+  "high_load_days": 31,
+  "all_matched": true,
+  "predictions_sha256": "f1465d92a45c70b8bf8ccebf6c1c8233bd553b9f9b3d4052a7a1898b28b40fd0"
+}

@@ -1,0 +1,66 @@
+{
+  "status": "EMPIRICAL_SCREEN_COMPLETED__UNCERTAINTY_CRITERION_NOT_MET",
+  "date": "2026-10-29",
+  "freeze_commit": "db4312849e84d11f06f53d943bac501b42fb0bfc",
+  "pre_model_amendment_commit": "4a77697d371a89618517bd58115521dd83a9b3b4",
+  "dataset": "GHCNh files matching 1.1.0 schema and documentation",
+  "official_archive_files": 124,
+  "nyiso_files": 84,
+  "ghcnh_station_year_files": 40,
+  "stations": 5,
+  "model_selected_pipelines": 13,
+  "fit_calls": 65,
+  "execution_runs": 1,
+  "tests_passed": 43,
+  "metric_recomputation_verified": true,
+  "held_out_days": 338,
+  "held_out_high_load_days": 31,
+  "excluded_days": 27,
+  "excluded_known_high_load_days": 0,
+  "coverage": {
+    "train": {
+      "eligible": 1461,
+      "usable": 1410,
+      "fraction": 0.9650924024640657
+    },
+    "validation": {
+      "eligible": 365,
+      "usable": 365,
+      "fraction": 1.0
+    },
+    "test": {
+      "eligible": 365,
+      "usable": 338,
+      "fraction": 0.9260273972602739
+    }
+  },
+  "quarantined_unknown_source_rows": 642,
+  "interval_check_dates": 8,
+  "screening_pass": false,
+  "screen_conditions": {
+    "enough_tail_days": true,
+    "at_least_five_percent_tail_gain": true,
+    "primary_interval_positive": false,
+    "ridge_tail_direction_agrees": true,
+    "beats_four_of_five_scrambles": true,
+    "overall_MAE_not_more_than_two_percent_worse": true
+  },
+  "primary_relative_tail_MAE_improvement": 0.06352068268752731,
+  "protocol_sha256": "fb18e8db6d8714b8ff864a9e7618df84b87db59e1647805204a7b91dc6ac8e7d",
+  "engine_source_sha256": "8698cacde6e7785ca405ea352b91d428ae34c0582e5756a43faa48f72565c61d",
+  "migration_source_sha256": "bc50a4bf4eecdb73d049561fbced3d9d214de9fb272dd7a613f4d880cca59288",
+  "data_sha256": "a3d182d6f6168d06d51460f485b8b139566432a7afdabfae4df9ff95f74f5260",
+  "model_results": "qa/metrics.csv",
+  "limitations": [
+    "31 high-load days in one system/year; primary uncertainty interval includes zero.",
+    "Weather data version changed across the 2024 and 2025 studies; their difference does not isolate a year effect.",
+    "Same-day realized weather, not day-ahead forecasts.",
+    "Unknown source 999 excluded in a disclosed pre-fit amendment; remaining missingness may be selective.",
+    "Original bootstrap spans first through last usable date, so trailing seven missing days are outside its resampling calendar."
+  ],
+  "engine_report_caveat": "The shared engine contains legacy wording about five interval-check dates; the attached evidence actually checks eight. No metrics are altered.",
+  "bootstrap_calendar_span": [
+    "2025-01-01",
+    "2025-12-24"
+  ]
+}

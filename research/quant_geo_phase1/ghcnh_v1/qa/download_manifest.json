@@ -1,0 +1,958 @@
+{
+  "status": "COMPLETE",
+  "protocol_sha256": "fb18e8db6d8714b8ff864a9e7618df84b87db59e1647805204a7b91dc6ac8e7d",
+  "files": [
+    {
+      "file": "nyiso_201901.zip",
+      "source": "https://mis.nyiso.com/public/csv/palIntegrated/20190101palIntegrated_csv.zip",
+      "final_url": "https://mis.nyiso.com/public/csv/palIntegrated/20190101palIntegrated_csv.zip",
+      "bytes": 58566,
+      "sha256": "e57ad2374c0f3ab6569c0bc33fb2736b7f73166d212026e0a7ccfa27f6db8644",
+      "retrieved_utc": "2026-10-29T12:29:37.613453+00:00"
+    },
+    {
+      "file": "nyiso_201902.zip",
+      "source": "https://mis.nyiso.com/public/csv/palIntegrated/20190201palIntegrated_csv.zip",
+      "final_url": "https://mis.nyiso.com/public/csv/palIntegrated/20190201palIntegrated_csv.zip",
+      "bytes": 52562,
+      "sha256": "ec106a76f3329551d1c3dd217e6e1b1e81dbd9a49efee2e6c406d0ad89fd4f35",
+      "retrieved_utc": "2026-10-29T12:29:37.786303+00:00"
+    },
+    {
+      "file": "nyiso_201903.zip",
+      "source": "https://mis.nyiso.com/public/csv/palIntegrated/20190301palIntegrated_csv.zip",
+      "final_url": "https://mis.nyiso.com/public/csv/palIntegrated/20190301palIntegrated_csv.zip",
+      "bytes": 57948,
+      "sha256": "f0e54441c4d50b46b170f416cee6a6a11bf33c1d09ed6b14bc276513d90aa0bd",
+      "retrieved_utc": "2026-10-29T12:29:37.956503+00:00"
+    },
+    {
+      "file": "nyiso_201904.zip",
+      "source": "https://mis.nyiso.com/public/csv/palIntegrated/20190401palIntegrated_csv.zip",
+      "final_url": "https://mis.nyiso.com/public/csv/palIntegrated/20190401palIntegrated_csv.zip",
+      "bytes": 56230,
+      "sha256": "127846ffadefecd0794b561e27018c422c4dd0e0610df11263e2fd05005b1017",
+      "retrieved_utc": "2026-10-29T12:29:38.144143+00:00"
+    },
+    {
+      "file": "nyiso_201905.zip",
+      "source": "https://mis.nyiso.com/public/csv/palIntegrated/20190501palIntegrated_csv.zip",
+      "final_url": "https://mis.nyiso.com/public/csv/palIntegrated/20190501palIntegrated_csv.zip",
+      "bytes": 58359,
+      "sha256": "78fcd03eaa77d9335fedecc5b514d422fd186ad24fe0f4ef5f867228a62053aa",
+      "retrieved_utc": "2026-10-29T12:29:38.285228+00:00"
+    },
+    {
+      "file": "nyiso_201906.zip",
+      "source": "https://mis.nyiso.com/public/csv/palIntegrated/20190601palIntegrated_csv.zip",
+      "final_url": "https://mis.nyiso.com/public/csv/palIntegrated/20190601palIntegrated_csv.zip",
+      "bytes": 57122,
+      "sha256": "33eb284dd6730a23c8c96015ed1d11de1c96ebc82b59768985e00e87991fb1ac",
+      "retrieved_utc": "2026-10-29T12:29:38.472259+00:00"
+    },
+    {
+      "file": "nyiso_201907.zip",
+      "source": "https://mis.nyiso.com/public/csv/palIntegrated/20190701palIntegrated_csv.zip",
+      "final_url": "https://mis.nyiso.com/public/csv/palIntegrated/20190701palIntegrated_csv.zip",
+      "bytes": 60252,
+      "sha256": "15e32aba8757e1a874413d4ad52d9b4e607d8802a1b36c3222a164f70d06a504",
+      "retrieved_utc": "2026-10-29T12:29:38.612600+00:00"
+    },
+    {
+      "file": "nyiso_201908.zip",
+      "source": "https://mis.nyiso.com/public/csv/palIntegrated/20190801palIntegrated_csv.zip",
+      "final_url": "https://mis.nyiso.com/public/csv/palIntegrated/20190801palIntegrated_csv.zip",
+      "bytes": 59702,
+      "sha256": "13f8bdf66350bc88a4d70b57c04080745ae9eca93d2e9b02dadf0826f14864da",
+      "retrieved_utc": "2026-10-29T12:29:38.759115+00:00"
+    },
+    {
+      "file": "nyiso_201909.zip",
+      "source": "https://mis.nyiso.com/public/csv/palIntegrated/20190901palIntegrated_csv.zip",
+      "final_url": "https://mis.nyiso.com/public/csv/palIntegrated/20190901palIntegrated_csv.zip",
+      "bytes": 56980,
+      "sha256": "7c5e87ef03d84d69c57fd276aed23ba72d936176ef99cecdc517ffc3037bdd6a",
+      "retrieved_utc": "2026-10-29T12:29:38.900598+00:00"
+    },
+    {
+      "file": "nyiso_201910.zip",
+      "source": "https://mis.nyiso.com/public/csv/palIntegrated/20191001palIntegrated_csv.zip",
+      "final_url": "https://mis.nyiso.com/public/csv/palIntegrated/20191001palIntegrated_csv.zip",
+      "bytes": 58328,
+      "sha256": "ee2ec0737ef49044f391f155e78d3b38dcc11a625c032838ee6ab8fd762bdf9d",
+      "retrieved_utc": "2026-10-29T12:29:39.040140+00:00"
+    },
+    {
+      "file": "nyiso_201911.zip",
+      "source": "https://mis.nyiso.com/public/csv/palIntegrated/20191101palIntegrated_csv.zip",
+      "final_url": "https://mis.nyiso.com/public/csv/palIntegrated/20191101palIntegrated_csv.zip",
+      "bytes": 56543,
+      "sha256": "07e36c0652318938cc55951bca4adac88ae98722776999d89bb98b2cb9ca6845",
+      "retrieved_utc": "2026-10-29T12:29:39.188279+00:00"
+    },
+    {
+      "file": "nyiso_201912.zip",
+      "source": "https://mis.nyiso.com/public/csv/palIntegrated/20191201palIntegrated_csv.zip",
+      "final_url": "https://mis.nyiso.com/public/csv/palIntegrated/20191201palIntegrated_csv.zip",
+      "bytes": 58474,
+      "sha256": "d150e1938b043ecd0ffe9e16e1e9d1e3ecd4cc31fdb3cd588aa87f57db824ef7",
+      "retrieved_utc": "2026-10-29T12:29:39.333527+00:00"
+    },
+    {
+      "file": "nyiso_202001.zip",
+      "source": "https://mis.nyiso.com/public/csv/palIntegrated/20200101palIntegrated_csv.zip",
+      "final_url": "https://mis.nyiso.com/public/csv/palIntegrated/20200101palIntegrated_csv.zip",
+      "bytes": 58479,
+      "sha256": "01d9e527ec10a5c730980f6376588f37f22acaa942c386745e031bc186a2538f",
+      "retrieved_utc": "2026-10-29T12:29:39.524461+00:00"
+    },
+    {
+      "file": "nyiso_202002.zip",
+      "source": "https://mis.nyiso.com/public/csv/palIntegrated/20200201palIntegrated_csv.zip",
+      "final_url": "https://mis.nyiso.com/public/csv/palIntegrated/20200201palIntegrated_csv.zip",
+      "bytes": 54505,
+      "sha256": "44610ec4b7163b118a667fea90ae14aa07927d2a334d90167830400bb01c9520",
+      "retrieved_utc": "2026-10-29T12:29:39.672236+00:00"
+    },
+    {
+      "file": "nyiso_202003.zip",
+      "source": "https://mis.nyiso.com/public/csv/palIntegrated/20200301palIntegrated_csv.zip",
+      "final_url": "https://mis.nyiso.com/public/csv/palIntegrated/20200301palIntegrated_csv.zip",
+      "bytes": 57893,
+      "sha256": "ff50464721712295d33fea24346f38b552565c4beaa9099a24b1f8218a113576",
+      "retrieved_utc": "2026-10-29T12:29:39.820785+00:00"
+    },
+    {
+      "file": "nyiso_202004.zip",
+      "source": "https://mis.nyiso.com/public/csv/palIntegrated/20200401palIntegrated_csv.zip",
+      "final_url": "https://mis.nyiso.com/public/csv/palIntegrated/20200401palIntegrated_csv.zip",
+      "bytes": 55747,
+      "sha256": "381f479773df1fc18fec06881eeba35db8a3ced96e1173371c72de876e146dc3",
+      "retrieved_utc": "2026-10-29T12:29:39.970718+00:00"
+    },
+    {
+      "file": "nyiso_202005.zip",
+      "source": "https://mis.nyiso.com/public/csv/palIntegrated/20200501palIntegrated_csv.zip",
+      "final_url": "https://mis.nyiso.com/public/csv/palIntegrated/20200501palIntegrated_csv.zip",
+      "bytes": 57901,
+      "sha256": "f43d9e623cfeb57bdbb4c598ad671bff56a78014e371ca3cc751f2aa7ad63f9a",
+      "retrieved_utc": "2026-10-29T12:29:40.117740+00:00"
+    },
+    {
+      "file": "nyiso_202006.zip",
+      "source": "https://mis.nyiso.com/public/csv/palIntegrated/20200601palIntegrated_csv.zip",
+      "final_url": "https://mis.nyiso.com/public/csv/palIntegrated/20200601palIntegrated_csv.zip",
+      "bytes": 61506,
+      "sha256": "2ef28ff2386f765f3f233a1931a469c08014ccb4bffda0998bba0fe15d241fed",
+      "retrieved_utc": "2026-10-29T12:29:40.260075+00:00"
+    },
+    {
+      "file": "nyiso_202007.zip",
+      "source": "https://mis.nyiso.com/public/csv/palIntegrated/20200701palIntegrated_csv.zip",
+      "final_url": "https://mis.nyiso.com/public/csv/palIntegrated/20200701palIntegrated_csv.zip",
+      "bytes": 79784,
+      "sha256": "bb05d0113708785de81a3e54b686e4c913ebc53da18b1d18954ffd96999783e4",
+      "retrieved_utc": "2026-10-29T12:29:40.444309+00:00"
+    },
+    {
+      "file": "nyiso_202008.zip",
+      "source": "https://mis.nyiso.com/public/csv/palIntegrated/20200801palIntegrated_csv.zip",
+      "final_url": "https://mis.nyiso.com/public/csv/palIntegrated/20200801palIntegrated_csv.zip",
+      "bytes": 79535,
+      "sha256": "08fa5cdc1f69b08078a25e87f05d219d2acb7c0abd6a516903ca5e43684dae89",
+      "retrieved_utc": "2026-10-29T12:29:40.587736+00:00"
+    },
+    {
+      "file": "nyiso_202009.zip",
+      "source": "https://mis.nyiso.com/public/csv/palIntegrated/20200901palIntegrated_csv.zip",
+      "final_url": "https://mis.nyiso.com/public/csv/palIntegrated/20200901palIntegrated_csv.zip",
+      "bytes": 75967,
+      "sha256": "01f36e9e419f6d87893b789b1ddb8c79f3f7b96fcb14832819be1cb66b185db4",
+      "retrieved_utc": "2026-10-29T12:29:40.687709+00:00"
+    },
+    {
+      "file": "nyiso_202010.zip",
+      "source": "https://mis.nyiso.com/public/csv/palIntegrated/20201001palIntegrated_csv.zip",
+      "final_url": "https://mis.nyiso.com/public/csv/palIntegrated/20201001palIntegrated_csv.zip",
+      "bytes": 77987,
+      "sha256": "c30055f13b15a4d9b3a614dab02303bf3016ae22deb11aec36c65ac67e501280",
+      "retrieved_utc": "2026-10-29T12:29:40.787117+00:00"
+    },
+    {
+      "file": "nyiso_202011.zip",
+      "source": "https://mis.nyiso.com/public/csv/palIntegrated/20201101palIntegrated_csv.zip",
+      "final_url": "https://mis.nyiso.com/public/csv/palIntegrated/20201101palIntegrated_csv.zip",
+      "bytes": 76323,
+      "sha256": "e89d1e0949f515f464f9c6ef14bb80692728f003ef752316d100a2ddb78280f5",
+      "retrieved_utc": "2026-10-29T12:29:40.932426+00:00"
+    },
+    {
+      "file": "nyiso_202012.zip",
+      "source": "https://mis.nyiso.com/public/csv/palIntegrated/20201201palIntegrated_csv.zip",
+      "final_url": "https://mis.nyiso.com/public/csv/palIntegrated/20201201palIntegrated_csv.zip",
+      "bytes": 79098,
+      "sha256": "a679f9fe6875d884f1fa4c90f13e294f65d6224db28be18513d8dd3ffdbd7461",
+      "retrieved_utc": "2026-10-29T12:29:41.116562+00:00"
+    },
+    {
+      "file": "nyiso_202101.zip",
+      "source": "https://mis.nyiso.com/public/csv/palIntegrated/20210101palIntegrated_csv.zip",
+      "final_url": "https://mis.nyiso.com/public/csv/palIntegrated/20210101palIntegrated_csv.zip",
+      "bytes": 78849,
+      "sha256": "19f6b037be3fec7cc94219f589d83f0839829e717b2d3608559d354a182b3523",
+      "retrieved_utc": "2026-10-29T12:29:41.264847+00:00"
+    },
+    {
+      "file": "nyiso_202102.zip",
+      "source": "https://mis.nyiso.com/public/csv/palIntegrated/20210201palIntegrated_csv.zip",
+      "final_url": "https://mis.nyiso.com/public/csv/palIntegrated/20210201palIntegrated_csv.zip",
+      "bytes": 71074,
+      "sha256": "5044ecaba427d22a10d92b23903a0b5d5c9d043c135d09bbd3ae388c973846ee",
+      "retrieved_utc": "2026-10-29T12:29:41.456000+00:00"
+    },
+    {
+      "file": "nyiso_202103.zip",
+      "source": "https://mis.nyiso.com/public/csv/palIntegrated/20210301palIntegrated_csv.zip",
+      "final_url": "https://mis.nyiso.com/public/csv/palIntegrated/20210301palIntegrated_csv.zip",
+      "bytes": 78263,
+      "sha256": "4e8605433d14316cbb8edeb42cf1616ac07d4c2551eda94b0e955912feebd0cc",
+      "retrieved_utc": "2026-10-29T12:29:41.636594+00:00"
+    },
+    {
+      "file": "nyiso_202104.zip",
+      "source": "https://mis.nyiso.com/public/csv/palIntegrated/20210401palIntegrated_csv.zip",
+      "final_url": "https://mis.nyiso.com/public/csv/palIntegrated/20210401palIntegrated_csv.zip",
+      "bytes": 75617,
+      "sha256": "ac8972a7680a2004bc62a8b2579710cbf555da05b23113fca2d8195c9b85754a",
+      "retrieved_utc": "2026-10-29T12:29:41.738330+00:00"
+    },
+    {
+      "file": "nyiso_202105.zip",
+      "source": "https://mis.nyiso.com/public/csv/palIntegrated/20210501palIntegrated_csv.zip",
+      "final_url": "https://mis.nyiso.com/public/csv/palIntegrated/20210501palIntegrated_csv.zip",
+      "bytes": 78388,
+      "sha256": "a51b724973590b39af18b019c8ac59e67121ecb39ba637b8455880cf546737fa",
+      "retrieved_utc": "2026-10-29T12:29:41.883297+00:00"
+    },
+    {
+      "file": "nyiso_202106.zip",
+      "source": "https://mis.nyiso.com/public/csv/palIntegrated/20210601palIntegrated_csv.zip",
+      "final_url": "https://mis.nyiso.com/public/csv/palIntegrated/20210601palIntegrated_csv.zip",
+      "bytes": 77185,
+      "sha256": "b6981da98f96c5281f43cd0de260f3359eac51364e7a9c996e2f0c80d02d9c52",
+      "retrieved_utc": "2026-10-29T12:29:41.984207+00:00"
+    },
+    {
+      "file": "nyiso_202107.zip",
+      "source": "https://mis.nyiso.com/public/csv/palIntegrated/20210701palIntegrated_csv.zip",
+      "final_url": "https://mis.nyiso.com/public/csv/palIntegrated/20210701palIntegrated_csv.zip",
+      "bytes": 79781,
+      "sha256": "e7c3c22a770ff344acac44c07c5e436d11d9413625da47862f7707988e4575e1",
+      "retrieved_utc": "2026-10-29T12:29:42.124277+00:00"
+    },
+    {
+      "file": "nyiso_202108.zip",
+      "source": "https://mis.nyiso.com/public/csv/palIntegrated/20210801palIntegrated_csv.zip",
+      "final_url": "https://mis.nyiso.com/public/csv/palIntegrated/20210801palIntegrated_csv.zip",
+      "bytes": 79891,
+      "sha256": "d002dc47832db4cf04e8cbd2c9028ec57f8c935ea1b13a89cb6a6f9a4c2945bf",
+      "retrieved_utc": "2026-10-29T12:29:42.224754+00:00"
+    },
+    {
+      "file": "nyiso_202109.zip",
+      "source": "https://mis.nyiso.com/public/csv/palIntegrated/20210901palIntegrated_csv.zip",
+      "final_url": "https://mis.nyiso.com/public/csv/palIntegrated/20210901palIntegrated_csv.zip",
+      "bytes": 76655,
+      "sha256": "6bab8d9042d3d18ae446dda6af085d70b2061737519f5ecfc97b9381252f38b7",
+      "retrieved_utc": "2026-10-29T12:29:42.328673+00:00"
+    },
+    {
+      "file": "nyiso_202110.zip",
+      "source": "https://mis.nyiso.com/public/csv/palIntegrated/20211001palIntegrated_csv.zip",
+      "final_url": "https://mis.nyiso.com/public/csv/palIntegrated/20211001palIntegrated_csv.zip",
+      "bytes": 78812,
+      "sha256": "7250d1e995aa2a2b491ad005c1e4f2decd20f7c2806029906766fe94c49b68a3",
+      "retrieved_utc": "2026-10-29T12:29:42.472011+00:00"
+    },
+    {
+      "file": "nyiso_202111.zip",
+      "source": "https://mis.nyiso.com/public/csv/palIntegrated/20211101palIntegrated_csv.zip",
+      "final_url": "https://mis.nyiso.com/public/csv/palIntegrated/20211101palIntegrated_csv.zip",
+      "bytes": 76145,
+      "sha256": "e2dc5751790a73e155343f930fc3a81f11b21604a2d9a50646fec7df807bca70",
+      "retrieved_utc": "2026-10-29T12:29:42.673358+00:00"
+    },
+    {
+      "file": "nyiso_202112.zip",
+      "source": "https://mis.nyiso.com/public/csv/palIntegrated/20211201palIntegrated_csv.zip",
+      "final_url": "https://mis.nyiso.com/public/csv/palIntegrated/20211201palIntegrated_csv.zip",
+      "bytes": 78849,
+      "sha256": "e276060ddf7ca9b8f3463027362675cd20380add73760d39be1596ae4b0c9a07",
+      "retrieved_utc": "2026-10-29T12:29:42.773693+00:00"
+    },
+    {
+      "file": "nyiso_202201.zip",
+      "source": "https://mis.nyiso.com/public/csv/palIntegrated/20220101palIntegrated_csv.zip",
+      "final_url": "https://mis.nyiso.com/public/csv/palIntegrated/20220101palIntegrated_csv.zip",
+      "bytes": 78691,
+      "sha256": "994afcbf488034e9889934975724369cab3ec3982100efb70334e1f6a16c695e",
+      "retrieved_utc": "2026-10-29T12:29:42.916975+00:00"
+    },
+    {
+      "file": "nyiso_202202.zip",
+      "source": "https://mis.nyiso.com/public/csv/palIntegrated/20220201palIntegrated_csv.zip",
+      "final_url": "https://mis.nyiso.com/public/csv/palIntegrated/20220201palIntegrated_csv.zip",
+      "bytes": 70798,
+      "sha256": "3b95d992c1ae5c7849f7ba240bcf3a96281a36cdfa2da087ce8c3236b991f254",
+      "retrieved_utc": "2026-10-29T12:29:43.106349+00:00"
+    },
+    {
+      "file": "nyiso_202203.zip",
+      "source": "https://mis.nyiso.com/public/csv/palIntegrated/20220301palIntegrated_csv.zip",
+      "final_url": "https://mis.nyiso.com/public/csv/palIntegrated/20220301palIntegrated_csv.zip",
+      "bytes": 78152,
+      "sha256": "9bd57e5e7a7407ca4e35d696bfe9033fbf208a744ddbdff3d405a64322990011",
+      "retrieved_utc": "2026-10-29T12:29:43.255938+00:00"
+    },
+    {
+      "file": "nyiso_202204.zip",
+      "source": "https://mis.nyiso.com/public/csv/palIntegrated/20220401palIntegrated_csv.zip",
+      "final_url": "https://mis.nyiso.com/public/csv/palIntegrated/20220401palIntegrated_csv.zip",
+      "bytes": 75546,
+      "sha256": "f5fe4dc14e5ddd66aedcae9be348c0995e66ca7153b3b9fb7069b565e81b5dcf",
+      "retrieved_utc": "2026-10-29T12:29:43.360872+00:00"
+    },
+    {
+      "file": "nyiso_202205.zip",
+      "source": "https://mis.nyiso.com/public/csv/palIntegrated/20220501palIntegrated_csv.zip",
+      "final_url": "https://mis.nyiso.com/public/csv/palIntegrated/20220501palIntegrated_csv.zip",
+      "bytes": 78528,
+      "sha256": "4ad2a1d9a88ee98e165e6aade14314153abb998f9d91e7c9b79dd69b8f01cd42",
+      "retrieved_utc": "2026-10-29T12:29:43.464769+00:00"
+    },
+    {
+      "file": "nyiso_202206.zip",
+      "source": "https://mis.nyiso.com/public/csv/palIntegrated/20220601palIntegrated_csv.zip",
+      "final_url": "https://mis.nyiso.com/public/csv/palIntegrated/20220601palIntegrated_csv.zip",
+      "bytes": 76676,
+      "sha256": "e658790e443fde77bdd47cd31e8c96af9f8f56c43fa94fed923b5e6309ec841a",
+      "retrieved_utc": "2026-10-29T12:29:43.562982+00:00"
+    },
+    {
+      "file": "nyiso_202207.zip",
+      "source": "https://mis.nyiso.com/public/csv/palIntegrated/20220701palIntegrated_csv.zip",
+      "final_url": "https://mis.nyiso.com/public/csv/palIntegrated/20220701palIntegrated_csv.zip",
+      "bytes": 79990,
+      "sha256": "0ecdfe1aff6470a67099a1849b21bbfa1e74060711820e80e2e8d79289261991",
+      "retrieved_utc": "2026-10-29T12:29:43.781175+00:00"
+    },
+    {
+      "file": "nyiso_202208.zip",
+      "source": "https://mis.nyiso.com/public/csv/palIntegrated/20220801palIntegrated_csv.zip",
+      "final_url": "https://mis.nyiso.com/public/csv/palIntegrated/20220801palIntegrated_csv.zip",
+      "bytes": 79930,
+      "sha256": "34c9e54f7729c3edc97229af1afe492475e845a1aa358798d559e1edbbccbb89",
+      "retrieved_utc": "2026-10-29T12:29:43.929671+00:00"
+    },
+    {
+      "file": "nyiso_202209.zip",
+      "source": "https://mis.nyiso.com/public/csv/palIntegrated/20220901palIntegrated_csv.zip",
+      "final_url": "https://mis.nyiso.com/public/csv/palIntegrated/20220901palIntegrated_csv.zip",
+      "bytes": 76468,
+      "sha256": "abac91473bdf08101900a820a4287102f5f5ed5b74fc72ab17723aa7b76442a3",
+      "retrieved_utc": "2026-10-29T12:29:44.084889+00:00"
+    },
+    {
+      "file": "nyiso_202210.zip",
+      "source": "https://mis.nyiso.com/public/csv/palIntegrated/20221001palIntegrated_csv.zip",
+      "final_url": "https://mis.nyiso.com/public/csv/palIntegrated/20221001palIntegrated_csv.zip",
+      "bytes": 78311,
+      "sha256": "8d9f2ad6f3a31f8a9bce754d267bae5fb24b9ad3152473c3520fa153237bc0f0",
+      "retrieved_utc": "2026-10-29T12:29:44.228291+00:00"
+    },
+    {
+      "file": "nyiso_202211.zip",
+      "source": "https://mis.nyiso.com/public/csv/palIntegrated/20221101palIntegrated_csv.zip",
+      "final_url": "https://mis.nyiso.com/public/csv/palIntegrated/20221101palIntegrated_csv.zip",
+      "bytes": 76140,
+      "sha256": "f1386ac45c4d682a1a0db32f554f601733c52bb125619ab986cc3b826ab1f0e1",
+      "retrieved_utc": "2026-10-29T12:29:44.371602+00:00"
+    },
+    {
+      "file": "nyiso_202212.zip",
+      "source": "https://mis.nyiso.com/public/csv/palIntegrated/20221201palIntegrated_csv.zip",
+      "final_url": "https://mis.nyiso.com/public/csv/palIntegrated/20221201palIntegrated_csv.zip",
+      "bytes": 78606,
+      "sha256": "752c7076703ac3a941142e06f71c887a5b8b44c148355d6ae1dca3896f15886e",
+      "retrieved_utc": "2026-10-29T12:29:44.515909+00:00"
+    },
+    {
+      "file": "nyiso_202301.zip",
+      "source": "https://mis.nyiso.com/public/csv/palIntegrated/20230101palIntegrated_csv.zip",
+      "final_url": "https://mis.nyiso.com/public/csv/palIntegrated/20230101palIntegrated_csv.zip",
+      "bytes": 78675,
+      "sha256": "256dc5020b719eb8d523b911e4220c35f7011b27a47f61dbcc2f3227f638fec4",
+      "retrieved_utc": "2026-10-29T12:29:44.617501+00:00"
+    },
+    {
+      "file": "nyiso_202302.zip",
+      "source": "https://mis.nyiso.com/public/csv/palIntegrated/20230201palIntegrated_csv.zip",
+      "final_url": "https://mis.nyiso.com/public/csv/palIntegrated/20230201palIntegrated_csv.zip",
+      "bytes": 70921,
+      "sha256": "00841a7cc2e5bf5d21e8641d160559f6255c9da4590c6d8bb11e58fd078f83ff",
+      "retrieved_utc": "2026-10-29T12:29:44.868342+00:00"
+    },
+    {
+      "file": "nyiso_202303.zip",
+      "source": "https://mis.nyiso.com/public/csv/palIntegrated/20230301palIntegrated_csv.zip",
+      "final_url": "https://mis.nyiso.com/public/csv/palIntegrated/20230301palIntegrated_csv.zip",
+      "bytes": 78155,
+      "sha256": "a0b8b7d41e8f212c8638a302929853622246d1ec591a68695ec499bd5fec21d2",
+      "retrieved_utc": "2026-10-29T12:29:45.011846+00:00"
+    },
+    {
+      "file": "nyiso_202304.zip",
+      "source": "https://mis.nyiso.com/public/csv/palIntegrated/20230401palIntegrated_csv.zip",
+      "final_url": "https://mis.nyiso.com/public/csv/palIntegrated/20230401palIntegrated_csv.zip",
+      "bytes": 75805,
+      "sha256": "8d07e0eb3c22491908ae6ec1cec1bda1bed3ab2e09a46286f440c00a77716aac",
+      "retrieved_utc": "2026-10-29T12:29:45.118760+00:00"
+    },
+    {
+      "file": "nyiso_202305.zip",
+      "source": "https://mis.nyiso.com/public/csv/palIntegrated/20230501palIntegrated_csv.zip",
+      "final_url": "https://mis.nyiso.com/public/csv/palIntegrated/20230501palIntegrated_csv.zip",
+      "bytes": 78344,
+      "sha256": "7b0a757abe270af0bbc70c885808fb49602ca8002f574b1eb5d203010c398feb",
+      "retrieved_utc": "2026-10-29T12:29:45.218647+00:00"
+    },
+    {
+      "file": "nyiso_202306.zip",
+      "source": "https://mis.nyiso.com/public/csv/palIntegrated/20230601palIntegrated_csv.zip",
+      "final_url": "https://mis.nyiso.com/public/csv/palIntegrated/20230601palIntegrated_csv.zip",
+      "bytes": 76442,
+      "sha256": "087d48291f786a6ab180b873482be48f3b5114e5fcc438cfba71c41270af4f0a",
+      "retrieved_utc": "2026-10-29T12:29:45.319789+00:00"
+    },
+    {
+      "file": "nyiso_202307.zip",
+      "source": "https://mis.nyiso.com/public/csv/palIntegrated/20230701palIntegrated_csv.zip",
+      "final_url": "https://mis.nyiso.com/public/csv/palIntegrated/20230701palIntegrated_csv.zip",
+      "bytes": 79859,
+      "sha256": "ddb37100e1aa150662370c21e68d98d0eee7d883972344732194be4f1ef1c587",
+      "retrieved_utc": "2026-10-29T12:29:45.459889+00:00"
+    },
+    {
+      "file": "nyiso_202308.zip",
+      "source": "https://mis.nyiso.com/public/csv/palIntegrated/20230801palIntegrated_csv.zip",
+      "final_url": "https://mis.nyiso.com/public/csv/palIntegrated/20230801palIntegrated_csv.zip",
+      "bytes": 79281,
+      "sha256": "60e47f35a0a4fef233e2dc2218c53a3748e8eb8557c3c1f21d7f4bfdf618c6ef",
+      "retrieved_utc": "2026-10-29T12:29:45.599928+00:00"
+    },
+    {
+      "file": "nyiso_202309.zip",
+      "source": "https://mis.nyiso.com/public/csv/palIntegrated/20230901palIntegrated_csv.zip",
+      "final_url": "https://mis.nyiso.com/public/csv/palIntegrated/20230901palIntegrated_csv.zip",
+      "bytes": 76406,
+      "sha256": "ae840546607a691ba2826984970b9dd77446f5e703e6b2006ca7c238407631ed",
+      "retrieved_utc": "2026-10-29T12:29:45.783960+00:00"
+    },
+    {
+      "file": "nyiso_202310.zip",
+      "source": "https://mis.nyiso.com/public/csv/palIntegrated/20231001palIntegrated_csv.zip",
+      "final_url": "https://mis.nyiso.com/public/csv/palIntegrated/20231001palIntegrated_csv.zip",
+      "bytes": 78720,
+      "sha256": "563c03fdacfbdde6e49d62434e9e8f7883ce2205aea75ed36455fcfb1a780e93",
+      "retrieved_utc": "2026-10-29T12:29:45.943546+00:00"
+    },
+    {
+      "file": "nyiso_202311.zip",
+      "source": "https://mis.nyiso.com/public/csv/palIntegrated/20231101palIntegrated_csv.zip",
+      "final_url": "https://mis.nyiso.com/public/csv/palIntegrated/20231101palIntegrated_csv.zip",
+      "bytes": 76122,
+      "sha256": "51994eb34b5a04e014a97c5491ee410c8f319497629430c3d95e15b894a100c9",
+      "retrieved_utc": "2026-10-29T12:29:46.127909+00:00"
+    },
+    {
+      "file": "nyiso_202312.zip",
+      "source": "https://mis.nyiso.com/public/csv/palIntegrated/20231201palIntegrated_csv.zip",
+      "final_url": "https://mis.nyiso.com/public/csv/palIntegrated/20231201palIntegrated_csv.zip",
+      "bytes": 78761,
+      "sha256": "7bd513814cfe7fc13d2dec34ad7338e36705b4122ff006cae9139a4c83abc389",
+      "retrieved_utc": "2026-10-29T12:29:46.280373+00:00"
+    },
+    {
+      "file": "nyiso_202401.zip",
+      "source": "https://mis.nyiso.com/public/csv/palIntegrated/20240101palIntegrated_csv.zip",
+      "final_url": "https://mis.nyiso.com/public/csv/palIntegrated/20240101palIntegrated_csv.zip",
+      "bytes": 78427,
+      "sha256": "a8139873a8b1aff98b5ad17ed16bb5cf57e834de513e6c80484ab371099ff592",
+      "retrieved_utc": "2026-10-29T12:29:46.432038+00:00"
+    },
+    {
+      "file": "nyiso_202402.zip",
+      "source": "https://mis.nyiso.com/public/csv/palIntegrated/20240201palIntegrated_csv.zip",
+      "final_url": "https://mis.nyiso.com/public/csv/palIntegrated/20240201palIntegrated_csv.zip",
+      "bytes": 73592,
+      "sha256": "1af2ad05722197e12d31fb422f4fcc6a2ed8e89f1b04ee313510d0cb5699fd82",
+      "retrieved_utc": "2026-10-29T12:29:46.540716+00:00"
+    },
+    {
+      "file": "nyiso_202403.zip",
+      "source": "https://mis.nyiso.com/public/csv/palIntegrated/20240301palIntegrated_csv.zip",
+      "final_url": "https://mis.nyiso.com/public/csv/palIntegrated/20240301palIntegrated_csv.zip",
+      "bytes": 78264,
+      "sha256": "90276dc779225078ec5016c3f417fecb2562964f9340124d1d8ccf5f02417a9b",
+      "retrieved_utc": "2026-10-29T12:29:46.691807+00:00"
+    },
+    {
+      "file": "nyiso_202404.zip",
+      "source": "https://mis.nyiso.com/public/csv/palIntegrated/20240401palIntegrated_csv.zip",
+      "final_url": "https://mis.nyiso.com/public/csv/palIntegrated/20240401palIntegrated_csv.zip",
+      "bytes": 75746,
+      "sha256": "b86d2b81588084385234b2e634842d064811df6ea3c26d4c55533ef01b477e92",
+      "retrieved_utc": "2026-10-29T12:29:46.799410+00:00"
+    },
+    {
+      "file": "nyiso_202405.zip",
+      "source": "https://mis.nyiso.com/public/csv/palIntegrated/20240501palIntegrated_csv.zip",
+      "final_url": "https://mis.nyiso.com/public/csv/palIntegrated/20240501palIntegrated_csv.zip",
+      "bytes": 78571,
+      "sha256": "f4aff95cc881ec92b4ce05a15dc6154ae29b7f4de189f25006422eac29cdfeed",
+      "retrieved_utc": "2026-10-29T12:29:47.024221+00:00"
+    },
+    {
+      "file": "nyiso_202406.zip",
+      "source": "https://mis.nyiso.com/public/csv/palIntegrated/20240601palIntegrated_csv.zip",
+      "final_url": "https://mis.nyiso.com/public/csv/palIntegrated/20240601palIntegrated_csv.zip",
+      "bytes": 76795,
+      "sha256": "d99bd9bc45c1df487436f2ab86648cd31b046bf6c27eaa6aa542f1f41cb7b9db",
+      "retrieved_utc": "2026-10-29T12:29:47.133204+00:00"
+    },
+    {
+      "file": "nyiso_202407.zip",
+      "source": "https://mis.nyiso.com/public/csv/palIntegrated/20240701palIntegrated_csv.zip",
+      "final_url": "https://mis.nyiso.com/public/csv/palIntegrated/20240701palIntegrated_csv.zip",
+      "bytes": 79952,
+      "sha256": "61fedf8d4904892213b231327bf87e52c871d921dbb1c047e1a588c17feca774",
+      "retrieved_utc": "2026-10-29T12:29:47.243135+00:00"
+    },
+    {
+      "file": "nyiso_202408.zip",
+      "source": "https://mis.nyiso.com/public/csv/palIntegrated/20240801palIntegrated_csv.zip",
+      "final_url": "https://mis.nyiso.com/public/csv/palIntegrated/20240801palIntegrated_csv.zip",
+      "bytes": 79471,
+      "sha256": "1b3cd91e65f21a462f2a142c5703ad15ac473051b6fd9eee3218bd1a8a2bfef5",
+      "retrieved_utc": "2026-10-29T12:29:47.354953+00:00"
+    },
+    {
+      "file": "nyiso_202409.zip",
+      "source": "https://mis.nyiso.com/public/csv/palIntegrated/20240901palIntegrated_csv.zip",
+      "final_url": "https://mis.nyiso.com/public/csv/palIntegrated/20240901palIntegrated_csv.zip",
+      "bytes": 76518,
+      "sha256": "1e224e649ad619979390898d2ef3ee0a1f293ff6f13a6ee98cf1b4aec2270096",
+      "retrieved_utc": "2026-10-29T12:29:47.467424+00:00"
+    },
+    {
+      "file": "nyiso_202410.zip",
+      "source": "https://mis.nyiso.com/public/csv/palIntegrated/20241001palIntegrated_csv.zip",
+      "final_url": "https://mis.nyiso.com/public/csv/palIntegrated/20241001palIntegrated_csv.zip",
+      "bytes": 78791,
+      "sha256": "e4fd5eb16cbc105a6f69f9a7d670d4cf92c78a84560455164c21fe1411e7b37e",
+      "retrieved_utc": "2026-10-29T12:29:47.577713+00:00"
+    },
+    {
+      "file": "nyiso_202411.zip",
+      "source": "https://mis.nyiso.com/public/csv/palIntegrated/20241101palIntegrated_csv.zip",
+      "final_url": "https://mis.nyiso.com/public/csv/palIntegrated/20241101palIntegrated_csv.zip",
+      "bytes": 76200,
+      "sha256": "7d53095c957af801ea831e7aa80fb0244240689bdaf3308130daa47a91e884ba",
+      "retrieved_utc": "2026-10-29T12:29:47.685245+00:00"
+    },
+    {
+      "file": "nyiso_202412.zip",
+      "source": "https://mis.nyiso.com/public/csv/palIntegrated/20241201palIntegrated_csv.zip",
+      "final_url": "https://mis.nyiso.com/public/csv/palIntegrated/20241201palIntegrated_csv.zip",
+      "bytes": 78780,
+      "sha256": "8ba7a8725872a4450a749c374aa0a64aa2a457fd3bbac922d0aa19d2886d488b",
+      "retrieved_utc": "2026-10-29T12:29:47.794377+00:00"
+    },
+    {
+      "file": "nyiso_202501.zip",
+      "source": "https://mis.nyiso.com/public/csv/palIntegrated/20250101palIntegrated_csv.zip",
+      "final_url": "https://mis.nyiso.com/public/csv/palIntegrated/20250101palIntegrated_csv.zip",
+      "bytes": 78666,
+      "sha256": "f77f56ccb24a2395ddf9bc967b5ab372380a1791448ba228d95cfe1a0a43e28e",
+      "retrieved_utc": "2026-10-29T21:31:25.944600+00:00"
+    },
+    {
+      "file": "nyiso_202502.zip",
+      "source": "https://mis.nyiso.com/public/csv/palIntegrated/20250201palIntegrated_csv.zip",
+      "final_url": "https://mis.nyiso.com/public/csv/palIntegrated/20250201palIntegrated_csv.zip",
+      "bytes": 70923,
+      "sha256": "b6fcf723f9159af401d0550cfa0fc288c5c6aed628e67df35ae9a2a0098c961c",
+      "retrieved_utc": "2026-10-29T21:31:26.148831+00:00"
+    },
+    {
+      "file": "nyiso_202503.zip",
+      "source": "https://mis.nyiso.com/public/csv/palIntegrated/20250301palIntegrated_csv.zip",
+      "final_url": "https://mis.nyiso.com/public/csv/palIntegrated/20250301palIntegrated_csv.zip",
+      "bytes": 78488,
+      "sha256": "5ae47488aa8ec2f57cc47e1392ceaba84c93173065ee9e00073744848383bb86",
+      "retrieved_utc": "2026-10-29T21:31:26.348594+00:00"
+    },
+    {
+      "file": "nyiso_202504.zip",
+      "source": "https://mis.nyiso.com/public/csv/palIntegrated/20250401palIntegrated_csv.zip",
+      "final_url": "https://mis.nyiso.com/public/csv/palIntegrated/20250401palIntegrated_csv.zip",
+      "bytes": 75897,
+      "sha256": "e774bcfdf7980eed343f4746285732fb8eaf7bc6b93811559ff144aa38903ec6",
+      "retrieved_utc": "2026-10-29T21:31:26.525096+00:00"
+    },
+    {
+      "file": "nyiso_202505.zip",
+      "source": "https://mis.nyiso.com/public/csv/palIntegrated/20250501palIntegrated_csv.zip",
+      "final_url": "https://mis.nyiso.com/public/csv/palIntegrated/20250501palIntegrated_csv.zip",
+      "bytes": 78326,
+      "sha256": "1fa73bc79a59b3c75a847d2d8feb2f8155cf71287d9c8aeeae17f9484bb2f870",
+      "retrieved_utc": "2026-10-29T21:31:26.621684+00:00"
+    },
+    {
+      "file": "nyiso_202506.zip",
+      "source": "https://mis.nyiso.com/public/csv/palIntegrated/20250601palIntegrated_csv.zip",
+      "final_url": "https://mis.nyiso.com/public/csv/palIntegrated/20250601palIntegrated_csv.zip",
+      "bytes": 76689,
+      "sha256": "9e190bea8c17ab5c6eaef1d013bf8b8c36b91eed1bf427d78cfbb16ce6cf10c2",
+      "retrieved_utc": "2026-10-29T21:31:26.713232+00:00"
+    },
+    {
+      "file": "nyiso_202507.zip",
+      "source": "https://mis.nyiso.com/public/csv/palIntegrated/20250701palIntegrated_csv.zip",
+      "final_url": "https://mis.nyiso.com/public/csv/palIntegrated/20250701palIntegrated_csv.zip",
+      "bytes": 79988,
+      "sha256": "e76ec9ebb38365b03f8bc52077e9be683bffcf13ea93817ce1a39ba2e0de8cfb",
+      "retrieved_utc": "2026-10-29T21:31:26.812641+00:00"
+    },
+    {
+      "file": "nyiso_202508.zip",
+      "source": "https://mis.nyiso.com/public/csv/palIntegrated/20250801palIntegrated_csv.zip",
+      "final_url": "https://mis.nyiso.com/public/csv/palIntegrated/20250801palIntegrated_csv.zip",
+      "bytes": 79458,
+      "sha256": "501ef760e3c550ce61bfcbe9b5e7b83babc4841796a80f14f8b692c7461fbc0a",
+      "retrieved_utc": "2026-10-29T21:31:26.956401+00:00"
+    },
+    {
+      "file": "nyiso_202509.zip",
+      "source": "https://mis.nyiso.com/public/csv/palIntegrated/20250901palIntegrated_csv.zip",
+      "final_url": "https://mis.nyiso.com/public/csv/palIntegrated/20250901palIntegrated_csv.zip",
+      "bytes": 76541,
+      "sha256": "c9502fdf1c50f555d4f0c2a0748aed62c329646082eab636916181efebba5143",
+      "retrieved_utc": "2026-10-29T21:31:27.096812+00:00"
+    },
+    {
+      "file": "nyiso_202510.zip",
+      "source": "https://mis.nyiso.com/public/csv/palIntegrated/20251001palIntegrated_csv.zip",
+      "final_url": "https://mis.nyiso.com/public/csv/palIntegrated/20251001palIntegrated_csv.zip",
+      "bytes": 78807,
+      "sha256": "46a5aa0d767c7d47e6b0c5350aeb13e63d346ed08b267922259348ceee916b7e",
+      "retrieved_utc": "2026-10-29T21:31:27.233534+00:00"
+    },
+    {
+      "file": "nyiso_202511.zip",
+      "source": "https://mis.nyiso.com/public/csv/palIntegrated/20251101palIntegrated_csv.zip",
+      "final_url": "https://mis.nyiso.com/public/csv/palIntegrated/20251101palIntegrated_csv.zip",
+      "bytes": 76213,
+      "sha256": "ff495b34a7fc0e61d338e91668485db6e66e72659e35369e8e7498cb8d2d2958",
+      "retrieved_utc": "2026-10-29T21:31:27.364846+00:00"
+    },
+    {
+      "file": "nyiso_202512.zip",
+      "source": "https://mis.nyiso.com/public/csv/palIntegrated/20251201palIntegrated_csv.zip",
+      "final_url": "https://mis.nyiso.com/public/csv/palIntegrated/20251201palIntegrated_csv.zip",
+      "bytes": 78756,
+      "sha256": "6642fcf115102053e9bcdb5b25fed6affcafc8aedf4aabdf4439e7a8f1ce9e51",
+      "retrieved_utc": "2026-10-29T21:31:27.501011+00:00"
+    },
+    {
+      "file": "GHCNh_USW00014733_2019.parquet",
+      "source": "https://www.ncei.noaa.gov/oa/global-historical-climatology-network/hourly/access/by-year/2019/parquet/GHCNh_USW00014733_2019.parquet",
+      "sha256": "5cd8087c60da98ed00b66e9ffea87f943fcd4955d7f8aa973d9f547d4435f520",
+      "bytes": 1496373,
+      "retrieved_utc": "2026-10-29T22:01:52.704104+00:00"
+    },
+    {
+      "file": "GHCNh_USW00014733_2020.parquet",
+      "source": "https://www.ncei.noaa.gov/oa/global-historical-climatology-network/hourly/access/by-year/2020/parquet/GHCNh_USW00014733_2020.parquet",
+      "sha256": "06c47945fce6c2da0e9a041f8148ff6cd6c145ecf2531ec40a365741799fd9fa",
+      "bytes": 1430739,
+      "retrieved_utc": "2026-10-29T22:01:52.503085+00:00"
+    },
+    {
+      "file": "GHCNh_USW00014733_2021.parquet",
+      "source": "https://www.ncei.noaa.gov/oa/global-historical-climatology-network/hourly/access/by-year/2021/parquet/GHCNh_USW00014733_2021.parquet",
+      "sha256": "896671f2f5cabe40fbf6db8cdd780563f530e6dd296a5b2299557bfcd02969e6",
+      "bytes": 1361044,
+      "retrieved_utc": "2026-10-29T22:01:52.494261+00:00"
+    },
+    {
+      "file": "GHCNh_USW00014733_2022.parquet",
+      "source": "https://www.ncei.noaa.gov/oa/global-historical-climatology-network/hourly/access/by-year/2022/parquet/GHCNh_USW00014733_2022.parquet",
+      "sha256": "dcf377da43e255f570022fb1cf414e8b26cd700c43128c618b6f274bf940f554",
+      "bytes": 1486569,
+      "retrieved_utc": "2026-10-29T22:01:55.942324+00:00"
+    },
+    {
+      "file": "GHCNh_USW00014733_2023.parquet",
+      "source": "https://www.ncei.noaa.gov/oa/global-historical-climatology-network/hourly/access/by-year/2023/parquet/GHCNh_USW00014733_2023.parquet",
+      "sha256": "d4407f38765c7d34abe5261f258e5f0c1b783f1398d69765c3fd2479d6560a3d",
+      "bytes": 1427165,
+      "retrieved_utc": "2026-10-29T22:01:56.052365+00:00"
+    },
+    {
+      "file": "GHCNh_USW00014733_2024.parquet",
+      "source": "https://www.ncei.noaa.gov/oa/global-historical-climatology-network/hourly/access/by-year/2024/parquet/GHCNh_USW00014733_2024.parquet",
+      "sha256": "56706de4f637cbd241febb057de9fd6aa3d3b766cd144c4d0fab117e128e5014",
+      "bytes": 1421172,
+      "retrieved_utc": "2026-10-29T22:01:55.951654+00:00"
+    },
+    {
+      "file": "GHCNh_USW00014733_2025.parquet",
+      "source": "https://www.ncei.noaa.gov/oa/global-historical-climatology-network/hourly/access/by-year/2025/parquet/GHCNh_USW00014733_2025.parquet",
+      "sha256": "7635c462b2ace447f8ca37484552adfe3787a8898192f87773736ced3bb84649",
+      "bytes": 1404040,
+      "retrieved_utc": "2026-10-29T22:01:59.445791+00:00"
+    },
+    {
+      "file": "GHCNh_USW00014733_2026.parquet",
+      "source": "https://www.ncei.noaa.gov/oa/global-historical-climatology-network/hourly/access/by-year/2026/parquet/GHCNh_USW00014733_2026.parquet",
+      "sha256": "90c423b9dc40664a6efcbd091330266f06f840e8589347d4355a3ac70fa73198",
+      "bytes": 1820869,
+      "retrieved_utc": "2026-10-29T22:01:59.857577+00:00"
+    },
+    {
+      "file": "GHCNh_USW00014771_2019.parquet",
+      "source": "https://www.ncei.noaa.gov/oa/global-historical-climatology-network/hourly/access/by-year/2019/parquet/GHCNh_USW00014771_2019.parquet",
+      "sha256": "d91d5e69291a64f5d7cdd75f51918756631add5cd8afef8ab7eaf93db75f864c",
+      "bytes": 1368234,
+      "retrieved_utc": "2026-10-29T22:01:59.704114+00:00"
+    },
+    {
+      "file": "GHCNh_USW00014771_2020.parquet",
+      "source": "https://www.ncei.noaa.gov/oa/global-historical-climatology-network/hourly/access/by-year/2020/parquet/GHCNh_USW00014771_2020.parquet",
+      "sha256": "3616e5e96d841b75716cc166ddac5f9a7e4e54fb94019ae0d1f4abbfa8de9d9e",
+      "bytes": 1305977,
+      "retrieved_utc": "2026-10-29T22:02:02.711257+00:00"
+    },
+    {
+      "file": "GHCNh_USW00014771_2021.parquet",
+      "source": "https://www.ncei.noaa.gov/oa/global-historical-climatology-network/hourly/access/by-year/2021/parquet/GHCNh_USW00014771_2021.parquet",
+      "sha256": "7b6d6bc6d5dc96610e464651841f5fd90f2b681b611cbe9b69b82a6f176b0ca4",
+      "bytes": 1306630,
+      "retrieved_utc": "2026-10-29T22:02:02.569839+00:00"
+    },
+    {
+      "file": "GHCNh_USW00014771_2022.parquet",
+      "source": "https://www.ncei.noaa.gov/oa/global-historical-climatology-network/hourly/access/by-year/2022/parquet/GHCNh_USW00014771_2022.parquet",
+      "sha256": "90bde1b475a0476e54ca6e00db8da921ffeefca3ebe0f6aa31c877646a7931ed",
+      "bytes": 1316845,
+      "retrieved_utc": "2026-10-29T22:02:02.595257+00:00"
+    },
+    {
+      "file": "GHCNh_USW00014771_2023.parquet",
+      "source": "https://www.ncei.noaa.gov/oa/global-historical-climatology-network/hourly/access/by-year/2023/parquet/GHCNh_USW00014771_2023.parquet",
+      "sha256": "ed87d1e79c49f71da7064d33f2d728850cf1a85f9ab22f9d85a8988a033c51d2",
+      "bytes": 1342514,
+      "retrieved_utc": "2026-10-29T22:02:06.168390+00:00"
+    },
+    {
+      "file": "GHCNh_USW00014771_2024.parquet",
+      "source": "https://www.ncei.noaa.gov/oa/global-historical-climatology-network/hourly/access/by-year/2024/parquet/GHCNh_USW00014771_2024.parquet",
+      "sha256": "70605a9841603bd2cd3153ce0d608f604e50a03ccd5ec6fc531b974cc3c16739",
+      "bytes": 1324350,
+      "retrieved_utc": "2026-10-29T22:02:05.968558+00:00"
+    },
+    {
+      "file": "GHCNh_USW00014771_2025.parquet",
+      "source": "https://www.ncei.noaa.gov/oa/global-historical-climatology-network/hourly/access/by-year/2025/parquet/GHCNh_USW00014771_2025.parquet",
+      "sha256": "be9ef16cef6bf7235161e558cc96afc7b213538ac674fa8f6e62651c98f17ab7",
+      "bytes": 1336199,
+      "retrieved_utc": "2026-10-29T22:02:05.996200+00:00"
+    },
+    {
+      "file": "GHCNh_USW00014771_2026.parquet",
+      "source": "https://www.ncei.noaa.gov/oa/global-historical-climatology-network/hourly/access/by-year/2026/parquet/GHCNh_USW00014771_2026.parquet",
+      "sha256": "7a1ccd3aec583cee69b2eb9687dfe564801241bd52c7e399b8b05c56e4862048",
+      "bytes": 1545109,
+      "retrieved_utc": "2026-10-29T22:02:10.211797+00:00"
+    },
+    {
+      "file": "GHCNh_USW00014735_2019.parquet",
+      "source": "https://www.ncei.noaa.gov/oa/global-historical-climatology-network/hourly/access/by-year/2019/parquet/GHCNh_USW00014735_2019.parquet",
+      "sha256": "2c539bb669bb214fc7f1b95a3a8b26fd39903a42f2bba57fa713e880fc4cb641",
+      "bytes": 1286032,
+      "retrieved_utc": "2026-10-29T22:02:09.987947+00:00"
+    },
+    {
+      "file": "GHCNh_USW00014735_2020.parquet",
+      "source": "https://www.ncei.noaa.gov/oa/global-historical-climatology-network/hourly/access/by-year/2020/parquet/GHCNh_USW00014735_2020.parquet",
+      "sha256": "1ba7ea448502108400a94751011117cff0530e9e59019b8aae62190638412650",
+      "bytes": 1240269,
+      "retrieved_utc": "2026-10-29T22:02:09.953654+00:00"
+    },
+    {
+      "file": "GHCNh_USW00014735_2021.parquet",
+      "source": "https://www.ncei.noaa.gov/oa/global-historical-climatology-network/hourly/access/by-year/2021/parquet/GHCNh_USW00014735_2021.parquet",
+      "sha256": "913a42d511bce4510f70f94e1024bf6b4a56cf8a829340abf8ce4dd96ca7d1a0",
+      "bytes": 1285813,
+      "retrieved_utc": "2026-10-29T22:02:12.735615+00:00"
+    },
+    {
+      "file": "GHCNh_USW00014735_2022.parquet",
+      "source": "https://www.ncei.noaa.gov/oa/global-historical-climatology-network/hourly/access/by-year/2022/parquet/GHCNh_USW00014735_2022.parquet",
+      "sha256": "2f1e2ec6700a09426a193f1fa574573c9ab8003d5537e2f1fe6979c49d45edec",
+      "bytes": 1266762,
+      "retrieved_utc": "2026-10-29T22:02:12.772536+00:00"
+    },
+    {
+      "file": "GHCNh_USW00014735_2023.parquet",
+      "source": "https://www.ncei.noaa.gov/oa/global-historical-climatology-network/hourly/access/by-year/2023/parquet/GHCNh_USW00014735_2023.parquet",
+      "sha256": "2f33ced789940635cdbb6883bb4c3f2e5eb499188f21c8b4aa9ee352bb9bb7a1",
+      "bytes": 1334729,
+      "retrieved_utc": "2026-10-29T22:02:12.815342+00:00"
+    },
+    {
+      "file": "GHCNh_USW00014735_2024.parquet",
+      "source": "https://www.ncei.noaa.gov/oa/global-historical-climatology-network/hourly/access/by-year/2024/parquet/GHCNh_USW00014735_2024.parquet",
+      "sha256": "63989e5ca9c5ad61ee9fdda1c1438cbfa8d464e64b4bda132832df36f5b9a5b1",
+      "bytes": 1308608,
+      "retrieved_utc": "2026-10-29T22:02:15.352066+00:00"
+    },
+    {
+      "file": "GHCNh_USW00014735_2025.parquet",
+      "source": "https://www.ncei.noaa.gov/oa/global-historical-climatology-network/hourly/access/by-year/2025/parquet/GHCNh_USW00014735_2025.parquet",
+      "sha256": "ec04c197164a3a468278b9263f117a051ef552de0fe613f5567c2c323235fa99",
+      "bytes": 1254477,
+      "retrieved_utc": "2026-10-29T22:02:15.383929+00:00"
+    },
+    {
+      "file": "GHCNh_USW00014735_2026.parquet",
+      "source": "https://www.ncei.noaa.gov/oa/global-historical-climatology-network/hourly/access/by-year/2026/parquet/GHCNh_USW00014735_2026.parquet",
+      "sha256": "49ebdc17f5e415f5bd15a6fab611242c1c4340dcc5f0468309d3829ef96cac50",
+      "bytes": 1663121,
+      "retrieved_utc": "2026-10-29T22:02:15.312379+00:00"
+    },
+    {
+      "file": "GHCNh_USW00014732_2019.parquet",
+      "source": "https://www.ncei.noaa.gov/oa/global-historical-climatology-network/hourly/access/by-year/2019/parquet/GHCNh_USW00014732_2019.parquet",
+      "sha256": "d4c77494a775adb3061ba329d2f30ea1e27e653ddb1f8ffae0b9d9e0c1ffa59c",
+      "bytes": 1240510,
+      "retrieved_utc": "2026-10-29T22:02:17.989181+00:00"
+    },
+    {
+      "file": "GHCNh_USW00014732_2020.parquet",
+      "source": "https://www.ncei.noaa.gov/oa/global-historical-climatology-network/hourly/access/by-year/2020/parquet/GHCNh_USW00014732_2020.parquet",
+      "sha256": "465964fad08aa71cb9f83b7f9bf6d61cf8e15ca1e05f0fa18535d762507bf07a",
+      "bytes": 1204843,
+      "retrieved_utc": "2026-10-29T22:02:17.994876+00:00"
+    },
+    {
+      "file": "GHCNh_USW00014732_2021.parquet",
+      "source": "https://www.ncei.noaa.gov/oa/global-historical-climatology-network/hourly/access/by-year/2021/parquet/GHCNh_USW00014732_2021.parquet",
+      "sha256": "ba2da604e6a1de9f8cf04b208bb64f1283b52e9830a050a91a1156a015677c20",
+      "bytes": 1166507,
+      "retrieved_utc": "2026-10-29T22:02:17.977607+00:00"
+    },
+    {
+      "file": "GHCNh_USW00014732_2022.parquet",
+      "source": "https://www.ncei.noaa.gov/oa/global-historical-climatology-network/hourly/access/by-year/2022/parquet/GHCNh_USW00014732_2022.parquet",
+      "sha256": "fea3ee13ef93bf2ba527e58a15a0511ff3b5763f9e8aab502685b67733eda683",
+      "bytes": 1187121,
+      "retrieved_utc": "2026-10-29T22:02:20.729839+00:00"
+    },
+    {
+      "file": "GHCNh_USW00014732_2023.parquet",
+      "source": "https://www.ncei.noaa.gov/oa/global-historical-climatology-network/hourly/access/by-year/2023/parquet/GHCNh_USW00014732_2023.parquet",
+      "sha256": "d0a66f508e986f5348daad046abc6a17a476fa67222758bb4a067195dead6b37",
+      "bytes": 1181544,
+      "retrieved_utc": "2026-10-29T22:02:20.744949+00:00"
+    },
+    {
+      "file": "GHCNh_USW00014732_2024.parquet",
+      "source": "https://www.ncei.noaa.gov/oa/global-historical-climatology-network/hourly/access/by-year/2024/parquet/GHCNh_USW00014732_2024.parquet",
+      "sha256": "a78d9ba9522230e0f518f6c80f91b8b79e0c7f73437ee1aaca9b4aab903bc79f",
+      "bytes": 1174615,
+      "retrieved_utc": "2026-10-29T22:02:20.741690+00:00"
+    },
+    {
+      "file": "GHCNh_USW00014732_2025.parquet",
+      "source": "https://www.ncei.noaa.gov/oa/global-historical-climatology-network/hourly/access/by-year/2025/parquet/GHCNh_USW00014732_2025.parquet",
+      "sha256": "d4bbcaef79c05b57a334ede5d836fcab54923c08ee0e1e3c79aeacec313a0b78",
+      "bytes": 1120393,
+      "retrieved_utc": "2026-10-29T22:02:23.725523+00:00"
+    },
+    {
+      "file": "GHCNh_USW00014732_2026.parquet",
+      "source": "https://www.ncei.noaa.gov/oa/global-historical-climatology-network/hourly/access/by-year/2026/parquet/GHCNh_USW00014732_2026.parquet",
+      "sha256": "11915d20d652817068bc339cedc1c9bc442886b7eae55ad329f216b110ab3a9a",
+      "bytes": 1439693,
+      "retrieved_utc": "2026-10-29T22:02:23.701585+00:00"
+    },
+    {
+      "file": "GHCNh_USW00004781_2019.parquet",
+      "source": "https://www.ncei.noaa.gov/oa/global-historical-climatology-network/hourly/access/by-year/2019/parquet/GHCNh_USW00004781_2019.parquet",
+      "sha256": "6172fa81e577a907a386d425721cde930e01b371bd8d598857f32d748e89088e",
+      "bytes": 947228,
+      "retrieved_utc": "2026-10-29T22:02:23.750808+00:00"
+    },
+    {
+      "file": "GHCNh_USW00004781_2020.parquet",
+      "source": "https://www.ncei.noaa.gov/oa/global-historical-climatology-network/hourly/access/by-year/2020/parquet/GHCNh_USW00004781_2020.parquet",
+      "sha256": "3abab75af24fd5661db1b9ae305a525ba501cb05549b58efa7569d5b04442692",
+      "bytes": 948167,
+      "retrieved_utc": "2026-10-29T22:02:27.005568+00:00"
+    },
+    {
+      "file": "GHCNh_USW00004781_2021.parquet",
+      "source": "https://www.ncei.noaa.gov/oa/global-historical-climatology-network/hourly/access/by-year/2021/parquet/GHCNh_USW00004781_2021.parquet",
+      "sha256": "3adc9a0262851de07173f704eeeb664952f7eccb284b0154d28a44766c3e1c12",
+      "bytes": 910296,
+      "retrieved_utc": "2026-10-29T22:02:27.226778+00:00"
+    },
+    {
+      "file": "GHCNh_USW00004781_2022.parquet",
+      "source": "https://www.ncei.noaa.gov/oa/global-historical-climatology-network/hourly/access/by-year/2022/parquet/GHCNh_USW00004781_2022.parquet",
+      "sha256": "90b645c326061cda4f9e3ea985a6e5286db5cd7d53c43070a1c9a6b5ccd9e35f",
+      "bytes": 920561,
+      "retrieved_utc": "2026-10-29T22:02:26.995283+00:00"
+    },
+    {
+      "file": "GHCNh_USW00004781_2023.parquet",
+      "source": "https://www.ncei.noaa.gov/oa/global-historical-climatology-network/hourly/access/by-year/2023/parquet/GHCNh_USW00004781_2023.parquet",
+      "sha256": "da3bc5783bfc52d6881f735b40247fe14a56084665a3c8c1b930ab9389241ee5",
+      "bytes": 923048,
+      "retrieved_utc": "2026-10-29T22:02:36.087553+00:00"
+    },
+    {
+      "file": "GHCNh_USW00004781_2024.parquet",
+      "source": "https://www.ncei.noaa.gov/oa/global-historical-climatology-network/hourly/access/by-year/2024/parquet/GHCNh_USW00004781_2024.parquet",
+      "sha256": "3420cc8567efe4314939ab31860fcb714d305fa54953ce0bcd6b1b120b9c22e7",
+      "bytes": 912335,
+      "retrieved_utc": "2026-10-29T22:02:35.897336+00:00"
+    },
+    {
+      "file": "GHCNh_USW00004781_2025.parquet",
+      "source": "https://www.ncei.noaa.gov/oa/global-historical-climatology-network/hourly/access/by-year/2025/parquet/GHCNh_USW00004781_2025.parquet",
+      "sha256": "cf03ed24bac02a8091a940cbfed8ec47ac94447b2cb069258a581a734a466a3f",
+      "bytes": 860619,
+      "retrieved_utc": "2026-10-29T22:02:36.054248+00:00"
+    },
+    {
+      "file": "GHCNh_USW00004781_2026.parquet",
+      "source": "https://www.ncei.noaa.gov/oa/global-historical-climatology-network/hourly/access/by-year/2026/parquet/GHCNh_USW00004781_2026.parquet",
+      "sha256": "64d0a203e499bf6bec18f6969dff43a1e0f1fbe0a42f5499a858d15cbfe51191",
+      "bytes": 1307294,
+      "retrieved_utc": "2026-10-29T22:02:38.985946+00:00"
+    }
+  ]
+}

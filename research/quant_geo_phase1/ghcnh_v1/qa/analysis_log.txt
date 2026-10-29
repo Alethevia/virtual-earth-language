@@ -1,0 +1,58 @@
+hgb__B0_calendar_lags {'family': 'hgb', 'representation': 'B0_calendar_lags', 'n': 338, 'MAE': 865.1117200576473, 'RMSE': 1251.3091072223945, 'high_load_n': 31, 'high_load_MAE': 1688.283385208008, 'high_load_underprediction': 1466.1601914531475}
+hgb__B1_aggregated {'family': 'hgb', 'representation': 'B1_aggregated', 'n': 338, 'MAE': 442.4401233765466, 'RMSE': 586.0363334819551, 'high_load_n': 31, 'high_load_MAE': 617.9140019759473, 'high_load_underprediction': 456.2711831891727}
+hgb__B2_distribution {'family': 'hgb', 'representation': 'B2_distribution', 'n': 338, 'MAE': 443.4482219610785, 'RMSE': 592.3500142925728, 'high_load_n': 31, 'high_load_MAE': 592.5284492530243, 'high_load_underprediction': 445.01791648554354}
+hgb__B3_site_identity {'family': 'hgb', 'representation': 'B3_site_identity', 'n': 338, 'MAE': 427.49563437406937, 'RMSE': 559.1649379458404, 'high_load_n': 31, 'high_load_MAE': 554.8906376446903, 'high_load_underprediction': 442.6419665410478}
+ridge__B0_calendar_lags {'family': 'ridge', 'representation': 'B0_calendar_lags', 'n': 338, 'MAE': 880.2409063079702, 'RMSE': 1252.7359231202406, 'high_load_n': 31, 'high_load_MAE': 1641.3417392793997, 'high_load_underprediction': 1448.3269294061483}
+ridge__B1_aggregated {'family': 'ridge', 'representation': 'B1_aggregated', 'n': 338, 'MAE': 476.5606780860985, 'RMSE': 593.3199471246077, 'high_load_n': 31, 'high_load_MAE': 486.05604289283184, 'high_load_underprediction': 413.760778370614}
+ridge__B2_distribution {'family': 'ridge', 'representation': 'B2_distribution', 'n': 338, 'MAE': 465.3350514097368, 'RMSE': 582.7834106597907, 'high_load_n': 31, 'high_load_MAE': 488.659048905159, 'high_load_underprediction': 399.7452844168785}
+ridge__B3_site_identity {'family': 'ridge', 'representation': 'B3_site_identity', 'n': 338, 'MAE': 460.89145122265114, 'RMSE': 579.0896054653288, 'high_load_n': 31, 'high_load_MAE': 443.5868574725748, 'high_load_underprediction': 345.31744910007086}
+{
+  "status": "EMPIRICAL_SCREEN_ONLY",
+  "scope": "NYISO system-wide daily maximum of hourly integrated zonal load; NOT outage risk and NOT a trading backtest",
+  "estimand": "Held-out conditional prediction using realized same-day weather, not a deployable day-ahead forecast",
+  "high_load_threshold_training_only": 24966.5,
+  "exposure_weights": {
+    "BUF": 0.15986890319156563,
+    "SYR": 0.18638091936228135,
+    "ALB": 0.1388533152625587,
+    "LGA": 0.3821057913423931,
+    "ISP": 0.13279107084120131
+  },
+  "primary_relative_tail_MAE_improvement": 0.06352068268752731,
+  "screen_conditions": {
+    "enough_tail_days": true,
+    "at_least_five_percent_tail_gain": true,
+    "primary_interval_positive": false,
+    "ridge_tail_direction_agrees": true,
+    "beats_four_of_five_scrambles": true,
+    "overall_MAE_not_more_than_two_percent_worse": true
+  },
+  "screening_pass": false,
+  "limitations": [
+    "One system and one held-out year; not geographic transfer validation.",
+    "Realized contemporaneous weather, not historical forecast vintages.",
+    "Historical files may be revised; this is not a point-in-time trading dataset.",
+    "Coarse five-station exposure mapping, not population-weighted coverage.",
+    "Hour-beginning labels corroborated against five-minute official archives, not an explicit written NYISO timing definition.",
+    "Passing an analyst-defined screen does not establish novelty, causality, deployability, or trading profit."
+  ],
+  "protocol_sha256": "fb18e8db6d8714b8ff864a9e7618df84b87db59e1647805204a7b91dc6ac8e7d",
+  "source_sha256": "8698cacde6e7785ca405ea352b91d428ae34c0582e5756a43faa48f72565c61d",
+  "data_sha256": "a3d182d6f6168d06d51460f485b8b139566432a7afdabfae4df9ff95f74f5260",
+  "preparation_provenance": {
+    "status": "OFFICIAL_ARCHIVE_PREPARED",
+    "daily_sha256": "a3d182d6f6168d06d51460f485b8b139566432a7afdabfae4df9ff95f74f5260",
+    "protocol_sha256": "fb18e8db6d8714b8ff864a9e7618df84b87db59e1647805204a7b91dc6ac8e7d",
+    "source_sha256": "8698cacde6e7785ca405ea352b91d428ae34c0582e5756a43faa48f72565c61d",
+    "migration_source_sha256": "bc50a4bf4eecdb73d049561fbced3d9d214de9fb272dd7a613f4d880cca59288",
+    "raw_manifest_sha256": "1d9c603aab3b864588016fd7d78f27cead646ede463ea5b4996d50e76f74eda4",
+    "audit_sha256": "82926aa15793d3b73c43a9037dbcf153abb3cccb038f816c02b24b515954c1f5"
+  },
+  "interval_evidence_sha256": "b171bb3b64b5a07ac52076b810ff03035f50056b69f40c05905befe859282fb8",
+  "versions": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "sklearn": "1.8.0"
+  }
+}

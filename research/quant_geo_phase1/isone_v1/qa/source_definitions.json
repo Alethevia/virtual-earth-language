@@ -1,0 +1,25 @@
+{
+  "source": "https://www.iso-ne.com/static-assets/documents/2019/02/2019_smd_hourly.xlsx",
+  "workbook_sha256": "f48acf50ba3346794581379cc9a1015b4a318f2b96b2484282ad7d3eae40de63",
+  "station_catalog_source": "https://www.ncei.noaa.gov/oa/global-historical-climatology-network/hourly/doc/ghcnh-station-list.txt",
+  "station_catalog_sha256": "ff451fafc8f251560029e9ed31ebf0f4d12a2ddd492516c0b166c3744cad182a",
+  "load_catalog_source": "https://www.iso-ne.com/isoexpress/web/reports/download/docWidgetGetMore?start=0&treenode=zone-info",
+  "interpretation": {
+    "demand": "Zonal RT_Demand measures wholesale settlement demand in MW, from metering, and includes grossed-up demand response during this study period. System_Load is a distinct planning/reporting series, not used as the target.",
+    "date": "Supplied local calendar date; hour labels are hour-ending 01 to 24.",
+    "dst": "The published March HE02 averages HE01 and HE03. The two physical November HE02 observations are averaged into one published row.",
+    "mapping": {
+      "BOS": "NEMA",
+      "BTV": "VT",
+      "CON": "NH",
+      "PWM": "ME",
+      "PVD": [
+        "RI",
+        "SEMA"
+      ],
+      "BDL": "CT",
+      "ORH": "WCMA"
+    },
+    "weather": "Official Notes station mapping is used. Native workbook Fahrenheit weather columns and seasonal weights are NOT model inputs; use GHCNh Celsius observations and training-only exposure weights."
+  }
+}

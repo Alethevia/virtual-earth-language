@@ -1,0 +1,11 @@
+{
+  "status": "FROZEN_BEFORE_ISONE_FITTING",
+  "sha256": {
+    "quant_geo_phase1.py": "8698cacde6e7785ca405ea352b91d428ae34c0582e5756a43faa48f72565c61d",
+    "ghcnh_migrate.py": "bc50a4bf4eecdb73d049561fbced3d9d214de9fb272dd7a613f4d880cca59288",
+    "isone_replication.py": "33dff434eb951fabae7033e4a6d2d87b7593c084faff1031502eb982fd83d42c",
+    "isone_v1/protocol.json": "094ccebff4aaf10b13ee3aa8a0b9bcd9761adbfa794b53c95157e2643eb53213",
+    "isone_v1/PLAN.md": "e60bb28e1365f672043ed47613332938e1d4065ac986683c44410b03181370ff",
+    "isone_v1/requirements.txt": "8a6ae919abff04f3742f9178188914d2805a0b4c2257441f914dcf3f239d4f0e"
+  }
+}

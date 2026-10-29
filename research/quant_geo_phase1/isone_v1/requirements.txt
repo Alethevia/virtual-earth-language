@@ -1,0 +1,2 @@
+-r ../ghcnh_v1/requirements.txt
+openpyxl==3.1.5

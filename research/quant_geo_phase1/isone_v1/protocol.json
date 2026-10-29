@@ -1,0 +1,146 @@
+{
+  "experiment_id": "quant_geo_002_isone_ghcnh_v1",
+  "status_at_creation": "FROZEN_BEFORE_ISONE_MODEL_FITTING",
+  "scope": "ISO-NE daily maximum of simultaneous sum of eight SMD zonal RT_Demand columns (MW); published 24-hour-normalized settlement demand, not System_Load",
+  "estimand": "Held-out conditional prediction using realized same-day weather, not a deployable day-ahead forecast",
+  "start": "2019-01-01",
+  "end": "2025-12-31",
+  "train_end": "2022-12-31",
+  "validation_start": "2023-01-01",
+  "validation_end": "2023-12-31",
+  "test_start": "2024-01-01",
+  "test_end": "2025-12-31",
+  "time_zone": "America/New_York",
+  "stations": {
+    "PWM": {
+      "ghcnh_id": "USW00014764",
+      "latitude": 43.6425,
+      "longitude": -70.3045,
+      "zones": [
+        "ME"
+      ],
+      "metadata_record": "USW00014764  43.6425  -70.3045   13.4 ME PORTLAND JETPORT                       72606 US"
+    },
+    "CON": {
+      "ghcnh_id": "USW00014745",
+      "latitude": 43.205,
+      "longitude": -71.5025,
+      "zones": [
+        "NH"
+      ],
+      "metadata_record": "USW00014745  43.2050  -71.5025  103.0 NH CONCORD ASOS                           72605 US"
+    },
+    "BTV": {
+      "ghcnh_id": "USW00014742",
+      "latitude": 44.4683,
+      "longitude": -73.15,
+      "zones": [
+        "VT"
+      ],
+      "metadata_record": "USW00014742  44.4683  -73.1500  101.2 VT BURLINGTON INTL AP                     72617 US"
+    },
+    "BDL": {
+      "ghcnh_id": "USW00014740",
+      "latitude": 41.9375,
+      "longitude": -72.6819,
+      "zones": [
+        "CT"
+      ],
+      "metadata_record": "USW00014740  41.9375  -72.6819   51.5 CT HARTFORD-BRADLEY INTL AP               72508 US"
+    },
+    "PVD": {
+      "ghcnh_id": "USW00014765",
+      "latitude": 41.7225,
+      "longitude": -71.4325,
+      "zones": [
+        "RI",
+        "SEMA"
+      ],
+      "metadata_record": "USW00014765  41.7225  -71.4325   15.5 RI PROVIDENCE                             72507 US"
+    },
+    "ORH": {
+      "ghcnh_id": "USW00094746",
+      "latitude": 42.2706,
+      "longitude": -71.8731,
+      "zones": [
+        "WCMA"
+      ],
+      "metadata_record": "USW00094746  42.2706  -71.8731  305.4 MA WORCESTER                              72510 US"
+    },
+    "BOS": {
+      "ghcnh_id": "USW00014739",
+      "latitude": 42.3606,
+      "longitude": -71.0097,
+      "zones": [
+        "NEMA"
+      ],
+      "metadata_record": "USW00014739  42.3606  -71.0097    3.4 MA BOSTON                                 72509 US"
+    }
+  },
+  "station_mapping_caveat": "Seven unique representative stations from official SMD Notes; PVD represents both RI and SEMA. Proxy mapping does not establish full-area coverage. Exposure weights use only 2019-2022 zone demand.",
+  "weather_qc_flags": [
+    "1",
+    "5"
+  ],
+  "minimum_weather_hour_fraction": 0.9,
+  "minimum_usable_fraction_each_split": 0.9,
+  "degree_threshold_c": 18.333333333333332,
+  "features": [
+    "B0_calendar_lags",
+    "B1_aggregated",
+    "B2_distribution",
+    "B3_site_identity"
+  ],
+  "tail_quantile_training_only": 0.9,
+  "primary_model_family": "histogram_gradient_boosting",
+  "secondary_model_family": "ridge_with_fixed_hinge_features",
+  "validation_selection_metric": "overall_MAE",
+  "primary_comparison": "HGB B3 versus B2, 2025 high-load MAE; 2024 secondary only",
+  "bootstrap_block_days": [
+    7,
+    14,
+    28
+  ],
+  "bootstrap_replicates": 2000,
+  "permutation_seeds": [
+    17,
+    29,
+    43,
+    61,
+    79
+  ],
+  "permutation_caveat": "Only site-labelled additions are randomized within each day; aggregate/distribution features are held fixed. This is a diagnostic ablation, NOT a causal randomization test or a p-value.",
+  "practical_screen_relative_tail_MAE_gain": 0.05,
+  "minimum_test_high_load_days": 30,
+  "seed": 20261028,
+  "no_current_weather_as_forecast": true,
+  "no_random_train_test_split": true,
+  "no_test_set_tuning": true,
+  "no_claim_of_novelty": true,
+  "weather_dataset": "GHCNh 1.1.0",
+  "primary_test_year": 2025,
+  "secondary_test_year": 2024,
+  "station_mapping_source": "https://www.iso-ne.com/static-assets/documents/2019/02/2019_smd_hourly.xlsx",
+  "bootstrap_calendar": "Full January 1 through December 31 for each year; no pooled success claim",
+  "target_hour_convention": "SMD Date + Hr_End 01..24; use supplied date, retain published DST normalization; never localize synthetic load hour labels",
+  "statistical_independence_caveat": "New geographic outcome dataset, but adjacent NYISO shares weather and economic shocks in the same years. This is not statistical independence or transfer of NYISO-fitted coefficients.",
+  "zones": [
+    "ME",
+    "NH",
+    "VT",
+    "CT",
+    "RI",
+    "SEMA",
+    "WCMA",
+    "NEMA"
+  ],
+  "load_sources": {
+    "2019": "https://www.iso-ne.com/static-assets/documents/2019/02/2019_smd_hourly.xlsx",
+    "2020": "https://www.iso-ne.com/static-assets/documents/2020/02/2020_smd_hourly.xlsx",
+    "2021": "https://www.iso-ne.com/static-assets/documents/2021/02/2021_smd_hourly.xlsx",
+    "2022": "https://www.iso-ne.com/static-assets/documents/2022/02/2022_smd_hourly.xlsx",
+    "2023": "https://www.iso-ne.com/static-assets/documents/2023/02/2023_smd_hourly.xlsx",
+    "2024": "https://www.iso-ne.com/static-assets/documents/100008/2024_smd_hourly.xlsx",
+    "2025": "https://www.iso-ne.com/static-assets/documents/100020/2025_smd_hourly.xlsx"
+  }
+}

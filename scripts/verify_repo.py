@@ -91,7 +91,7 @@ except subprocess.CalledProcessError as e:
 pytest_ok = None
 if shutil.which("pytest"):
     try:
-        subprocess.check_call(["pytest", "-q"], cwd=str(ROOT), env=dict(os.environ, PYTHONPATH=str(ROOT)))
+        subprocess.check_call([sys.executable, "-m", "pytest", "tests", "-q"], cwd=str(ROOT), env=dict(os.environ, PYTHONPATH=str(ROOT)))
         pytest_ok = True
     except subprocess.CalledProcessError:
         pytest_ok = False

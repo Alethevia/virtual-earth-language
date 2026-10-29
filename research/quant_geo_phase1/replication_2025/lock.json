@@ -1,0 +1,35 @@
+{
+  "test_year": 2025,
+  "status": "BEFORE_WORKFLOW_RETRIEVES_2025",
+  "base_commit": "ca622cf0e0c352aaa1be0e28a665212cfe1ff6eb",
+  "allowed_protocol_changes": [
+    "experiment_id",
+    "status_at_creation",
+    "end",
+    "test_start",
+    "test_end",
+    "primary_comparison"
+  ],
+  "interval_dates": [
+    "20190115",
+    "20220715",
+    "20240310",
+    "20240715",
+    "20241103",
+    "20250309",
+    "20250715",
+    "20251102"
+  ],
+  "sha256": {
+    "protocol.json": "dabaa879b0292b877d1aab6f90f1e487f6ede618c4345afa38b2edd45f1acfae",
+    "quant_geo_phase1.py": "8698cacde6e7785ca405ea352b91d428ae34c0582e5756a43faa48f72565c61d",
+    "verify_intervals.py": "8d097de1b90ab7fb40795b5fcd76380955dcc1fd978b61cea385f453f4506e90",
+    "replicate_2025.py": "04c523acc4b815d9156b9c9e3d95b8d8dbfc1f0ad98fb156cd9c98c30c7a3f53",
+    "replication_2025/protocol.json": "f683d9ae75e56b91acbedfb85ea8476f2289aa4520042f57358ab69ab9a1fa7f",
+    "replication_2025/PLAN.md": "1fc8f3016c1416617170e286de990c4ddb8067c14d4271ff9051074bf2b43957",
+    "qa/empirical_20261029/model_selection.json": "3cd3159034aa97ebcf7b06a6cb9d7a72bc7364742c04d242e626792bbb38fde4",
+    "qa/empirical_20261029/test_predictions.csv": "a1609152436425d373f551a57b44b89f1406e3102dd42b85c7e6fc18e2497f2c",
+    "qa/empirical_20261029/empirical_report.json": "3654d11143ee29f811b266c0236badc3819c5912973c84299d10b2da75b0ac0a",
+    "qa/empirical_20261029/download_manifest.json": "b95b631d26d63a1ddaebd1a61dc291cde1662d51335c51239d6caa229549448d"
+  }
+}

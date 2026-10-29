@@ -1,0 +1,113 @@
+{
+  "experiment_id": "quant_geo_001_ghcnh_v1_2025",
+  "status_at_creation": "FROZEN_BEFORE_GHCNH_MODELLING",
+  "scope": "NYISO system-wide daily maximum of hourly integrated zonal load; NOT outage risk and NOT a trading backtest",
+  "estimand": "Held-out conditional prediction using realized same-day weather, not a deployable day-ahead forecast",
+  "start": "2019-01-01",
+  "end": "2025-12-31",
+  "train_end": "2022-12-31",
+  "validation_start": "2023-01-01",
+  "validation_end": "2023-12-31",
+  "test_start": "2025-01-01",
+  "test_end": "2025-12-31",
+  "time_zone": "America/New_York",
+  "stations": {
+    "BUF": {
+      "id": "72528014733",
+      "expected_name": "BUFFALO",
+      "zones": [
+        "WEST",
+        "GENESE"
+      ],
+      "ghcnh_id": "USW00014733",
+      "latitude": 42.9489,
+      "longitude": -78.7367
+    },
+    "SYR": {
+      "id": "72519014771",
+      "expected_name": "SYRACUSE",
+      "zones": [
+        "CENTRL",
+        "NORTH",
+        "MHKVL"
+      ],
+      "ghcnh_id": "USW00014771",
+      "latitude": 43.1111,
+      "longitude": -76.1039
+    },
+    "ALB": {
+      "id": "72518014735",
+      "expected_name": "ALBANY",
+      "zones": [
+        "CAPITL",
+        "HUDVL"
+      ],
+      "ghcnh_id": "USW00014735",
+      "latitude": 42.7472,
+      "longitude": -73.7992
+    },
+    "LGA": {
+      "id": "72503014732",
+      "expected_name": "LAGUARDIA",
+      "zones": [
+        "MILLWD",
+        "DUNWOD",
+        "NYC"
+      ],
+      "ghcnh_id": "USW00014732",
+      "latitude": 40.7794,
+      "longitude": -73.8803
+    },
+    "ISP": {
+      "id": "72505004781",
+      "expected_name": "ISLIP",
+      "zones": [
+        "LONGIL"
+      ],
+      "ghcnh_id": "USW00004781",
+      "latitude": 40.7939,
+      "longitude": -73.1019
+    }
+  },
+  "station_mapping_caveat": "Five deliberately coarse proxy locations. Zone-to-station groups are analyst assumptions, NOT official weather service areas. Load exposure weights use 2019-2022 data only; they are NOT population weights.",
+  "weather_qc_flags": [
+    "1",
+    "5"
+  ],
+  "minimum_weather_hour_fraction": 0.9,
+  "minimum_usable_fraction_each_split": 0.9,
+  "degree_threshold_c": 18.333333333333332,
+  "features": [
+    "B0_calendar_lags",
+    "B1_aggregated",
+    "B2_distribution",
+    "B3_site_identity"
+  ],
+  "tail_quantile_training_only": 0.9,
+  "primary_model_family": "histogram_gradient_boosting",
+  "secondary_model_family": "ridge_with_fixed_hinge_features",
+  "validation_selection_metric": "overall_MAE",
+  "primary_comparison": "B3 versus B2, 2025 high-load MAE on GHCNh data version",
+  "bootstrap_block_days": [
+    7,
+    14,
+    28
+  ],
+  "bootstrap_replicates": 2000,
+  "permutation_seeds": [
+    17,
+    29,
+    43,
+    61,
+    79
+  ],
+  "permutation_caveat": "Only site-labelled additions are randomized within each day; aggregate/distribution features are held fixed. This is a diagnostic ablation, NOT a causal randomization test or a p-value.",
+  "practical_screen_relative_tail_MAE_gain": 0.05,
+  "minimum_test_high_load_days": 30,
+  "seed": 20261028,
+  "no_current_weather_as_forecast": true,
+  "no_random_train_test_split": true,
+  "no_test_set_tuning": true,
+  "no_claim_of_novelty": true,
+  "weather_dataset": "GHCNh 1.1.0"
+}

@@ -1,0 +1,11 @@
+{
+  "status": "BEFORE_GHCNH_MODELLING",
+  "base_commit": "ce44e13d5222e600c3bf071a833b487f73fddb78",
+  "sha256": {
+    "quant_geo_phase1.py": "8698cacde6e7785ca405ea352b91d428ae34c0582e5756a43faa48f72565c61d",
+    "ghcnh_migrate.py": "f6594e02f97f5a7d8cd13f55f0dc734669d71c3c6069e25b8ad3ed8ce91e303a",
+    "ghcnh_v1/protocol.json": "fb18e8db6d8714b8ff864a9e7618df84b87db59e1647805204a7b91dc6ac8e7d",
+    "ghcnh_v1/PLAN.md": "065fd7ab56f2fb804d42ac7c3eec54f32115a0eb3561271fdb5bf5d9abdc53df",
+    "ghcnh_v1/qa/station_mapping.json": "2a7d9dd374e00beccd9765c887439a3f68185138f276de78cbac492d57d5bcf8"
+  }
+}

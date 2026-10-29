@@ -1,0 +1,47 @@
+{
+  "official_inventory_url": "https://www.ncei.noaa.gov/oa/global-historical-climatology-network/hourly/doc/ghcnh-station-list.txt",
+  "inventory_sha256": "ff451fafc8f251560029e9ed31ebf0f4d12a2ddd492516c0b166c3744cad182a",
+  "documentation_sha256": "df5694efdc2d498f006a343165bae65701d14809174b9bed660149bd4fe591b7",
+  "mappings": [
+    {
+      "station": "BUF",
+      "legacy_id": "72528014733",
+      "ghcnh_id": "USW00014733",
+      "latitude": 42.9489,
+      "longitude": -78.7367,
+      "official_inventory_line": "USW00014733  42.9489  -78.7367  240.8 NY BUFFALO                                72528 US"
+    },
+    {
+      "station": "SYR",
+      "legacy_id": "72519014771",
+      "ghcnh_id": "USW00014771",
+      "latitude": 43.1111,
+      "longitude": -76.1039,
+      "official_inventory_line": "USW00014771  43.1111  -76.1039  125.0 NY SYRACUSE HANCOCK INTL AP               72519 US"
+    },
+    {
+      "station": "ALB",
+      "legacy_id": "72518014735",
+      "ghcnh_id": "USW00014735",
+      "latitude": 42.7472,
+      "longitude": -73.7992,
+      "official_inventory_line": "USW00014735  42.7472  -73.7992   85.3 NY ALBANY INTL AP                         72518 US"
+    },
+    {
+      "station": "LGA",
+      "legacy_id": "72503014732",
+      "ghcnh_id": "USW00014732",
+      "latitude": 40.7794,
+      "longitude": -73.8803,
+      "official_inventory_line": "USW00014732  40.7794  -73.8803    3.0 NY LAGUARDIA AP                           72503 US"
+    },
+    {
+      "station": "ISP",
+      "legacy_id": "72505004781",
+      "ghcnh_id": "USW00004781",
+      "latitude": 40.7939,
+      "longitude": -73.1019,
+      "official_inventory_line": "USW00004781  40.7939  -73.1019   25.3 NY ISLIP-LI MACARTHUR AP                  72505 US"
+    }
+  ]
+}

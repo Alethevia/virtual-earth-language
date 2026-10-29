@@ -1,0 +1,2 @@
+-r ../requirements.txt
+pyarrow==19.0.1

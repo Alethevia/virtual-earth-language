@@ -1,0 +1,72 @@
+[
+  {
+    "year": 2019,
+    "notes_field_sha256": {
+      "RT_Demand |": "f23cc4e8427a83e3f4e0dd5f020d27af2faeb3f7013c2c462563154028538681",
+      "Hr_End |": "d5d798a61b5153dd642d95f0e1313b15c83bc9f6ab2e84424cae6e5a8de8bbf1",
+      "Note concerning Daylight": "0bac5d427636a9f77dcdbe3f8cd9fb7853465424751877985cddcd6ce94519a0"
+    },
+    "all_fields_present": true,
+    "published_dst_averaging_documented": true
+  },
+  {
+    "year": 2020,
+    "notes_field_sha256": {
+      "RT_Demand |": "f23cc4e8427a83e3f4e0dd5f020d27af2faeb3f7013c2c462563154028538681",
+      "Hr_End |": "d5d798a61b5153dd642d95f0e1313b15c83bc9f6ab2e84424cae6e5a8de8bbf1",
+      "Note concerning Daylight": "0bac5d427636a9f77dcdbe3f8cd9fb7853465424751877985cddcd6ce94519a0"
+    },
+    "all_fields_present": true,
+    "published_dst_averaging_documented": true
+  },
+  {
+    "year": 2021,
+    "notes_field_sha256": {
+      "RT_Demand |": "f23cc4e8427a83e3f4e0dd5f020d27af2faeb3f7013c2c462563154028538681",
+      "Hr_End |": "d5d798a61b5153dd642d95f0e1313b15c83bc9f6ab2e84424cae6e5a8de8bbf1",
+      "Note concerning Daylight": "0bac5d427636a9f77dcdbe3f8cd9fb7853465424751877985cddcd6ce94519a0"
+    },
+    "all_fields_present": true,
+    "published_dst_averaging_documented": true
+  },
+  {
+    "year": 2022,
+    "notes_field_sha256": {
+      "RT_Demand |": "f23cc4e8427a83e3f4e0dd5f020d27af2faeb3f7013c2c462563154028538681",
+      "Hr_End |": "d5d798a61b5153dd642d95f0e1313b15c83bc9f6ab2e84424cae6e5a8de8bbf1",
+      "Note concerning Daylight": "0bac5d427636a9f77dcdbe3f8cd9fb7853465424751877985cddcd6ce94519a0"
+    },
+    "all_fields_present": true,
+    "published_dst_averaging_documented": true
+  },
+  {
+    "year": 2023,
+    "notes_field_sha256": {
+      "RT_Demand |": "f23cc4e8427a83e3f4e0dd5f020d27af2faeb3f7013c2c462563154028538681",
+      "Hr_End |": "d5d798a61b5153dd642d95f0e1313b15c83bc9f6ab2e84424cae6e5a8de8bbf1",
+      "Note concerning Daylight": "0bac5d427636a9f77dcdbe3f8cd9fb7853465424751877985cddcd6ce94519a0"
+    },
+    "all_fields_present": true,
+    "published_dst_averaging_documented": true
+  },
+  {
+    "year": 2024,
+    "notes_field_sha256": {
+      "RT_Demand |": "b9735c28b485364365d8febaf6e2afa71d021df0fe386b5c5545bf3b255c6b3e",
+      "Hr_End |": "d5d798a61b5153dd642d95f0e1313b15c83bc9f6ab2e84424cae6e5a8de8bbf1",
+      "Note concerning Daylight": null
+    },
+    "all_fields_present": false,
+    "published_dst_averaging_documented": false
+  },
+  {
+    "year": 2025,
+    "notes_field_sha256": {
+      "RT_Demand |": "b9735c28b485364365d8febaf6e2afa71d021df0fe386b5c5545bf3b255c6b3e",
+      "Hr_End |": "d5d798a61b5153dd642d95f0e1313b15c83bc9f6ab2e84424cae6e5a8de8bbf1",
+      "Note concerning Daylight": null
+    },
+    "all_fields_present": false,
+    "published_dst_averaging_documented": false
+  }
+]

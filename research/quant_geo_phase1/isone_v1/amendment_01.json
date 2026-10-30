@@ -1,0 +1,7 @@
+{
+  "status": "PRE_FIT_SCHEMA_CORRECTION",
+  "original_source_sha256": "33dff434eb951fabae7033e4a6d2d87b7593c084faff1031502eb982fd83d42c",
+  "amended_source_sha256": "05d4f2274c5ca5e47a656ed1a366933a7729265b438a121bb869e94af96a7d9d",
+  "reason": "2024/2025 native DST hours harmonized to legacy 24-hour convention",
+  "model_fits_before_amendment": 0
+}

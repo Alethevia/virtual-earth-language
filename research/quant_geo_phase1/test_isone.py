@@ -7,13 +7,39 @@ import isone_replication as iso
 class ISOTimingAndIsolationTests(unittest.TestCase):
     def frame(self, year=2024):
         days = pd.date_range(f'{year}-01-01', f'{year}-12-31')
-        return pd.DataFrame({'Date': np.repeat(days, 24), 'Hr_End': list(range(1, 25))*len(days), 'RT_Demand': 1.0})
+        rows = []
+        for date in days:
+            labels = list(range(1, 25))
+            if year >= 2024 and iso.q.expected_hours(date) == 23:
+                labels.remove(2)
+            if year >= 2024 and iso.q.expected_hours(date) == 25:
+                labels.insert(2, '02X')
+            rows.extend(dict(Date=date, Hr_End=h, RT_Demand=1.) for h in labels)
+        return pd.DataFrame(rows)
 
     def test_dst_is_published_24_hour_convention(self):
+        data = iso.validate_hours(self.frame(2019), 2019)
+        self.assertEqual(len(data.loc['2019-03-10']), 24)
+        self.assertEqual(len(data.loc['2019-11-03']), 24)
+        self.assertEqual(len(data), 365*24)
+
+    def test_native_dst_and_harmonization(self):
         data = iso.validate_hours(self.frame(), 2024)
-        self.assertEqual(len(data.loc['2024-03-10']), 24)
-        self.assertEqual(len(data.loc['2024-11-03']), 24)
-        self.assertEqual(len(data), 366*24)
+        self.assertEqual(len(data.loc['2024-03-10']), 23)
+        self.assertEqual(len(data.loc['2024-11-03']), 25)
+        numeric = data[['RT_Demand']].copy()
+        numeric.loc[(pd.Timestamp('2024-03-10'), '01'), 'RT_Demand'] = 5.
+        numeric.loc[(pd.Timestamp('2024-11-03'), '02X'), 'RT_Demand'] = 9.
+        output = iso.normalize_load_hours(numeric, 2024)
+        self.assertEqual(len(output), 366*24)
+        self.assertEqual(output.loc[(pd.Timestamp('2024-03-10'), '02'), 'RT_Demand'], 3.)
+        self.assertEqual(output.loc[(pd.Timestamp('2024-11-03'), '02'), 'RT_Demand'], 5.)
+
+    def test_extra_hour_on_wrong_day_stops(self):
+        frame = self.frame()
+        frame.loc[(frame.Date == pd.Timestamp('2024-01-02')) & (frame.Hr_End == 2), 'Hr_End'] = '02X'
+        with self.assertRaisesRegex(ValueError, 'Missing or unexpected'):
+            iso.validate_hours(frame, 2024)
 
     def test_missing_hour_stops(self):
         with self.assertRaisesRegex(ValueError, 'Missing'):

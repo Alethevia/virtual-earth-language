@@ -25,7 +25,14 @@ ROOT = q.ROOT / 'isone_v1'
 
 def check_lock(root=ROOT):
     lock = json.loads((root / 'lock.json').read_text())
-    for name, digest in lock['sha256'].items():
+    expected = dict(lock['sha256'])
+    amendment = root/'amendment_01.json'
+    if amendment.exists():
+        correction = json.loads(amendment.read_text())
+        if correction['original_source_sha256'] != expected['isone_replication.py']:
+            raise ValueError('Wrong amendment base')
+        expected['isone_replication.py'] = correction['amended_source_sha256']
+    for name, digest in expected.items():
         if q.sha256(q.ROOT / name) != digest:
             raise ValueError('Locked source changed: ' + name)
     return lock
@@ -78,20 +85,34 @@ def download(root=ROOT):
 
 
 def validate_hours(frame, year):
-    """SMD has exactly 24 published HE labels on every date, including DST."""
+    """Validate legacy 24-hour files and the native DST format from 2024."""
     x = frame.copy()
     x['date'] = pd.to_datetime(x['Date'], errors='raise')
     if x.date.isna().any() or not x.date.eq(x.date.dt.normalize()).all():
         raise ValueError('Invalid calendar date')
     if not x.date.dt.year.eq(year).all():
         raise ValueError('Wrong annual file')
-    hour = pd.to_numeric(x['Hr_End'], errors='raise')
-    if not hour.isin(range(1, 25)).all():
-        raise ValueError('Unrecognized hour-ending label')
-    x['hour'] = hour.astype(int)
+    def label(value):
+        if str(value).strip() == '02X':
+            return '02X'
+        number = float(value)
+        if not number.is_integer() or not 1 <= number <= 24:
+            raise ValueError('Unrecognized hour-ending label')
+        return f'{int(number):02d}'
+    x['hour'] = x['Hr_End'].map(label)
     if x.duplicated(['date', 'hour']).any():
         raise ValueError('Duplicate hour')
-    expected = pd.MultiIndex.from_product([pd.date_range(f'{year}-01-01', f'{year}-12-31'), range(1, 25)], names=['date', 'hour'])
+    pairs = []
+    for date in pd.date_range(f'{year}-01-01', f'{year}-12-31'):
+        hours = [f'{h:02d}' for h in range(1, 25)]
+        if year >= 2024:
+            count = q.expected_hours(date)
+            if count == 23:
+                hours.remove('02')
+            elif count == 25:
+                hours.insert(2, '02X')
+        pairs.extend((date, h) for h in hours)
+    expected = pd.MultiIndex.from_tuples(pairs, names=['date', 'hour'])
     x = x.set_index(['date', 'hour']).sort_index()
     if not x.index.equals(expected):
         raise ValueError('Missing or unexpected SMD hour')
@@ -114,7 +135,7 @@ def parse_load(path, year, cfg):
                 raise ValueError('Missing or negative zonal demand')
             columns[zone] = demand
         hourly = pd.DataFrame(columns)
-        return aggregate_load(hourly)
+        return aggregate_load(normalize_load_hours(hourly, year))
     finally:
         book.close()
 
@@ -125,6 +146,21 @@ def aggregate_load(hourly):
     out = hourly.groupby(level='date').mean().add_prefix('zone_')
     out['peak'] = total.groupby(level='date').max()
     return out
+
+
+def normalize_load_hours(hourly, year):
+    """Harmonize 2024+ DST rows to the documented 2019-2023 convention."""
+    if year < 2024:
+        return hourly
+    out = hourly.copy()
+    for date in hourly.index.get_level_values('date').unique():
+        count = q.expected_hours(date)
+        if count == 23:
+            out.loc[(date, '02'), :] = (hourly.loc[(date, '01')] + hourly.loc[(date, '03')])/2
+        elif count == 25:
+            out.loc[(date, '02'), :] = (hourly.loc[(date, '02')] + hourly.loc[(date, '02X')])/2
+            out = out.drop(index=(date, '02X'))
+    return out.sort_index()
 
 
 def coverage(data, cfg):
@@ -176,7 +212,7 @@ def prepare(root=ROOT):
     flags.to_csv(qa/'daily_coverage.csv', index_label='date')
     q.dump_json(root/'input_lock.json', dict(status='PREPARED_BEFORE_MODEL_FITTING',
         created_utc=datetime.now(timezone.utc).isoformat(),
-        sha256={name: q.sha256(root/name) for name in ['protocol.json', 'lock.json', 'qa/daily_model_input.csv', 'qa/download_manifest.json', 'qa/coverage.json']}))
+        sha256={name: q.sha256(root/name) for name in ['protocol.json', 'lock.json', 'amendment_01.json', 'AMENDMENT_01.md', 'qa/daily_model_input.csv', 'qa/download_manifest.json', 'qa/coverage.json']}))
     print(json.dumps(cov, indent=2))
 
 

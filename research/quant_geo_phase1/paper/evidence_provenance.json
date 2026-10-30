@@ -1,0 +1,13 @@
+{
+  "source_commit": "5e9ffef948d8a7f43b65f3929d077cc594b23a4f",
+  "source_sha256": {
+    "bridge_2024/qa/metrics.csv": "325dc69b55956978b1f530a49f2425fa161316351d7e26f6380a36dbf7759b87",
+    "bridge_2024/qa/full_calendar_intervals.json": "2b5cc75620954f2b776c36c495d0b18229e7fd8c93ec4963673aca89534e24b4",
+    "isone_v1/qa/metrics.csv": "acdd907dc6add7c4c9a188e1516006bace07028b04bf877163ffd14e7f219e43",
+    "isone_v1/qa/block_intervals.json": "785db60fc7eef0c415a58156e5a97edbdcfdeeddf5176f1e5217952a38c3dee5",
+    "ghcnh_v1/qa/block_intervals.json": "42084116addf5b012098bc738456fffe772b46697700bed49979b7edf6e74d86",
+    "qa/empirical_20261029/metrics.csv": "cc8e368329ec67880e5cbc54596e63568a214bc6e85e80d27b2cd0b139a265a5"
+  },
+  "new_model_fits": 0,
+  "note": "Descriptive synthesis. NYISO full-calendar intervals are post hoc; original primary intervals remain unchanged."
+}

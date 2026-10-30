@@ -1,0 +1,8 @@
+{
+  "source_commit": "5e9ffef948d8a7f43b65f3929d077cc594b23a4f",
+  "git_blob_hashes_verified": 154,
+  "mismatches": 0,
+  "offline_tests": 58,
+  "untracked_raw_or_prepared_files_copied": false,
+  "check_scope": "All geography files from the GitHub tree, copied only after SHA-1 Git blob verification"
+}

@@ -1,0 +1,58 @@
+$ python isone_replication.py analyse
+fit hgb__B0_calendar_lags
+fit hgb__B1_aggregated
+fit hgb__B2_distribution
+fit hgb__B3_site_identity
+fit ridge__B0_calendar_lags
+fit ridge__B1_aggregated
+fit ridge__B2_distribution
+fit ridge__B3_site_identity
+fit hgb__identity_scramble_17
+fit hgb__identity_scramble_29
+fit hgb__identity_scramble_43
+fit hgb__identity_scramble_61
+fit hgb__identity_scramble_79
+{
+  "2025": {
+    "role": "primary",
+    "relative_tail_gain": -0.09102974194255942,
+    "scrambles_beaten": 0,
+    "conditions": {
+      "enough_tail_days": false,
+      "at_least_five_percent_tail_gain": false,
+      "primary_interval_positive": false,
+      "ridge_tail_direction_agrees": true,
+      "beats_four_of_five_scrambles": false,
+      "overall_MAE_not_more_than_two_percent_worse": true
+    },
+    "screening_pass": false
+  },
+  "2024": {
+    "role": "secondary",
+    "relative_tail_gain": 0.0708889274417035,
+    "scrambles_beaten": 4,
+    "conditions": {
+      "enough_tail_days": false,
+      "at_least_five_percent_tail_gain": true,
+      "primary_interval_positive": false,
+      "ridge_tail_direction_agrees": false,
+      "beats_four_of_five_scrambles": true,
+      "overall_MAE_not_more_than_two_percent_worse": true
+    },
+    "screening_pass": false
+  }
+}
+
+$ python verify_isone.py
+{
+  "status": "VERIFIED",
+  "metric_rows": 26,
+  "error_metrics_recomputed": 104,
+  "interval_summaries_recomputed": 12,
+  "interval_statistics_checked": 36,
+  "metric_max_abs_difference_mw": 9.094947017729282e-13,
+  "interval_max_abs_difference_mw": 3.637978807091713e-12,
+  "exact_test_dates_and_counts": true,
+  "source_and_input_hashes_verified": true,
+  "limitation": "Independent arithmetic implementation, not an independent investigator or raw measurement audit."
+}

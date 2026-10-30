@@ -64,5 +64,13 @@
     "primary_high_load_days": 29,
     "primary_minimum_high_load_days": 30,
     "details": "isone_v1/execution_status.json"
+  },
+  "working_manuscript": {
+    "status": "DRAFT_NOT_SUBMITTED",
+    "details": "paper/MANUSCRIPT.md",
+    "new_experimental_fits": 0,
+    "isone_reproduction_fits_per_run": 65,
+    "local_model_predictions_reproduced": 9022,
+    "literature_review": "paper/LITERATURE.md"
   }
 }

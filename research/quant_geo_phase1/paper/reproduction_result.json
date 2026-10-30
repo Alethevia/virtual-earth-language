@@ -1,0 +1,17 @@
+{
+  "status": "REPRODUCED_FROM_COMMITTED_DAILY_INPUT",
+  "source_commit": "5e9ffef948d8a7f43b65f3929d077cc594b23a4f",
+  "pinned_files": 23,
+  "raw_archives_used": false,
+  "python_socket_connections_blocked": true,
+  "experimental_model_fits_previously_reported": 65,
+  "additional_reproduction_fits": 65,
+  "pipelines_reproduced": 13,
+  "held_out_dates": 694,
+  "model_predictions_compared": 9022,
+  "prediction_max_abs_difference_mw": 0.0,
+  "validation_selected_parameters_match": true,
+  "prediction_csv_byte_identical": true,
+  "python": "3.12.14",
+  "limitation": "Same runtime replay from prepared inputs; not third-party verification, raw archive reconstruction, or a new statistical experiment."
+}

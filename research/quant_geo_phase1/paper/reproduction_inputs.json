@@ -1,0 +1,28 @@
+{
+  "source_commit": "5e9ffef948d8a7f43b65f3929d077cc594b23a4f",
+  "sha256": {
+    "quant_geo_phase1.py": "8698cacde6e7785ca405ea352b91d428ae34c0582e5756a43faa48f72565c61d",
+    "ghcnh_migrate.py": "bc50a4bf4eecdb73d049561fbced3d9d214de9fb272dd7a613f4d880cca59288",
+    "verify_intervals.py": "8d097de1b90ab7fb40795b5fcd76380955dcc1fd978b61cea385f453f4506e90",
+    "isone_replication.py": "05d4f2274c5ca5e47a656ed1a366933a7729265b438a121bb869e94af96a7d9d",
+    "verify_isone.py": "b8f0668348221f216e6e404dd0b437c4aaa62b4a4e54207a5bce9e5ae1ca659f",
+    "requirements.txt": "3d64ba6772e2e9817a019cb86c42445a33b353050e4b21bb3cc7b1c70612dcda",
+    "ghcnh_v1/requirements.txt": "bc7de87857325202d0810b19755e4944163fcf72ad96d4fe724bb20ec5d0013d",
+    "isone_v1/requirements.txt": "8a6ae919abff04f3742f9178188914d2805a0b4c2257441f914dcf3f239d4f0e",
+    "isone_v1/PLAN.md": "e60bb28e1365f672043ed47613332938e1d4065ac986683c44410b03181370ff",
+    "isone_v1/protocol.json": "094ccebff4aaf10b13ee3aa8a0b9bcd9761adbfa794b53c95157e2643eb53213",
+    "isone_v1/lock.json": "8f23743de04ee2122d9b1f5c944816d9718de1e784bcca276d3b9fc7a4281434",
+    "isone_v1/AMENDMENT_01.md": "56263db0374f9a00405dd841ea2597e534acc6ad7516fa22b896c39f4f95b490",
+    "isone_v1/amendment_01.json": "4c85174a8ad085260d145eebe147a21cb3d843224a1cdb0118b4883ff119d3dd",
+    "isone_v1/input_lock.json": "b531acd36ec96cdcd23f01932b74d82563e3dc9d0e195cdc33b0f3d57498e56d",
+    "isone_v1/execution_status.json": "57006b37c225bfe15a048b03b4c3f1942c16fb0199856552b606cf10fa15aaaf",
+    "isone_v1/qa/daily_model_input.csv": "a6c61f63dc1b9928bef9f40b4cdb01a9c204c221cfcb2df95cfe1999c799ec52",
+    "isone_v1/qa/download_manifest.json": "071686ab6254ca48fe67c3ae0031262df38ec35a9e63567d494cc70165f88493",
+    "isone_v1/qa/coverage.json": "e6dcbba877d71efc5121bf675dd7cd8321ece0767f57fdafbef63776c5896f85",
+    "isone_v1/qa/daily_coverage.csv": "381be6c9387f6aad5329f5a76b2e1e872c0cce1a79612ce95977ef69c283ba92",
+    "isone_v1/qa/test_predictions.csv": "51193133201370cdee52b9dab97ad47b20310d19ebe226c87c0b35608e34a4b3",
+    "isone_v1/qa/model_selection.json": "de1b1c298f2f34ee0750b626d5960f2e581908d83e50f9d8a5cf25a86cf9f805",
+    "isone_v1/qa/metrics.csv": "acdd907dc6add7c4c9a188e1516006bace07028b04bf877163ffd14e7f219e43",
+    "isone_v1/qa/block_intervals.json": "785db60fc7eef0c415a58156e5a97edbdcfdeeddf5176f1e5217952a38c3dee5"
+  }
+}

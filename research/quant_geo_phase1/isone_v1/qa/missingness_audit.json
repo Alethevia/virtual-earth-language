@@ -1,0 +1,389 @@
+{
+  "by_year": {
+    "2019": {
+      "eligible": 365,
+      "usable": 319,
+      "known_high": 33,
+      "excluded_high": 13
+    },
+    "2020": {
+      "eligible": 366,
+      "usable": 355,
+      "known_high": 41,
+      "excluded_high": 0
+    },
+    "2021": {
+      "eligible": 365,
+      "usable": 353,
+      "known_high": 37,
+      "excluded_high": 3
+    },
+    "2022": {
+      "eligible": 365,
+      "usable": 350,
+      "known_high": 36,
+      "excluded_high": 2
+    },
+    "2023": {
+      "eligible": 365,
+      "usable": 351,
+      "known_high": 26,
+      "excluded_high": 1
+    },
+    "2024": {
+      "eligible": 366,
+      "usable": 356,
+      "known_high": 28,
+      "excluded_high": 0
+    },
+    "2025": {
+      "eligible": 365,
+      "usable": 338,
+      "known_high": 33,
+      "excluded_high": 4
+    }
+  },
+  "excluded_test_days": [
+    {
+      "date": "2024-04-07",
+      "actual_peak_mw": 13410.622,
+      "high_load": false,
+      "missing_station_weather": [
+        "PWM"
+      ]
+    },
+    {
+      "date": "2024-04-08",
+      "actual_peak_mw": 13348.887,
+      "high_load": false,
+      "missing_station_weather": [
+        "PWM"
+      ]
+    },
+    {
+      "date": "2024-04-09",
+      "actual_peak_mw": 13168.066,
+      "high_load": false,
+      "missing_station_weather": [
+        "PWM"
+      ]
+    },
+    {
+      "date": "2024-04-10",
+      "actual_peak_mw": 13545.086,
+      "high_load": false,
+      "missing_station_weather": [
+        "PWM"
+      ]
+    },
+    {
+      "date": "2024-06-08",
+      "actual_peak_mw": 13580.222,
+      "high_load": false,
+      "missing_station_weather": [
+        "PVD"
+      ]
+    },
+    {
+      "date": "2024-06-28",
+      "actual_peak_mw": 15122.223000000002,
+      "high_load": false,
+      "missing_station_weather": [
+        "PWM"
+      ]
+    },
+    {
+      "date": "2024-08-13",
+      "actual_peak_mw": 17129.778,
+      "high_load": false,
+      "missing_station_weather": [
+        "PWM"
+      ]
+    },
+    {
+      "date": "2024-09-29",
+      "actual_peak_mw": 13333.443,
+      "high_load": false,
+      "missing_station_weather": [
+        "PWM"
+      ]
+    },
+    {
+      "date": "2024-11-01",
+      "actual_peak_mw": 13512.43,
+      "high_load": false,
+      "missing_station_weather": [
+        "PWM"
+      ]
+    },
+    {
+      "date": "2024-12-03",
+      "actual_peak_mw": 16987.595,
+      "high_load": false,
+      "missing_station_weather": [
+        "BDL"
+      ]
+    },
+    {
+      "date": "2025-01-23",
+      "actual_peak_mw": 18416.173,
+      "high_load": false,
+      "missing_station_weather": [
+        "PWM",
+        "CON",
+        "BDL",
+        "PVD"
+      ]
+    },
+    {
+      "date": "2025-03-26",
+      "actual_peak_mw": 14363.347,
+      "high_load": false,
+      "missing_station_weather": [
+        "PVD"
+      ]
+    },
+    {
+      "date": "2025-04-07",
+      "actual_peak_mw": 14825.877,
+      "high_load": false,
+      "missing_station_weather": [
+        "CON"
+      ]
+    },
+    {
+      "date": "2025-04-12",
+      "actual_peak_mw": 14104.372,
+      "high_load": false,
+      "missing_station_weather": [
+        "PVD"
+      ]
+    },
+    {
+      "date": "2025-04-24",
+      "actual_peak_mw": 12821.898,
+      "high_load": false,
+      "missing_station_weather": [
+        "CON"
+      ]
+    },
+    {
+      "date": "2025-04-25",
+      "actual_peak_mw": 12456.079999999998,
+      "high_load": false,
+      "missing_station_weather": [
+        "CON"
+      ]
+    },
+    {
+      "date": "2025-05-28",
+      "actual_peak_mw": 13576.962,
+      "high_load": false,
+      "missing_station_weather": [
+        "ORH"
+      ]
+    },
+    {
+      "date": "2025-05-29",
+      "actual_peak_mw": 13332.801,
+      "high_load": false,
+      "missing_station_weather": [
+        "ORH"
+      ]
+    },
+    {
+      "date": "2025-06-05",
+      "actual_peak_mw": 19232.598,
+      "high_load": true,
+      "missing_station_weather": [
+        "CON"
+      ]
+    },
+    {
+      "date": "2025-06-06",
+      "actual_peak_mw": 17754.445,
+      "high_load": false,
+      "missing_station_weather": [
+        "CON"
+      ]
+    },
+    {
+      "date": "2025-06-12",
+      "actual_peak_mw": 17293.439,
+      "high_load": false,
+      "missing_station_weather": [
+        "BTV"
+      ]
+    },
+    {
+      "date": "2025-06-19",
+      "actual_peak_mw": 20546.9,
+      "high_load": true,
+      "missing_station_weather": [
+        "BTV"
+      ]
+    },
+    {
+      "date": "2025-06-27",
+      "actual_peak_mw": 14569.237999999998,
+      "high_load": false,
+      "missing_station_weather": [
+        "CON"
+      ]
+    },
+    {
+      "date": "2025-07-03",
+      "actual_peak_mw": 20174.738,
+      "high_load": true,
+      "missing_station_weather": [
+        "ORH"
+      ]
+    },
+    {
+      "date": "2025-07-09",
+      "actual_peak_mw": 19468.078,
+      "high_load": true,
+      "missing_station_weather": [
+        "BTV"
+      ]
+    },
+    {
+      "date": "2025-08-28",
+      "actual_peak_mw": 14646.387,
+      "high_load": false,
+      "missing_station_weather": [
+        "ORH"
+      ]
+    },
+    {
+      "date": "2025-08-29",
+      "actual_peak_mw": 14242.716,
+      "high_load": false,
+      "missing_station_weather": [
+        "PWM",
+        "CON",
+        "BTV",
+        "BDL",
+        "PVD",
+        "ORH",
+        "BOS"
+      ]
+    },
+    {
+      "date": "2025-08-30",
+      "actual_peak_mw": 13211.485,
+      "high_load": false,
+      "missing_station_weather": [
+        "PWM",
+        "CON",
+        "BTV",
+        "BDL",
+        "PVD",
+        "ORH",
+        "BOS"
+      ]
+    },
+    {
+      "date": "2025-08-31",
+      "actual_peak_mw": 13575.883000000002,
+      "high_load": false,
+      "missing_station_weather": [
+        "PWM",
+        "CON",
+        "BTV",
+        "BDL",
+        "PVD",
+        "ORH",
+        "BOS"
+      ]
+    },
+    {
+      "date": "2025-09-01",
+      "actual_peak_mw": 14241.922,
+      "high_load": false,
+      "missing_station_weather": [
+        "PWM",
+        "CON",
+        "BTV",
+        "BDL",
+        "PVD",
+        "ORH",
+        "BOS"
+      ]
+    },
+    {
+      "date": "2025-09-02",
+      "actual_peak_mw": 15431.559,
+      "high_load": false,
+      "missing_station_weather": [
+        "PWM",
+        "CON",
+        "BTV",
+        "BDL",
+        "PVD",
+        "ORH",
+        "BOS"
+      ]
+    },
+    {
+      "date": "2025-09-08",
+      "actual_peak_mw": 14025.199999999995,
+      "high_load": false,
+      "missing_station_weather": [
+        "PWM",
+        "CON",
+        "BTV",
+        "BDL",
+        "PVD",
+        "ORH",
+        "BOS"
+      ]
+    },
+    {
+      "date": "2025-09-15",
+      "actual_peak_mw": 15365.469,
+      "high_load": false,
+      "missing_station_weather": [
+        "PWM",
+        "CON",
+        "BTV",
+        "BDL",
+        "ORH",
+        "BOS"
+      ]
+    },
+    {
+      "date": "2025-11-15",
+      "actual_peak_mw": 14386.667,
+      "high_load": false,
+      "missing_station_weather": [
+        "PWM"
+      ]
+    },
+    {
+      "date": "2025-11-16",
+      "actual_peak_mw": 14910.856,
+      "high_load": false,
+      "missing_station_weather": [
+        "PWM"
+      ]
+    },
+    {
+      "date": "2025-11-17",
+      "actual_peak_mw": 16235.473,
+      "high_load": false,
+      "missing_station_weather": [
+        "PWM"
+      ]
+    },
+    {
+      "date": "2025-11-18",
+      "actual_peak_mw": 15730.776000000002,
+      "high_load": false,
+      "missing_station_weather": [
+        "PWM"
+      ]
+    }
+  ],
+  "interpretation": "Scores apply to complete cases. Four known high-load days in 2025 are excluded; missingness may be informative. The 30-day minimum is not met in either year."
+}

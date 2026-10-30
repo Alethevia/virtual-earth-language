@@ -34,8 +34,9 @@ jobs:
       - name: Geography offline checks
         working-directory: research/quant_geo_phase1
         run: |
-          python -m pip install -r ghcnh_v1/requirements.txt
-          python -m unittest -v test_quant_geo_phase1.py test_followup.py test_ghcnh.py test_bridge.py
+          python -m pip install -r isone_v1/requirements.txt
+          python -m unittest -v test_quant_geo_phase1.py test_followup.py test_ghcnh.py test_bridge.py test_isone.py
+          python verify_isone.py
 
   web:
     runs-on: ubuntu-latest

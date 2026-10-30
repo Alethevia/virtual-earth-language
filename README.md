@@ -20,7 +20,7 @@ The new [quantitative geography project](research/quant_geo_phase1/README.md) as
 
 ```bash
 cd research/quant_geo_phase1
-python -m pip install -r requirements.txt
+python -m pip install -r isone_v1/requirements.txt
 python -m unittest -v
 ```
 
@@ -40,3 +40,5 @@ npm run dev
 Cesium assets are generated from the locked npm dependency during installation/build. Generated third-party asset copies are no longer tracked. The viewer is a visualization shell with sample GeoJSON, not a validated geospatial analysis system. See [AUDIT.md](AUDIT.md).
 
 The [same-version 2024–2025 bridge](research/quant_geo_phase1/bridge_2024/RESULTS.md) reproduces all 2025 predictions and adds descriptive 2024 comparisons. HGB point estimates are positive on both GHCNh years, but their intervals include zero and ridge disagrees in 2024; part of the change from the legacy study reflects a worse baseline. No new independent-validation claim is made.
+
+The [ISO-NE geographic replication](research/quant_geo_phase1/isone_v1/RESULTS.md) now adds a separately held-out regional dataset. The fixed 2025 primary HGB comparison worsens high-load MAE by 9.10%; 2024 improves 7.09%, with an interval spanning zero. Ridge has opposite yearly directions. Both years fall below the predeclared 30-high-day minimum (29 and 28 observed days), and neither passes the full screen. All 13 pipelines, frozen daily inputs, 58 offline checks and independent recomputation of scores and intervals are retained. This tests a retrained method in a neighboring region, not statistically independent outcomes or transfer of NYISO-trained coefficients.

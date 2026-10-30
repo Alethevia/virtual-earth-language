@@ -1,0 +1,12 @@
+{
+  "status": "VERIFIED",
+  "metric_rows": 26,
+  "error_metrics_recomputed": 104,
+  "interval_summaries_recomputed": 12,
+  "interval_statistics_checked": 36,
+  "metric_max_abs_difference_mw": 9.094947017729282e-13,
+  "interval_max_abs_difference_mw": 3.637978807091713e-12,
+  "exact_test_dates_and_counts": true,
+  "source_and_input_hashes_verified": true,
+  "limitation": "Independent arithmetic implementation, not an independent investigator or raw measurement audit."
+}

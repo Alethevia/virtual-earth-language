@@ -1,0 +1,88 @@
+{
+  "status": "EMPIRICAL_GEOGRAPHIC_REPLICATION",
+  "model_fits": 65,
+  "pipelines": 13,
+  "fits_per_pipeline": 5,
+  "training_end": "2023-12-31",
+  "threshold_mw": 19045.328,
+  "exposure_weights": {
+    "PWM": 0.09865840626528122,
+    "CON": 0.09736919381332428,
+    "BTV": 0.043073786351346455,
+    "BDL": 0.2396701015064661,
+    "PVD": 0.18504155047195914,
+    "ORH": 0.13622921824130188,
+    "BOS": 0.19995774335032085
+  },
+  "coverage": {
+    "train": {
+      "eligible": 1461,
+      "usable": 1377,
+      "fraction": 0.9425051334702259
+    },
+    "validation": {
+      "eligible": 365,
+      "usable": 351,
+      "fraction": 0.9616438356164384
+    },
+    "test_2024": {
+      "eligible": 366,
+      "usable": 356,
+      "fraction": 0.9726775956284153
+    },
+    "test_2025": {
+      "eligible": 365,
+      "usable": 338,
+      "fraction": 0.9260273972602739
+    }
+  },
+  "screens": {
+    "2025": {
+      "role": "primary",
+      "relative_tail_gain": -0.09102974194255942,
+      "scrambles_beaten": 0,
+      "conditions": {
+        "enough_tail_days": false,
+        "at_least_five_percent_tail_gain": false,
+        "primary_interval_positive": false,
+        "ridge_tail_direction_agrees": true,
+        "beats_four_of_five_scrambles": false,
+        "overall_MAE_not_more_than_two_percent_worse": true
+      },
+      "screening_pass": false
+    },
+    "2024": {
+      "role": "secondary",
+      "relative_tail_gain": 0.0708889274417035,
+      "scrambles_beaten": 4,
+      "conditions": {
+        "enough_tail_days": false,
+        "at_least_five_percent_tail_gain": true,
+        "primary_interval_positive": false,
+        "ridge_tail_direction_agrees": false,
+        "beats_four_of_five_scrambles": true,
+        "overall_MAE_not_more_than_two_percent_worse": true
+      },
+      "screening_pass": false
+    }
+  },
+  "input_lock": {
+    "status": "PREPARED_BEFORE_MODEL_FITTING",
+    "created_utc": "2026-10-30T00:03:17.786236+00:00",
+    "sha256": {
+      "protocol.json": "094ccebff4aaf10b13ee3aa8a0b9bcd9761adbfa794b53c95157e2643eb53213",
+      "lock.json": "8f23743de04ee2122d9b1f5c944816d9718de1e784bcca276d3b9fc7a4281434",
+      "amendment_01.json": "4c85174a8ad085260d145eebe147a21cb3d843224a1cdb0118b4883ff119d3dd",
+      "AMENDMENT_01.md": "56263db0374f9a00405dd841ea2597e534acc6ad7516fa22b896c39f4f95b490",
+      "qa/daily_model_input.csv": "a6c61f63dc1b9928bef9f40b4cdb01a9c204c221cfcb2df95cfe1999c799ec52",
+      "qa/download_manifest.json": "071686ab6254ca48fe67c3ae0031262df38ec35a9e63567d494cc70165f88493",
+      "qa/coverage.json": "e6dcbba877d71efc5121bf675dd7cd8321ece0767f57fdafbef63776c5896f85"
+    }
+  },
+  "versions": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "sklearn": "1.8.0"
+  }
+}

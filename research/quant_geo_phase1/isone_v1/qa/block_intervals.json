@@ -1,0 +1,134 @@
+[
+  {
+    "year": 2025,
+    "family": "hgb",
+    "calendar_days": 365,
+    "block_days": 7,
+    "paired_mean_improvement": -61.97289176036542,
+    "lower_95": -134.75581334343875,
+    "upper_95": 13.266463673338464,
+    "effective_bootstrap_replicates": 2000,
+    "note": "Exploratory paired circular-block interval; not causal and not a multiple-testing correction."
+  },
+  {
+    "year": 2025,
+    "family": "hgb",
+    "calendar_days": 365,
+    "block_days": 14,
+    "paired_mean_improvement": -61.97289176036542,
+    "lower_95": -111.72717134735902,
+    "upper_95": -10.419505770613103,
+    "effective_bootstrap_replicates": 1999,
+    "note": "Exploratory paired circular-block interval; not causal and not a multiple-testing correction."
+  },
+  {
+    "year": 2025,
+    "family": "hgb",
+    "calendar_days": 365,
+    "block_days": 28,
+    "paired_mean_improvement": -61.97289176036542,
+    "lower_95": -109.31572706663833,
+    "upper_95": 12.18480443326841,
+    "effective_bootstrap_replicates": 1998,
+    "note": "Exploratory paired circular-block interval; not causal and not a multiple-testing correction."
+  },
+  {
+    "year": 2025,
+    "family": "ridge",
+    "calendar_days": 365,
+    "block_days": 7,
+    "paired_mean_improvement": 97.42738387416165,
+    "lower_95": 10.338388641496108,
+    "upper_95": 167.52948195615528,
+    "effective_bootstrap_replicates": 2000,
+    "note": "Exploratory paired circular-block interval; not causal and not a multiple-testing correction."
+  },
+  {
+    "year": 2025,
+    "family": "ridge",
+    "calendar_days": 365,
+    "block_days": 14,
+    "paired_mean_improvement": 97.42738387416165,
+    "lower_95": 28.610921577670887,
+    "upper_95": 161.8481952481073,
+    "effective_bootstrap_replicates": 1999,
+    "note": "Exploratory paired circular-block interval; not causal and not a multiple-testing correction."
+  },
+  {
+    "year": 2025,
+    "family": "ridge",
+    "calendar_days": 365,
+    "block_days": 28,
+    "paired_mean_improvement": 97.42738387416165,
+    "lower_95": 18.381208969848164,
+    "upper_95": 146.46312501268426,
+    "effective_bootstrap_replicates": 1998,
+    "note": "Exploratory paired circular-block interval; not causal and not a multiple-testing correction."
+  },
+  {
+    "year": 2024,
+    "family": "hgb",
+    "calendar_days": 366,
+    "block_days": 7,
+    "paired_mean_improvement": 30.244571166708347,
+    "lower_95": -103.64328650270355,
+    "upper_95": 141.20240998681965,
+    "effective_bootstrap_replicates": 2000,
+    "note": "Exploratory paired circular-block interval; not causal and not a multiple-testing correction."
+  },
+  {
+    "year": 2024,
+    "family": "hgb",
+    "calendar_days": 366,
+    "block_days": 14,
+    "paired_mean_improvement": 30.244571166708347,
+    "lower_95": -108.87707458691419,
+    "upper_95": 124.5618646984775,
+    "effective_bootstrap_replicates": 1995,
+    "note": "Exploratory paired circular-block interval; not causal and not a multiple-testing correction."
+  },
+  {
+    "year": 2024,
+    "family": "hgb",
+    "calendar_days": 366,
+    "block_days": 28,
+    "paired_mean_improvement": 30.244571166708347,
+    "lower_95": -116.92254913584533,
+    "upper_95": 108.59701949229556,
+    "effective_bootstrap_replicates": 1968,
+    "note": "Exploratory paired circular-block interval; not causal and not a multiple-testing correction."
+  },
+  {
+    "year": 2024,
+    "family": "ridge",
+    "calendar_days": 366,
+    "block_days": 7,
+    "paired_mean_improvement": -48.11447323605704,
+    "lower_95": -110.74306146473232,
+    "upper_95": 11.223459773648688,
+    "effective_bootstrap_replicates": 2000,
+    "note": "Exploratory paired circular-block interval; not causal and not a multiple-testing correction."
+  },
+  {
+    "year": 2024,
+    "family": "ridge",
+    "calendar_days": 366,
+    "block_days": 14,
+    "paired_mean_improvement": -48.11447323605704,
+    "lower_95": -91.02610712595008,
+    "upper_95": 8.862195471743838,
+    "effective_bootstrap_replicates": 1995,
+    "note": "Exploratory paired circular-block interval; not causal and not a multiple-testing correction."
+  },
+  {
+    "year": 2024,
+    "family": "ridge",
+    "calendar_days": 366,
+    "block_days": 28,
+    "paired_mean_improvement": -48.11447323605704,
+    "lower_95": -93.95180847803204,
+    "upper_95": 9.54660832076375,
+    "effective_bootstrap_replicates": 1968,
+    "note": "Exploratory paired circular-block interval; not causal and not a multiple-testing correction."
+  }
+]

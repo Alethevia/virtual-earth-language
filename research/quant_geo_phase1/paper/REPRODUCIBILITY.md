@@ -79,3 +79,14 @@ causality or the statistical reliability of a small high-demand sample. It
 confirms that the reported ISO-NE computations can be repeated without the
 researcher's untracked data cache. The original empirical search had 65 fits;
 these additional 65 verification fits are not additional independent trials.
+
+## Publication-gate regression checks
+
+Run `python -m unittest discover -s paper -p 'test_*.py' -v` from the geography
+directory. Eight tests exercise the published inputs and intentionally damaged
+copies under both normal and optimized (`-O`) Python. The gate rejects a missing
+manuscript, duplicate table markers, duplicate score rows, non-finite errors,
+inconsistent sample counts, a mismatched paired mean and stale manuscript
+numbers. These checks run in CI and do not refit models or change research
+results. They validate the generated table and its inputs, not every numerical
+statement in the prose or the rendered SVG.

@@ -41,6 +41,7 @@ jobs:
       - name: Geography manuscript evidence and model replay
         working-directory: research/quant_geo_phase1
         run: |
+          python -m unittest discover -s paper -p 'test_*.py' -v
           python paper/build_evidence.py --check
           python paper/reproduce_isone.py
 

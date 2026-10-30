@@ -5,6 +5,7 @@ import csv
 import hashlib
 import io
 import json
+import math
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
@@ -36,13 +37,31 @@ def build_rows():
                     scores = [r for r in iso if int(r['year'])==year and r['family']==family]
                     intervals = [r for r in iso_ci if r['year']==year and r['family']==family and r['block_days']==14]
                     role = 'secondary year' if year==2024 else 'primary year'
-                pairs = {r['representation']: r for r in scores}
+                pairs = {}
+                for score in scores:
+                    key = score['representation']
+                    if key in pairs:
+                        raise ValueError(f'Duplicate score: {region} {year} {family} {key}')
+                    pairs[key] = score
                 b2, b3 = pairs['B2_distribution'], pairs['B3_site_identity']
-                assert len(intervals)==1
+                if len(intervals) != 1:
+                    raise ValueError(f'Expected one interval: {region} {year} {family}')
                 ci = intervals[0]
                 a, b = float(b2['high_load_MAE']), float(b3['high_load_MAE'])
-                assert int(b2['n'])==int(b3['n']) and int(b2['high_load_n'])==int(b3['high_load_n'])
-                assert abs(a-b-ci['paired_mean_improvement'])<1e-8
+                values = [a, b, float(b2['MAE']), float(b3['MAE']),
+                          ci['paired_mean_improvement'], ci['lower_95'], ci['upper_95']]
+                if not all(math.isfinite(v) for v in values):
+                    raise ValueError('Non-finite evidence value')
+                if a <= 0 or b < 0 or min(values[2:4]) < 0:
+                    raise ValueError('Invalid MAE for relative comparison')
+                if ci['lower_95'] > ci['upper_95']:
+                    raise ValueError('Reversed interval bounds')
+                if not (int(b2['n']) == int(b3['n']) and
+                        int(b2['high_load_n']) == int(b3['high_load_n']) and
+                        0 < int(b2['high_load_n']) <= int(b2['n'])):
+                    raise ValueError('Inconsistent sample counts')
+                if abs(a-b-ci['paired_mean_improvement']) >= 1e-8:
+                    raise ValueError('Paired mean disagrees with MAEs')
                 rows.append(dict(region=region, year=year, family=family.upper(),
                     usable_days=int(b2['n']), high_load_days=int(b2['high_load_n']),
                     B2_all_MAE_MW=float(b2['MAE']), B3_all_MAE_MW=float(b3['MAE']),
@@ -50,7 +69,8 @@ def build_rows():
                     relative_high_improvement_percent=100*(1-b/a),
                     paired_improvement_MW=a-b, lower_95_MW=ci['lower_95'], upper_95_MW=ci['upper_95'],
                     meets_30_day_minimum=int(b2['high_load_n'])>=30, evidence_role=role))
-    assert len(rows)==8
+    if len(rows) != 8:
+        raise ValueError('Expected eight evidence rows')
     return rows
 
 
@@ -108,15 +128,18 @@ def main():
         else:
             (HERE/name).write_text(text)
     manuscript = HERE/'MANUSCRIPT.md'
-    if manuscript.exists():
-        text = manuscript.read_text(); begin='<!-- EVIDENCE_TABLE_BEGIN -->'; end='<!-- EVIDENCE_TABLE_END -->'
-        table = products(rows)['evidence_table.md']
-        updated = text.split(begin)[0]+begin+'\n\n'+table+'\n'+end+text.split(end)[1]
-        if args.check:
-            if text != updated:
-                raise ValueError('Manuscript table differs from saved evidence')
-        else:
-            manuscript.write_text(updated)
+    text = manuscript.read_text()  # Missing manuscript is a failed check.
+    begin = '<!-- EVIDENCE_TABLE_BEGIN -->'
+    end = '<!-- EVIDENCE_TABLE_END -->'
+    if text.count(begin) != 1 or text.count(end) != 1 or text.index(begin) >= text.index(end):
+        raise ValueError('Expected exactly one ordered manuscript table marker pair')
+    table = products(rows)['evidence_table.md']
+    updated = text.split(begin)[0]+begin+'\n\n'+table+'\n'+end+text.split(end)[1]
+    if args.check:
+        if text != updated:
+            raise ValueError('Manuscript table differs from saved evidence')
+    else:
+        manuscript.write_text(updated)
     if args.plot:
         plot(rows)
     print('Verified 8 descriptive result rows; no model fitted.')

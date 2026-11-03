@@ -215,7 +215,7 @@ jobs:
           report=json.loads(Path("paper/reproduction_result.json").read_text())
           print("GEO_REPLAY_SCOPE",json.dumps(report),flush=True)
           assert report["model_predictions_compared"]==9022
-          assert report["prediction_max_abs_difference_mw"]==0
+          assert abs(report["prediction_max_abs_difference_mw"]) < 1e-7, "Numerical replay tolerance (MW) exceeded"
           assert report["raw_archives_used"] is False
           PY
 

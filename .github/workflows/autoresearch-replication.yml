@@ -1,0 +1,252 @@
+name: AutoResearch independent replication
+on:
+  push:
+    branches:
+      - research/autoresearch-audit-20261102
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  motor:
+    name: Motor — frozen benchmark + new-seed stress
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    defaults:
+      run:
+        working-directory: research/engineering_motor_faults
+    env:
+      OPENBLAS_NUM_THREADS: "1"
+      OMP_NUM_THREADS: "1"
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: Alethevia/virtual-earth-language
+          ref: 95a46ec42e0bdb66002325e6bae11c28f7690249
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - run: python -m pip install -r requirements.txt
+      - name: Original motor tests
+        run: python -m unittest -v
+      - name: Frozen motor experiment
+        run: python run_experiment.py --out results/autoresearch_locked
+      - name: Falsification and new-seed mixed-calibration ablation
+        run: |
+          python - <<'PY'
+          import json, math
+          from pathlib import Path
+          import numpy as np
+          from motorbench import DT, WARMUP, FAULT_TIME, METHODS, episode, calibration_threshold, first_alarm, wilson
+          expected=json.loads(Path("results/run_v1/summary.json").read_text())
+          actual=json.loads(Path("results/autoresearch_locked/summary.json").read_text())
+          for method in METHODS:
+              assert math.isclose(expected["thresholds"][method], actual["thresholds"][method], rel_tol=1e-9), method
+          for condition in expected["results"]:
+              for method in METHODS:
+                  want=expected["results"][condition][method]
+                  got=actual["results"][condition][method]
+                  assert want["count"] == got["count"] and want["n"] == got["n"], (condition, method)
+          print("LOCKED_BASELINE_REPRODUCED: all 18 cells, all 3 thresholds", flush=True)
+
+          # Exploratory candidate; all 80 calibration episodes are distinct from held-out seeds.
+          seeds=range(5100,5140)
+          cutoff=round(WARMUP/DT)
+          calib=np.asarray([episode(seed,condition)[1][cutoff:].max(axis=0)
+                            for condition in ("healthy","healthy_shift") for seed in seeds])
+          mixed={method:calibration_threshold(calib[:,j]) for j,method in enumerate(METHODS)}
+          original=actual["thresholds"]
+          cases={}
+          for condition in ("healthy","healthy_shift","bias","bias_shift","stuck"):
+              cases[condition]={}
+              for j,method in enumerate(METHODS):
+                  cases[condition][method]={"original":{"events":0,"pre_fault":0},
+                                           "mixed":{"events":0,"pre_fault":0}}
+              for seed in range(6000,6020):
+                  _, score=episode(seed,condition)
+                  for j,method in enumerate(METHODS):
+                      for label, threshold in (("original",original[method]),("mixed",mixed[method])):
+                          at=first_alarm(score[:,j], threshold)
+                          fault=not condition.startswith("healthy")
+                          valid=at is not None and (not fault or at*DT>=FAULT_TIME)
+                          early=fault and at is not None and at*DT<FAULT_TIME
+                          cases[condition][method][label]["events"]+=int(valid)
+                          cases[condition][method][label]["pre_fault"]+=int(early)
+              for method in METHODS:
+                  for label in ("original","mixed"):
+                      cell=cases[condition][method][label]
+                      cell["n"]=20
+                      cell["rate"]=cell["events"]/20
+                      cell["wilson95"]=wilson(cell["events"],20)
+          report={"status":"EXPLORATORY_NOT_CONFIRMATORY",
+                  "holdout_seed_range":[6000,6019],
+                  "calibration_seed_range":[5100,5139],
+                  "calibration_episode_count":80,
+                  "original_thresholds":original,
+                  "mixed_thresholds":mixed,
+                  "results":cases,
+                  "interpretation":"Shift-aware calibration trades off false alarms and fault detection; no method selected on held-out results."}
+          Path("results/autoresearch_locked/new_seed_ablation.json").write_text(json.dumps(report,indent=2))
+          print("MOTOR_NEW_SEED_ABLATION",json.dumps({"thresholds":mixed,"conditions":cases}),flush=True)
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: autoresearch-motor
+          path: research/engineering_motor_faults/results/autoresearch_locked/
+
+  diagnostic:
+    name: Diagnostic memory — frozen model + independent seed
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    defaults:
+      run:
+        working-directory: research/diagnostic_memory_v1
+    env:
+      OPENBLAS_NUM_THREADS: "1"
+      OMP_NUM_THREADS: "1"
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: Alethevia/virtual-earth-language
+          ref: 093e62d18c1b70dc80f671dc6066ff93b7a11723
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - run: python -m pip install -r requirements.txt
+      - name: Original diagnostic-memory tests
+        run: python -m unittest -v
+      - name: Frozen search and evaluation
+        run: |
+          python run_experiment.py --out results/autoresearch_locked --phase design
+          python run_experiment.py --out results/autoresearch_locked --phase evaluate
+      - name: Verify reference plus independent Monte Carlo
+        run: |
+          python - <<'PY'
+          import json,math
+          from pathlib import Path
+          import numpy as np
+          from dynamic import Model,trajectories,separation,bayes_risk,state_filter,finite_predict,batch_llr,frozen_design_risk
+          root=Path("results/autoresearch_locked")
+          want=json.loads(Path("REFERENCE.json").read_text())
+          got=json.loads((root/"summary.json").read_text())
+          design=json.loads((root/"design.json").read_text())
+          assert design["admissible_count"]==want["admissible_schedules"]
+          assert design["candidate_count"]==want["candidate_schedules"]
+          assert all(v["decision_disagreements"]==0 for v in got["identity_checks"].values())
+          assert design["choices"]["full_information_design"]["probe"] == design["choices"]["two_bit_design"]["probe"]
+          rows=[x for x in got["results"] if x["schedule"]=="full_information_design" and x["noise_scale"]==1.]
+          for ref in want["nominal_selected_schedule_results"]:
+              row=next(x for x in rows if x["method"]==ref["method"] and x["state_bits"]==ref["bits"])
+              assert row["errors"]==ref["observed_errors"],(ref,row)
+              assert math.isclose(row["modeled_risk"],ref["exact_error"],abs_tol=1e-10)
+          print("DIAGNOSTIC_LOCKED_REFERENCE_REPRODUCED: 10 rows, null co-design",flush=True)
+
+          # Untouched noise seed, no recalibration or parameter selection on test data.
+          m=Model(**design["model"])
+          choice=design["choices"]["full_information_design"]
+          mu,_=trajectories(np.asarray(choice["probe"]),m)
+          q=separation(mu,m.sigma)
+          option=next(x for x in choice["classifiers"] if x["method"]=="posterior" and x["bits"]==4)
+          rule=state_filter(q,4,option["span"],"posterior",retain=True)
+          n=5000
+          truth=np.repeat([0,1],n)
+          eps=np.random.default_rng(2026110201).normal(size=(2*n,m.horizon))
+          y=mu[0,truth]+m.sigma*eps
+          oracle=(batch_llr(y,mu[0],m.sigma)>0).astype(int)
+          constrained=finite_predict(y,mu[0],m.sigma,rule)
+          e0=(oracle!=truth).astype(float)
+          e1=(constrained!=truth).astype(float)
+          d=e1-e0
+          se=float(d.std(ddof=1)/np.sqrt(len(d)))
+          stress=[]
+          for scale in (1.0,1.5,2.0):
+              stress.append({"noise_multiplier":scale,
+                  "full_information_bayes_risk":float(bayes_risk(q.sum(),scale)),
+                  "frozen_4bit_posterior_risk":float(frozen_design_risk(rule,scale)[0])})
+          result={"status":"EXPLORATORY_NEW_RANDOM_SEED","seed":2026110201,
+                  "n_per_hypothesis":n,"full_errors":int(e0.sum()),
+                  "posterior_4bit_errors":int(e1.sum()),
+                  "paired_excess_error":float(d.mean()),
+                  "paired_excess_error_normal95":[float(d.mean()-1.96*se),float(d.mean()+1.96*se)],
+                  "stress_exact_model_risks":stress,
+                  "novelty_claim":False}
+          (root/"independent_seed_audit.json").write_text(json.dumps(result,indent=2))
+          print("DIAGNOSTIC_NEW_SEED_AUDIT",json.dumps(result),flush=True)
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: autoresearch-diagnostic-memory
+          path: research/diagnostic_memory_v1/results/autoresearch_locked/
+
+  geography:
+    name: Geography — manuscript evidence and 65-fit replay
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    defaults:
+      run:
+        working-directory: research/quant_geo_phase1
+    env:
+      OPENBLAS_NUM_THREADS: "1"
+      OMP_NUM_THREADS: "1"
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: Alethevia/virtual-earth-language
+          ref: d77f7c57535bb8864db5abb9e6649f06c370abde
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install -r isone_v1/requirements.txt
+      - name: Existing offline geographic tests
+        run: |
+          python -m unittest -v test_quant_geo_phase1.py test_followup.py test_ghcnh.py test_bridge.py test_isone.py
+          python verify_isone.py
+      - name: Independent evidence checks and replay
+        run: |
+          python -m unittest discover -s paper -p 'test_*.py' -v
+          python paper/build_evidence.py --check
+          python paper/reproduce_isone.py
+      - name: Verify replay scope metadata
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          report=json.loads(Path("paper/reproduction_result.json").read_text())
+          print("GEO_REPLAY_SCOPE",json.dumps(report),flush=True)
+          assert report["model_predictions_compared"]==9022
+          assert report["prediction_max_abs_difference_mw"]==0
+          assert report["raw_archives_used"] is False
+          PY
+
+  quant:
+    name: Alpha-Research — offline validity, NOT profitability
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: Alethevia/Alpha-Research
+          ref: fcced69ac47ba26ad23174aac91bc50a1fbf0b72
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install -e ".[dev]"
+      - name: Offline tests, including anti-lookahead
+        run: python -m pytest tests -q -o addopts=
+      - name: Run correctness sanity checks
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          report={"status":"CODE_TESTS_ONLY","real_market_data_replayed":False,
+                  "live_trading":False,"profitability_verified":False,
+                  "note":"Passing unit tests does not validate strategy alpha, transaction costs, data lineage or forward performance."}
+          Path("AUTORESEARCH_AUDIT_SCOPE.json").write_text(json.dumps(report,indent=2))
+          print("QUANT_AUDIT_SCOPE",json.dumps(report))
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: autoresearch-quant-scope
+          path: AUTORESEARCH_AUDIT_SCOPE.json

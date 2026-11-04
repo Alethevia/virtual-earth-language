@@ -1,0 +1,46 @@
+name: Motor bank V2 reproduction
+on:
+  push:
+    branches: [research/motor-bank-v2-20261104]
+    paths:
+      - 'research/motor_bank_v2/**'
+      - '.github/workflows/motor-bank-v2.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: motor-bank-v2-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  reproduce:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    defaults:
+      run:
+        working-directory: research/motor_bank_v2
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13.5'
+      - run: python -m pip install -r requirements.txt
+      - name: Verify pre-evaluation source commitment
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          import bank_study
+          lock=json.loads(Path('SOURCE_LOCK.json').read_text())
+          assert bank_study.source_hashes()==lock['source_sha256']
+          print('Pre-evaluation code hashes verified.')
+          PY
+      - name: Reproduce every locked condition and count
+        run: bash run_all.sh results/ci
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: motor-bank-v2-raw-results
+          path: research/motor_bank_v2/results/ci

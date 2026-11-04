@@ -1,0 +1,11 @@
+{
+  "protocol_commit": "907e4a13065f51a63d66f97b09c02266576a9298",
+  "source_sha256": {
+    "motorbench.py": "caea2a328becfff82cf915511b157c76b7dd01ca43a2c884e1f2804c566a4834",
+    "bank_study.py": "e6aa4ccba89aa53c20f9586331344093301947c6c8e59edcde20ca3ab7bf6f1d"
+  },
+  "development_only": "8100-8111 plus unit-test seeds 8190,8199,8233; no calibration or holdout yet",
+  "software": {"python": "3.13.5", "numpy": "2.3.5", "scipy": "1.17.0", "numba": "0.65.1"},
+  "unit_tests_passed": 14,
+  "scope": "Pre-evaluation cryptographic commitment; full source to be added without changing these hashes. No novelty or hardware claim."
+}

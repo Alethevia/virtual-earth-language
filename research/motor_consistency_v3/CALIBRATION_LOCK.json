@@ -1,0 +1,20 @@
+{
+  "protocol_commit": "6e90b4e6ce4c83c3efac9be6c7b14eab589e362a",
+  "calibration_sha256": "86967eb311bf527f6920d7182a33ce8553bed0987e2fbafd3308720b19e73678",
+  "holdout_run_yet": false,
+  "n_seed_groups": 159,
+  "n_trajectories": 318,
+  "per_mode_healthy": 78,
+  "per_mode_healthy_shift": 81,
+  "rank": 152,
+  "thresholds": {
+    "passive": {"v2_bank": 3.41702576793913, "electrical_single": 0.019526304445768264, "electrical_switch": 0.01678494480218208, "bias_gate_no_switch": 0.019526304445768264, "triage": 0.01678494480218208, "always_abstain": 0.0},
+    "active": {"v2_bank": 3.519355631592882, "electrical_single": 0.019312517147123506, "electrical_switch": 0.016784947985505765, "bias_gate_no_switch": 0.019312517147123506, "triage": 0.016784947985505765, "always_abstain": 0.0}
+  },
+  "source_sha256": {
+    "motorbench.py": "caea2a328becfff82cf915511b157c76b7dd01ca43a2c884e1f2804c566a4834",
+    "bank_study.py": "e6aa4ccba89aa53c20f9586331344093301947c6c8e59edcde20ca3ab7bf6f1d",
+    "study.py": "419240774aabbd96d84a60ad72d91567ab55c1ffa4dc33fed6128ff6b246b0ca",
+    "box_solver.py": "e0f4cf9863787a905e02a0c79f84d090f50d020f0d6cb116811416b84bf62b7d"
+  }
+}

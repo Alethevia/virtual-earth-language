@@ -1,0 +1,26 @@
+{
+  "protocol_commit": "907e4a13065f51a63d66f97b09c02266576a9298",
+  "source_lock_commit": "0109a5bdf767c16e7cf1745a29318c3cc13b1158",
+  "source_sha256": {
+    "motorbench.py": "caea2a328becfff82cf915511b157c76b7dd01ca43a2c884e1f2804c566a4834",
+    "bank_study.py": "e6aa4ccba89aa53c20f9586331344093301947c6c8e59edcde20ca3ab7bf6f1d"
+  },
+  "method_order": ["no_load_original", "load_original", "no_load_matched", "load_matched", "bank_cumulative", "bank_recent", "bank_residual_min"],
+  "core_n_per_condition": 200,
+  "stress_n_per_condition": 100,
+  "counts": {
+    "healthy": [1, 2, 0, 0, 21, 8, 25],
+    "healthy_shift": [200, 200, 24, 28, 8, 8, 0],
+    "bias": [55, 49, 0, 0, 183, 11, 94],
+    "bias_shift": [0, 0, 33, 33, 194, 11, 21],
+    "drift": [104, 91, 0, 0, 184, 12, 75],
+    "stuck": [194, 194, 138, 138, 181, 190, 132],
+    "startup_bias": [34, 31, 0, 0, 99, 2, 66],
+    "healthy_late_shift": [100, 100, 8, 9, 100, 100, 2],
+    "bias_late_shift": [0, 0, 14, 14, 0, 0, 2],
+    "healthy_outside_bank": [100, 100, 100, 100, 100, 2, 100],
+    "healthy_nonlinear": [2, 1, 0, 0, 11, 3, 4],
+    "bias_nonlinear": [29, 28, 0, 0, 89, 3, 29]
+  },
+  "primary_screen_passed": false
+}

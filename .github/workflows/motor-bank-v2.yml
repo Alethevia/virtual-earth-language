@@ -13,7 +13,9 @@ concurrency:
   cancel-in-progress: true
 jobs:
   reproduce:
-    runs-on: ubuntu-latest
+    # Run 41787499080 failed before experiment: Python 3.13.5 unavailable on Ubuntu 26.04.
+    # Environment-only correction; source hashes, thresholds and criteria remain unchanged.
+    runs-on: ubuntu-24.04
     timeout-minutes: 12
     defaults:
       run:

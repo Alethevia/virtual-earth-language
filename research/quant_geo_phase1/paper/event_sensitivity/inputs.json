@@ -1,0 +1,34 @@
+{
+  "source_commit": "d77f7c57535bb8864db5abb9e6649f06c370abde",
+  "status": "POST_HOC_DESCRIPTIVE_ONLY",
+  "sources": [
+    {
+      "region": "NYISO",
+      "path": "bridge_2024/qa/ghcnh_2024_predictions.csv",
+      "years": [
+        2024
+      ],
+      "threshold_mw": 24966.5,
+      "sha256": "9626792f18232de144a547da0a6ec337a1bb92cdb20b338cfdfeb7bf40501642"
+    },
+    {
+      "region": "NYISO",
+      "path": "ghcnh_v1/qa/test_predictions.csv",
+      "years": [
+        2025
+      ],
+      "threshold_mw": 24966.5,
+      "sha256": "f1465d92a45c70b8bf8ccebf6c1c8233bd553b9f9b3d4052a7a1898b28b40fd0"
+    },
+    {
+      "region": "ISO-NE",
+      "path": "isone_v1/qa/test_predictions.csv",
+      "years": [
+        2024,
+        2025
+      ],
+      "threshold_mw": 19045.328,
+      "sha256": "51193133201370cdee52b9dab97ad47b20310d19ebe226c87c0b35608e34a4b3"
+    }
+  ]
+}

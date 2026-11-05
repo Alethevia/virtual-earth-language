@@ -14,6 +14,10 @@
   "source_sha256": {
     "motorbench.py": "caea2a328becfff82cf915511b157c76b7dd01ca43a2c884e1f2804c566a4834",
     "bank_study.py": "e6aa4ccba89aa53c20f9586331344093301947c6c8e59edcde20ca3ab7bf6f1d",
-    "study.py": "419240774aabbd96d84a60ad72d91567ab55c1ffa4dc8...INVALID_PLACEHOLDER"
+    "study.py": "419240774aabbd96d84a60ad72d91567ab55c1ffa4dc33fed6128ff6b246b0ca",
+    "box_solver.py": "e0f4cf9863787a905e02a0c79f84d090f50d020f0d6cb116811416b84bf62b7d",
+    "experiment.py": "15eddca6510854e8f791d14aab6b7b13e3566909c078314dff6e6c09947a9e3d",
+    "telemetry.py": "e26f86c34c18cc57436efc2980134cf8a59c869375068b52acc7181c9ca6b956",
+    "calibration_study.py": "4934e3d5e531579cc6881198880c691e2dd7eeb2365b7dc1b6da1830aa385e37"
   }
 }

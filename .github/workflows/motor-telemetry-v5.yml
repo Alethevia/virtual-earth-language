@@ -1,0 +1,40 @@
+name: Motor telemetry V5 reproduction
+on:
+  push:
+    branches: [research/motor-telemetry-v5-20261104]
+    paths:
+      - 'research/motor_telemetry_v5/**'
+      - '.github/workflows/motor-telemetry-v5.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: motor-telemetry-v5-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  reproduce:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    defaults:
+      run:
+        working-directory: research/motor_telemetry_v5
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13.5'
+      - run: python -m pip install -r requirements.txt
+      - name: Causal packets and metadata integrity
+        run: python -m unittest -v
+      - name: Full locked replay and failure assertions
+        run: python run_all.py --out results/ci
+      - name: Independent packet and record reconstruction
+        run: python verify.py results/ci
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: motor-telemetry-v5-raw-results
+          path: research/motor_telemetry_v5/results/ci

@@ -1,0 +1,19 @@
+{
+  "protocol_commit": "1e7f67e68632c249e841964c2c68bee7e32db05e",
+  "calibration_sha256": "fa6b25b606ee43619376ce35822e7eb2a1e274e06aa4a0c78575c7f76b97714a",
+  "holdout_run_yet": false,
+  "n": 796,
+  "n_per_profile": 199,
+  "rank": 190,
+  "rate_order": ["dense", "sparse"],
+  "rate": {
+    "rms": [1.6062664471151504, 2.520276162534006],
+    "mean": [0.8545401260047532, 1.6345234856016921],
+    "cusum": [170.26237709964514, 9.994218256126453]
+  },
+  "universal": {"rms": 2.520276162534006, "mean": 1.6345234856016921, "cusum": 170.26237709964514},
+  "source_sha256": {
+    "horizon.py": "3e026b467693184d2b26a256e0f00a643ba5c9242eeb64678ae00bcaaa0ebdb1",
+    "cusum_study.py": "82df678ef7ab82db02580c5b6c058d97f9c727f16f8830814a2bd2934402268a"
+  }
+}

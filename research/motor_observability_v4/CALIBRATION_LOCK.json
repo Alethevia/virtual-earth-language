@@ -1,0 +1,17 @@
+{
+  "protocol_commit": "bfec323bd142b8e107cf5d0adf3890901641df09",
+  "calibration_sha256": "e57d3907cdec7b43c94e928c76f656eba9cc34e7e8c71e4a34279d7e3c10a625",
+  "thresholds": {
+    "passive": {"v3": 0.01666141056763229, "dual": 0.4802944423150484, "triple": 0.49060564088478326},
+    "active": {"v3": 0.016537755556050686, "dual": 0.4802944423150484, "triple": 0.49060564088478326}
+  },
+  "source_sha256": {
+    "motorbench.py": "caea2a328becfff82cf915511b157c76b7dd01ca43a2c884e1f2804c566a4834",
+    "bank_study.py": "e6aa4ccba89aa53c20f9586331344093301947c6c8e59edcde20ca3ab7bf6f1d",
+    "study.py": "419240774aabbd96d84a60ad72d91567ab55c1ffa4dc33fed6128ff6b246b0ca",
+    "box_solver.py": "e0f4cf9863787a905e02a0c79f84d090f50d020f0d6cb116811416b84bf62b7d",
+    "experiment.py": "15eddca6510854e8f791d14aab6b7b13e3566909c078314dff6e6c09947a9e3d"
+  },
+  "holdout_run": false,
+  "calibration_rank": 190
+}

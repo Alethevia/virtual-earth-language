@@ -1,0 +1,12 @@
+{
+  "protocol_commit": "99689fb386e21867d11f62cebad323d915f9d709",
+  "calibration_lock_commit": "67f8c67496b45c71aa133a0fa8b32c2f2ef44b92",
+  "count_table_sha256": "bf857cfda10a645da3ddc3de1c54e2a3a059945a00220996f2c6ca5722e10268",
+  "screen_passed": false,
+  "checks_passed": 16,
+  "checks_total": 20,
+  "records": 60000,
+  "cells": 300,
+  "paired_intervals": 720,
+  "independent_test_seed_groups": 200
+}

@@ -1,0 +1,40 @@
+name: Motor horizon V7 reproduction
+on:
+  push:
+    branches: [research/motor-horizon-v7-20261105]
+    paths:
+      - 'research/motor_horizon_v7/**'
+      - '.github/workflows/motor-horizon-v7.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: motor-horizon-v7-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  reproduce:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    defaults:
+      run:
+        working-directory: research/motor_horizon_v7
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13.5'
+      - run: python -m pip install -r requirements.txt
+      - name: Causality, readout scope and first-diagnosis integrity
+        run: python -m unittest -v
+      - name: Full small-bias and uninterrupted600s replay
+        run: python replay.py --out results/ci --workers 2
+      - name: Independent full-record and raw-packet verification
+        run: python verify.py results/ci
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: motor-horizon-v7-raw-results
+          path: research/motor_horizon_v7/results/ci

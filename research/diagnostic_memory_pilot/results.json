@@ -1,0 +1,13 @@
+{
+  "n": 10000,
+  "pairs": 8,
+  "d": 0.4,
+  "sigma": 1,
+  "seed": 20261029,
+  "compressed_error": 0.4966,
+  "evidence_error": 0.0584,
+  "theoretical_evidence_error": 0.054799291699557995,
+  "compressed_mean_H0": -0.007568904057476253,
+  "compressed_mean_H1": -0.0021169716396020255,
+  "status": "synthetic pilot, local run"
+}

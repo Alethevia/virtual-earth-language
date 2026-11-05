@@ -1,0 +1,27 @@
+{
+  "protocol_commit": "3876398b3f8c3183d9c6a14f7764c808454f4fae",
+  "design_sha256": "261db8756cb349cbbff06710ac3d2f9089e06ed0430da02ae0bac1f6f0256d20",
+  "candidate_schedules": 7920,
+  "admissible_schedules": 7234,
+  "independent_noise_trajectories": 40000,
+  "paired_scenario_trajectory_evaluations": 480000,
+  "local_tests_passed": 22,
+  "max_batch_recursive_llr_difference": 6.217248937900877e-15,
+  "batch_recursive_decision_disagreements": 0,
+  "full_information_probe": [-0.5,-0.5,-0.5,-0.5,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+  "two_bit_posterior_probe": [-0.5,-0.5,-0.5,-0.5,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+  "nominal_selected_schedule_results": [
+    {"method":"full_history_llr","bits":1152,"exact_error":0.17982540900522415,"observed_errors":7135,"n":40000},
+    {"method":"recursive_llr","bits":64,"exact_error":0.17982540900522415,"observed_errors":7135,"n":40000},
+    {"method":"fixed_center","bits":2,"exact_error":0.2257284963442362,"observed_errors":8963,"n":40000},
+    {"method":"posterior","bits":2,"exact_error":0.20765629047585724,"observed_errors":8185,"n":40000},
+    {"method":"fixed_center","bits":3,"exact_error":0.19364240100452798,"observed_errors":7604,"n":40000},
+    {"method":"posterior","bits":3,"exact_error":0.1921224672822151,"observed_errors":7567,"n":40000},
+    {"method":"fixed_center","bits":4,"exact_error":0.18496611947209518,"observed_errors":7287,"n":40000},
+    {"method":"posterior","bits":4,"exact_error":0.1834869897420623,"observed_errors":7259,"n":40000},
+    {"method":"fixed_center","bits":8,"exact_error":0.1798754551163682,"observed_errors":7111,"n":40000},
+    {"method":"posterior","bits":8,"exact_error":0.1798753485673758,"observed_errors":7113,"n":40000}
+  ],
+  "memory_scope":"Only persistent data-dependent diagnostic state; clock, ROM, scratch arithmetic and current observation excluded. Batch entry is observation storage.",
+  "conclusion":"No co-design probe advantage in the declared finite family. Recursive sufficient statistic matches full history. No novelty or global finite-state optimality claim."
+}

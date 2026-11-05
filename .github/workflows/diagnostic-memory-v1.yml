@@ -1,0 +1,56 @@
+name: Diagnostic memory V1
+on:
+  push:
+    paths:
+      - 'research/diagnostic_memory_v1/**'
+      - '.github/workflows/diagnostic-memory-v1.yml'
+  pull_request:
+    paths:
+      - 'research/diagnostic_memory_v1/**'
+      - '.github/workflows/diagnostic-memory-v1.yml'
+permissions:
+  contents: read
+concurrency:
+  group: diagnostic-memory-v1-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  reproduce:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+    defaults:
+      run:
+        working-directory: research/diagnostic_memory_v1
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - run: python -m pip install -r requirements.txt
+      - run: python -m unittest -v
+      - run: python run_experiment.py --out results/ci --phase design
+      - run: python run_experiment.py --out results/ci --phase evaluate
+      - name: Check reference risks and decisions
+        run: |
+          python - <<'PY'
+          import json, math
+          from pathlib import Path
+          expected = json.loads(Path('REFERENCE.json').read_text())
+          actual = json.loads(Path('results/ci/summary.json').read_text())
+          design = json.loads(Path('results/ci/design.json').read_text())
+          assert design['admissible_count'] == expected['admissible_schedules']
+          assert all(x['decision_disagreements'] == 0 for x in actual['identity_checks'].values())
+          rows = [x for x in actual['results'] if x['schedule'] == 'full_information_design' and x['noise_scale'] == 1]
+          for want in expected['nominal_selected_schedule_results']:
+              got = next(x for x in rows if x['method'] == want['method'] and x['state_bits'] == want['bits'])
+              assert math.isclose(got['modeled_risk'], want['exact_error'], abs_tol=1e-10)
+              assert got['errors'] == want['observed_errors']
+          assert design['choices']['full_information_design']['probe'] == design['choices']['two_bit_design']['probe']
+          print('Reference risks, classification counts and null co-design finding reproduced.')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: diagnostic-memory-v1-results
+          path: research/diagnostic_memory_v1/results/ci

@@ -1,0 +1,10 @@
+{
+  "source_sha256": "3fa549660c813f0e9ec0b3d6c5ffc6e1dacd640747c1099d5c48f0d22bfe8178",
+  "count_keys": ["profile","mode","amplitude","model","method","n","any_alarm_count","pre_fault_alarm_count","first_alarm_valid_count","within_5s_count","within_30s_count"],
+  "count_digest": "b667778a07a28291fae643854d47d878e95eb7484728ed04ec2661a7ece3b4ed",
+  "scan_cells": 64,
+  "scan_records": 12800,
+  "oracle_sparse_ar_half_five_alpha10": 0.793310373759395,
+  "oracle_sparse_ar99_half_five_alpha10": 0.5195817031840375,
+  "scope": "Numerical reproduction only; no practical diagnosis acceptance."
+}

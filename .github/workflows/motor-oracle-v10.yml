@@ -1,0 +1,38 @@
+name: Motor oracle V10 reproduction
+on:
+  push:
+    branches: [research/motor-oracle-v10-20261106]
+    paths:
+      - 'research/motor_oracle_v10/**'
+      - '.github/workflows/motor-oracle-v10.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: motor-oracle-v10-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  reproduce:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    defaults:
+      run:
+        working-directory: research/motor_oracle_v10
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13.5'
+      - run: python -m pip install -r requirements.txt
+      - name: Covariance, original-source parity and causality tests
+        run: python -m unittest -v
+      - name: All analytic cells, explicit Gaussian windows and continuous references
+        run: python replay.py --out results/ci
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: motor-oracle-v10-raw-results
+          path: research/motor_oracle_v10/results/ci

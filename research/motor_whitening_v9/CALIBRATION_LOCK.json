@@ -1,0 +1,18 @@
+{
+  "protocol_commit": "676bca0f04c4be7d67b53b2230a59afb9313da3d",
+  "training_lock_commit": "289ff0cf290bdbd71f518a05a9abff4ca510fc46",
+  "training_sha256": "10f8251985ea53e1ba8d6a56a5651a14f2ebf752df57d5593034a67ac897ee47",
+  "calibration_sha256": "bc0a2bd5e85c2b2403b8f1c8e03e3166107dc366f2c1d64ba992c5e69c46accc",
+  "source_sha256": "fa91377767f25aa848b0a4193c19c3d1973dd1eeab7488060975104a58f3b4d2",
+  "holdout_run_yet": false,
+  "n_calibration_paths": 796,
+  "rank_per_configuration": "190 of 199 whole-path maxima",
+  "method_order": ["rms_matched", "mean_2s", "signed_scan", "whiten_naive", "whiten_matched"],
+  "thresholds": {
+    "dense_iid": [1.1461515265923383, 0.2716006512074926, 4.347737704427057, 4.341056500209886, 4.342080138694506],
+    "sparse_iid": [2.468806028610585, 2.132293922738854, 4.493215905074505, 4.594974576867632, 4.594974576867632],
+    "dense_ar": [1.6118907565056975, 1.1218078964165836, 16.443939899011774, 4.597566097074267, 4.648719249674953],
+    "sparse_ar": [2.573174936394228, 2.2370628206352046, 4.724859568959431, 4.881831404175754, 4.885563890062798]
+  },
+  "scope": "Configuration-specific healthy commissioning is disclosed extra information. No test-based parameter or threshold changes are permitted. All failures and strong simpler baselines remain visible."
+}

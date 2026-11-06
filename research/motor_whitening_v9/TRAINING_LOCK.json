@@ -1,0 +1,14 @@
+{
+  "protocol_commit": "676bca0f04c4be7d67b53b2230a59afb9313da3d",
+  "training_sha256": "10f8251985ea53e1ba8d6a56a5651a14f2ebf752df57d5593034a67ac897ee47",
+  "source_sha256": "fa91377767f25aa848b0a4193c19c3d1973dd1eeab7488060975104a58f3b4d2",
+  "calibration_run_yet": false,
+  "holdout_run_yet": false,
+  "training_paths": 128,
+  "duration_per_path_seconds": 60,
+  "instrument_configurations": ["dense_iid", "sparse_iid", "dense_ar", "sparse_ar"],
+  "orders": [20, 1, 20, 1],
+  "first_pair_training_lag1_before": [0.002758964405924723, -0.03421365757034271, 0.7217234908860943, -0.03917404607099902],
+  "first_pair_training_lag1_after": [0.00004436711484762282, 0.00004542081147500207, -0.00024969325092178817, -0.0016184071266635213],
+  "scope": "Training diagnostics only, not held-out validation or a proof of independence. Configuration-matched healthy commissioning is extra prior information. Full learned parameters are in the hashed training artifact. No model selection or correction based on future outcomes."
+}

@@ -1,0 +1,19 @@
+{
+  "protocol_commit": "6fc23e904b4fa79019c48ca098fc4a6ca4edf0ff",
+  "source_sha256": "3fa549660c813f0e9ec0b3d6c5ffc6e1dacd640747c1099d5c48f0d22bfe8178",
+  "calibration_sha256": "644f2af9d8c16b037d4e0de5752f7fa95b451de362aba53dbc54083a770c184f",
+  "holdout_run_yet": false,
+  "n_profiles": 6,
+  "n_per_profile": 199,
+  "rank": 190,
+  "method_order": ["mean5", "gls5"],
+  "thresholds": {
+    "dense_iid": [4.250821591132857, 4.2508215911328575],
+    "sparse_iid": [3.9630675321811135, 3.9630675321811153],
+    "dense_ar": [4.12076009939675, 4.246795125517324],
+    "sparse_ar": [3.988135491735442, 3.990230345993553],
+    "dense_ar99": [3.9753091087078904, 4.072706644186759],
+    "sparse_ar99": [3.902699831138335, 3.953786491047677]
+  },
+  "scope": "Known-target, correct-model oracle references; absolute five-second scores scanned over600s. Analytical powers and independent oracle-window MonteCarlo have run; unknown-onset holdout has not. No deployment/unique-attribution claim."
+}

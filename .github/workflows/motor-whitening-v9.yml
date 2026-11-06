@@ -1,0 +1,40 @@
+name: Motor whitening V9 reproduction
+on:
+  push:
+    branches: [research/motor-whitening-v9-20261105]
+    paths:
+      - 'research/motor_whitening_v9/**'
+      - '.github/workflows/motor-whitening-v9.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: motor-whitening-v9-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  reproduce:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    defaults:
+      run:
+        working-directory: research/motor_whitening_v9
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13.5'
+      - run: python -m pip install -r requirements.txt
+      - name: Causality, source commitments and transformed-step integrity
+        run: python -m unittest -v
+      - name: Independent healthy fit, calibration and full locked holdout
+        run: python replay.py --out results/ci --workers 2
+      - name: Separate complete-record and FIR-scan verification
+        run: python verify.py results/ci
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: motor-whitening-v9-raw-results
+          path: research/motor_whitening_v9/results/ci

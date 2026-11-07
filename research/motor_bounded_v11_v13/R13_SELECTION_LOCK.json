@@ -1,0 +1,11 @@
+{
+  "source_sha256": "0b244265f65d21dba760f1cfc5ba73a696ae6b77ccf453adcda24e25035a8eb7",
+  "config": {"fs":20,"scale":0.5,"rho":0.9},
+  "selected": "mean5",
+  "selection_failed": false,
+  "thresholds": {"mean5":4.309315764590838,"raw_scan":5.031103528801269,"innovation_scan":5.096745821628595},
+  "selection_rule": "Max .5 within5 among healthy error eligible; ties prefer mean5,raw,innovation.",
+  "r12_summary_sha256": "74879e1e73c7e1ce524038aa26d7e6b46aba5af4316af6c17da91d79b64164f7",
+  "calibration_sha256": "fd84c981b0a4f9f89e0db5c60aaf7f1c4b251652f2cd59198b1dabc34af0ba8b",
+  "confirmation_run_yet": false
+}

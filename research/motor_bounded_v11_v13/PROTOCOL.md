@@ -1,0 +1,45 @@
+# V11–V13: three bounded follow-ups, then stop and assess
+
+2026-11-06 America/New_York. Base V10 c5cf864b2b23f80b50fdd6e41930005dc320090c. No existing experiment is overwritten, no main merge, no paid model/GPU, real machine, trading or safety claim. This is simulation research using established detection methods, NOT a new algorithm claim. The protocol is recorded before any new calibration/performance evaluation. Implementation hashes will be committed after integrity tests and before performance runs.
+
+## Scope shared by all rounds
+
+Retain the V7–V10 downstream diagnostic-readout setting. Common physical speed cancels in differences; faults do not enter a motor controller. Three independent white-noise sensor readings have SD .25 rad/s; the primary additionally has stationary AR noise with variance .5 and base-tick correlation .9 at .01 seconds. Rates divide 100 Hz. Offsets and the nominal noise law are known and fixed, as extra commissioning information; no online model selection is claimed. No fault onset, sign, target or future noise is given to the unknown-target detectors. Time horizon 600 seconds; monitoring begins at 5 seconds with no subsequent reset. Step onset is uniform 300–330 seconds, random sign. Failure before onset remains a failure; never filter to survivors.
+
+Scaling noise by s scales BOTH white and correlated sensor-noise amplitudes. This represents improved total measurement noise, not a free algorithmic gain or a priced hardware design. Sampling changes and noise changes are reported separately. The noise physical correlation time remains fixed when rate changes: a=.9^(100/fs), not .9 per new sample.
+
+Calibration uses 199 healthy paths and the 190th order statistic of each rule's maximum over all monitoring times and (for unknown-target rules) all three channel pairs. Every compared rule sees the same calibration paths. This is a finite-horizon empirical rank calibration under matched whole-path exchangeability, not anytime, arbitrary-shift or per-calibration-set certification. Calibration thresholds/source hashes are frozen before that round's test set.
+
+## Round 11: resource intervention with the simple V10 binary baseline
+
+Rates fs in {2,10,20,100} Hz; noise amplitude factors {1,.7,.5}, all with base rho .9. Same base100Hz noise realizations are downsampled/scaled across the 12 configurations. Known-primary contrast y0-(y1+y2)/2, fixed 5-second moving mean, two-sided alarm. No unique channel localization claim. Compare healthy, .25, .5 and 1 rad/s persistent primary-readout biases. Test 300 new base seeds. Analytic ideal-reference values may be shown but never substitute for achieved performance. The original .5 rad/s/5s requirement is NOT changed; improved-noise arms explicitly change resource assumptions. Calibration seed range 910000–910198; evaluation 920000–920299. Profiles share seeds and are not independent devices.
+
+## Round 12: same-information algorithm comparison and unknown-target localization
+
+Configurations: (100Hz,rho0,s1), (2Hz,rho.9,s1), (20Hz,rho.9,s1), (100Hz,rho.9,s1), (20Hz,rho.9,s.5). Three fixed candidates: 5-second signed mean; raw multiscale signed means with windows {.2,.5,1,2,5}s (at least one acquired sample); and steady-state Kalman-innovation matched-step scan with the SAME windows. Known nominal covariance is given to all methods; matched-step template accounts for the filter transient. Empirical calibration includes scanning all windows/pairs/times. These are established matched-filter/scan ideas, not exact quickest-detection optimality claims.
+
+All three pair differences are scored. A channel is uniquely isolated only when its two incident pairs cross threshold and the remaining pair does not. General alarms and wrong-channel decisions are recorded separately. Fixed models and coefficients; no adapting to a monitored fault. Conditions: healthy, primary .25/.5/1/6 bias, either auxiliary .5 bias, a primary .5 two-second pulse, and primary alternating +/- .5 every .5s. Calibration 930000–930198, evaluation 940000–940199, common seeds across conditions/configurations. The comparison set is also used for the explicitly declared next-stage selection; it is NOT the final independent confirmation set.
+
+Primary comparison: matched-step scan versus raw scan and fixed mean, same inputs/calibration. For each configuration, screen: healthy any false alarm<=10%, healthy wrong-any<=5%, .5 primary first-correct within5s>=80%, and 1 rad/s first-correct within5s>=90%. Report all cells and failures, not only screen totals. No requirement of universal superiority is weakened afterward.
+
+## Round 13: freeze one candidate and test genuinely fresh conditions
+
+Use the fixed improved-resource arm 20Hz,rho.9,s=.5, specified NOW regardless of the previous results. Selection from Round12 at that arm: among methods satisfying healthy any<=10% and wrong-any<=5%, choose greatest .5 primary five-second first-correct count; ties prefer 5s mean, then raw scan, then innovation scan. If none qualify, retain the 5s mean and explicitly label the selection failure. Freeze method and existing Round12 calibration thresholds BEFORE confirmation. Always retain the 5s mean as comparator (avoid duplicate results if it is selected).
+
+400 entirely new base seeds 950000–950399. A separate simulation implementation uses explicit state recurrences and PCG64DXSM random streams instead of the original lfilter generator. Same-law confirmation is an implementation/distribution check, NOT independent physical-world validation. At the selected20Hz rate, use the exact corresponding AR coefficient. Compare Gaussian matched conditions with: Student-t5 latent innovations at equal variance; Student-t3 white sensor noise at equal variance; a 50/50 variance mixture of rho.9 and rho.99 latent components; frozen-model true rho.99; and 25% larger primary-white noise after180s. Neither nominal threshold nor covariance is updated on these stresses.
+
+For each of the six noise families run healthy and primary .5 bias. Also in Gaussian noise run primary1 bias, either auxiliary .5 bias, primary .5 two-second pulse, two-auxiliary common .5 bias, and all-three common .5 bias. Total18 scenario families. Common-mode claims are not credited as a unique correct diagnosis. Changed-noise stress failures remain reported even if matched cases pass.
+
+Matched-confirmation screen: healthy any<=10%, wrong-any<=5%, primary .5 timely-first-correct>=80%, primary1 timely-first-correct>=90%, each single auxiliary .5 timely-first-correct>=80%. Broad robustness additionally requires those healthy error limits and >=80% .5 timely-first-correct in each changed-noise family. Point screens and uncertainty are separate: also provide Wilson95 bounds per Bernoulli cell; these are not simultaneous confidence certificates. Pulse onset and post-recovery accusations reported separately.
+
+## Outcomes and uncertainty
+
+Save all per-path first generic alarm, first unique label/time, any wrong-channel occurrence, eventual first-correct, first-correct within5/30s, and success-conditional delay. No binary known-target result is called channel isolation. Generic false alarms, unique wrong accusations and silence are not interchangeable. Record deadline misses over ALL paths, not only successful detections. Pair by base seed; 10,000-resample percentile intervals for the few declared candidate-minus-mean/raw timely and false-alarm contrasts, exploratory and unadjusted. Do not treat time windows, repeated conditions or replay runs as independent samples.
+
+## Verification, artifacts and stopping rule
+
+Before performance evaluation test direct-convolution parity, covariance normalization, causal prefix/future invariance, unknown-target channel logic, no metadata truth passed to detectors, no control use, rate/noise scaling, seed disjointness and pre-fault penalties. Lock source hashes publicly. Save calibration maxima, per-path records, compact aggregate tables, source/seed/environment manifests and representative complete input/score/decision examples; other raw paths remain regenerable. A separately implemented verifier recomputes all aggregate counts/intervals and representative scores without calling the main score functions. A clean-source replay checks reference counts; same-author checking is not third-party peer review.
+
+After these THREE rounds, assess engineering reproducibility, achieved conditions, regressions, originality, real-world evidence and next needed external validation. Do not automatically start Round14. Do not call software CI success a scientific pass. Cite original methods and preserve negative results.
+
+Primary sources: NIST CUSUM https://www.itl.nist.gov/div898/handbook/pmc/section3/pmc323.htm ; NIST autocorrelated monitoring https://www.nist.gov/publications/statistical-process-monitoring-autocorrelated-data ; Sun and Zou https://arxiv.org/abs/2310.08789 ; Neyman–Pearson background https://stat210a.berkeley.edu/fall-2024/reader/hypothesis-testing.html . These motivate existing methods, not certification of this implementation.

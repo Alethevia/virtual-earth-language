@@ -1,0 +1,46 @@
+name: Motor bounded V11-V13 reproduction
+on:
+  push:
+    branches: [research/motor-bounded-v11-v13-20261106]
+    paths:
+      - 'research/motor_bounded_v11_v13/**'
+      - '.github/workflows/motor-bounded-v11-v13.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: motor-bounded-v11-v13-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  reproduce:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    defaults:
+      run:
+        working-directory: research/motor_bounded_v11_v13
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13.5'
+      - run: python -m pip install -r requirements.txt
+      - name: Pre-evaluation source commitments and integrity tests
+        run: |
+          python - <<'PY'
+          import hashlib,json
+          from pathlib import Path
+          lock=json.loads(Path('SOURCE_LOCK.json').read_text())
+          for name in ('study.py','test_study.py'):
+              assert hashlib.sha256(Path(name).read_bytes()).hexdigest()==lock[name]
+          PY
+          python -m unittest -v
+      - name: All three rounds and separately implemented verification
+        run: python replay.py --out results/ci --workers 2
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: motor-bounded-v11-v13-results
+          path: research/motor_bounded_v11_v13/results/ci
